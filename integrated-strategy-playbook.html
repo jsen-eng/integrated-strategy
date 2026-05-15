@@ -1,3 +1,8 @@
+<!-- ============================================================
+     FILE 1: integrated-strategy-playbook.html
+     CHANGES: playbook-nav added, section-nav moved below header,
+              dark bg text contrast improved throughout
+============================================================ -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,57 +11,66 @@
 <title>OBx B-School | Integrated Strategy Playbook</title>
 <style>
 :root {
-  --navy: #1B4F72; --navy-dark: #154360; --orange: #D4551A; --gold: #F5A623;
-  --slate: #4A6375; --light-gray: #F0F2F5; --border: #DDE3EA;
-  --text: #2C3E50; --text-light: #7F8C8D; --success: #27AE60; --error: #E74C3C;
-  --seo: #0E7C5C;   --seo-light: rgba(14,124,92,0.08);  --seo-dark: #0A5C43;
-  --paid: #D4551A;  --paid-light: rgba(212,85,26,0.07);
-  --email: #5B3FA8; --email-light: rgba(91,63,168,0.07);
-  --ux: #2C5F7A;    --ux-light: rgba(44,95,122,0.07);
-  --loop: #0A7B8E;  --loop-light: rgba(10,123,142,0.07); --loop-dark: #086B7A;
-  --ai: #3B2F6B;    --ai-light: rgba(59,47,107,0.08);
-  --pb-light: rgba(27,79,114,0.06);
+  --navy:#1B4F72; --navy-dark:#154360; --gold:#F5A623;
+  --slate:#4A6375; --light-gray:#F0F2F5; --border:#DDE3EA;
+  --text:#2C3E50; --text-light:#7F8C8D; --success:#27AE60; --error:#E74C3C;
+  --seo:#0E7C5C;  --seo-light:rgba(14,124,92,0.08);  --seo-dark:#0A5C43;
+  --paid:#D4551A; --paid-light:rgba(212,85,26,0.07);
+  --email:#5B3FA8; --email-light:rgba(91,63,168,0.07);
+  --ux:#2C5F7A;   --ux-light:rgba(44,95,122,0.07);
+  --loop:#0A7B8E; --loop-light:rgba(10,123,142,0.07); --loop-dark:#086B7A;
+  --pb-light:rgba(27,79,114,0.06);
 }
-*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
 body{font-family:'Segoe UI',-apple-system,Arial,sans-serif;background:var(--light-gray);color:var(--text);line-height:1.65;}
 
-/* NAV */
+/* ─── TOP NAV ─── */
 .top-nav{position:sticky;top:0;z-index:300;background:var(--navy);height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 48px;box-shadow:0 2px 12px rgba(0,0,0,0.25);}
 .brand{display:flex;align-items:center;}
 .brand-main{color:#fff;font-size:1.3rem;font-weight:900;letter-spacing:-0.5px;}
 .brand-main em{color:var(--gold);font-style:normal;}
 .brand-school{color:var(--gold);font-size:0.65rem;font-weight:800;letter-spacing:3px;text-transform:uppercase;border-left:2px solid rgba(245,166,35,0.35);margin-left:12px;padding-left:12px;}
-.nav-right{display:flex;align-items:center;gap:10px;}
 .nav-badge{background:rgba(245,166,35,0.15);color:var(--gold);border:1px solid rgba(245,166,35,0.3);padding:3px 12px;border-radius:20px;font-size:0.71rem;font-weight:600;}
-.nav-link-pill{background:rgba(212,85,26,0.2);color:#fff;border:1px solid rgba(212,85,26,0.4);padding:4px 12px;border-radius:20px;font-size:0.71rem;font-weight:700;text-decoration:none;transition:all 0.15s;}
-.nav-link-pill:hover{background:var(--paid);}
 
-/* SECTION NAV */
-.section-nav{background:var(--navy-dark);border-bottom:2px solid rgba(245,166,35,0.12);display:flex;align-items:center;padding:0 48px;gap:4px;overflow-x:auto;position:sticky;top:56px;z-index:190;}
+/* ─── PLAYBOOK NAV ─── */
+.playbook-nav{position:sticky;top:56px;z-index:290;background:#0D1C2B;height:44px;display:flex;align-items:center;padding:0 48px;gap:10px;border-bottom:1px solid rgba(255,255,255,0.08);overflow-x:auto;}
+.pn-label{color:rgba(255,255,255,0.32);font-size:0.64rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding-right:14px;border-right:1px solid rgba(255,255,255,0.1);white-space:nowrap;flex-shrink:0;}
+.pn-link{display:flex;align-items:center;gap:6px;padding:5px 13px;border-radius:6px;font-size:0.74rem;font-weight:600;text-decoration:none;transition:all 0.15s;white-space:nowrap;flex-shrink:0;}
+.pn-link.active{background:rgba(255,255,255,0.12);color:#fff;cursor:default;border:1px solid rgba(255,255,255,0.18);}
+.pn-link.other{color:rgba(255,255,255,0.48);border:1px solid rgba(255,255,255,0.1);}
+.pn-link.other:hover{background:rgba(255,255,255,0.07);color:rgba(255,255,255,0.85);border-color:rgba(255,255,255,0.22);}
+.pn-sep{color:rgba(255,255,255,0.15);font-size:0.9rem;flex-shrink:0;}
+
+/* ─── SECTION NAV ─── */
+.section-nav{background:var(--navy-dark);border-bottom:2px solid rgba(245,166,35,0.12);display:flex;align-items:center;padding:0 48px;gap:4px;overflow-x:auto;position:sticky;top:100px;z-index:180;}
 .snav-label{color:rgba(255,255,255,0.27);font-size:0.67rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding-right:14px;border-right:1px solid rgba(255,255,255,0.08);margin-right:8px;white-space:nowrap;flex-shrink:0;}
-.snav-link{display:flex;align-items:center;gap:7px;color:rgba(255,255,255,0.42);text-decoration:none;font-size:0.76rem;font-weight:600;padding:13px 14px;border-bottom:3px solid transparent;margin-bottom:-2px;transition:all 0.15s;white-space:nowrap;}
-.snav-link:hover{color:rgba(255,255,255,0.8);}
+.snav-link{display:flex;align-items:center;gap:7px;color:rgba(255,255,255,0.48);text-decoration:none;font-size:0.76rem;font-weight:600;padding:13px 14px;border-bottom:3px solid transparent;margin-bottom:-2px;transition:all 0.15s;white-space:nowrap;}
+.snav-link:hover{color:rgba(255,255,255,0.85);}
 .snav-num{width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.65rem;font-weight:800;color:#fff;flex-shrink:0;}
-.sn-s{background:var(--slate);} .sn-seo{background:var(--seo);} .sn-loop{background:var(--loop);}
-.sn-gold{background:#9A6800;} .sn-ai{background:#3B2F6B;} .sn-navy{background:var(--navy);}
-.sn-paid{background:var(--paid);} .sn-email{background:var(--email);}
+.sn-s{background:var(--slate);}.sn-seo{background:var(--seo);}.sn-loop{background:var(--loop);}
+.sn-gold{background:#9A6800;}.sn-ai{background:#3B2F6B;}.sn-navy{background:var(--navy);}
+.sn-paid{background:var(--paid);}.sn-email{background:var(--email);}
 
-/* HEADER */
+/* ─── ACCENT BAR ─── */
+.accent-bar{height:4px;background:linear-gradient(90deg,var(--seo) 0%,var(--loop) 25%,var(--paid) 50%,var(--email) 75%,var(--ux) 100%);}
+
+/* ─── HEADER ─── */
 .part-header{background:linear-gradient(135deg,#0D1C2B 0%,#154360 50%,#1B4F72 100%);padding:72px 48px 64px;position:relative;overflow:hidden;}
 .ph-blob{position:absolute;border-radius:50%;pointer-events:none;top:-80px;right:-60px;width:420px;height:420px;background:rgba(245,166,35,0.04);}
 .ph-sq1{position:absolute;top:36px;right:80px;width:20px;height:20px;background:rgba(255,255,255,0.08);pointer-events:none;}
 .ph-sq2{position:absolute;top:58px;right:56px;width:13px;height:13px;background:rgba(245,166,35,0.35);pointer-events:none;}
 .ph-inner{max-width:1060px;margin:0 auto;position:relative;z-index:1;}
-.ph-series{font-size:0.7rem;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:12px;display:flex;align-items:center;gap:10px;}
-.ph-series::before{content:'';display:block;width:24px;height:2px;background:rgba(255,255,255,0.38);}
+.ph-series{font-size:0.7rem;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-bottom:12px;display:flex;align-items:center;gap:10px;}
+.ph-series::before{content:'';display:block;width:24px;height:2px;background:rgba(255,255,255,0.4);}
 .ph-badge{display:inline-flex;background:rgba(245,166,35,0.15);border:1px solid rgba(245,166,35,0.3);border-radius:6px;padding:5px 12px;color:var(--gold);font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:16px;}
 .ph-title{color:#fff;font-size:2.8rem;font-weight:900;line-height:1.12;margin-bottom:16px;}
-.ph-sub{color:rgba(255,255,255,0.65);font-size:0.98rem;max-width:620px;line-height:1.72;margin-bottom:30px;}
+.ph-sub{color:rgba(255,255,255,0.78);font-size:0.98rem;max-width:620px;line-height:1.72;margin-bottom:30px;}
 .ph-objs{display:flex;flex-wrap:wrap;gap:9px;}
-.ph-obj{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.13);border-radius:7px;padding:7px 13px;color:rgba(255,255,255,0.78);font-size:0.77rem;}
-.ph-obj::before{content:'✓ ';color:rgba(255,255,255,0.45);font-size:0.72rem;}
+.ph-obj{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.15);border-radius:7px;padding:7px 13px;color:rgba(255,255,255,0.85);font-size:0.77rem;}
+.ph-obj::before{content:'✓ ';color:rgba(255,255,255,0.5);font-size:0.72rem;}
 
-/* CHANNEL STRIP */
+/* ─── CHANNEL STRIP ─── */
 .channel-strip{background:var(--navy-dark);border-bottom:1px solid rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:center;gap:12px;padding:12px 48px;flex-wrap:wrap;}
 .ch-pill{display:flex;align-items:center;gap:7px;padding:6px 14px;border-radius:20px;font-size:0.75rem;font-weight:700;color:#fff;white-space:nowrap;}
 .ch-pill.seo{background:rgba(14,124,92,0.25);border:1px solid rgba(14,124,92,0.4);}
@@ -64,44 +78,42 @@ body{font-family:'Segoe UI',-apple-system,Arial,sans-serif;background:var(--ligh
 .ch-pill.email{background:rgba(91,63,168,0.25);border:1px solid rgba(91,63,168,0.4);}
 .ch-pill.ux{background:rgba(44,95,122,0.25);border:1px solid rgba(44,95,122,0.4);}
 .ch-pill.loop{background:rgba(10,123,142,0.3);border:1px solid rgba(10,123,142,0.5);}
-.ch-plus{color:rgba(255,255,255,0.25);font-size:1rem;}
+.ch-plus{color:rgba(255,255,255,0.3);font-size:1rem;}
 
-/* ACCENT BAR */
-.accent-bar{height:4px;background:linear-gradient(90deg,var(--seo) 0%,var(--loop) 25%,var(--paid) 50%,var(--email) 75%,var(--ux) 100%);}
-
-/* LAYOUT */
+/* ─── LAYOUT ─── */
 .container{max-width:1060px;margin:0 auto;padding:0 48px;}
 section.sec-light{background:var(--light-gray);padding:64px 0;}
 section.sec-white{background:#fff;padding:64px 0;}
 section.sec-dark{background:var(--navy);padding:64px 0;}
 section.sec-ai{background:linear-gradient(160deg,#0F1E2D 0%,#1B2A3B 60%,#1B3050 100%);padding:64px 0;}
 
-/* SECTION HEADERS */
+/* ─── SECTION HEADERS ─── */
 .sh{margin-bottom:36px;}
-.sh-tag{font-size:0.72rem;font-weight:800;letter-spacing:3px;text-transform:uppercase;margin-bottom:8px;color:var(--navy);}
-.sh-tag.wht{color:rgba(255,255,255,0.48);} .sh-tag.gold{color:var(--gold);}
-.sh-tag.seo{color:var(--seo);} .sh-tag.loop{color:var(--loop);}
-.sh-tag.paid{color:var(--paid);} .sh-tag.email{color:var(--email);} .sh-tag.ai{color:rgba(180,160,255,0.85);}
+.sh-tag{font-size:0.72rem;font-weight:800;letter-spacing:3px;text-transform:uppercase;margin-bottom:8px;}
+.sh-tag.navy{color:var(--navy);}.sh-tag.wht{color:rgba(255,255,255,0.6);}
+.sh-tag.gold{color:var(--gold);}.sh-tag.seo{color:var(--seo);}
+.sh-tag.loop{color:var(--loop);}.sh-tag.paid{color:var(--paid);}
+.sh-tag.email{color:var(--email);}.sh-tag.ai{color:rgba(180,160,255,0.9);}
+.sh-tag.both{background:linear-gradient(90deg,var(--paid),var(--seo));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
 .sh-title{font-size:1.9rem;font-weight:800;color:var(--navy);line-height:1.2;margin-bottom:12px;}
 .sh-title.wht{color:#fff;}
 .sh-desc{color:var(--text-light);font-size:0.91rem;max-width:700px;line-height:1.7;}
-.sh-desc.wht{color:rgba(255,255,255,0.6);}
+.sh-desc.wht{color:rgba(255,255,255,0.82);}
 
-/* GRIDS */
+/* ─── GRIDS ─── */
 .g2{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
 .g3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
 .g4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
 
-/* CARDS */
+/* ─── CARDS ─── */
 .card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:26px;transition:box-shadow 0.15s,transform 0.15s;}
 .card:hover{box-shadow:0 5px 20px rgba(0,0,0,0.07);transform:translateY(-2px);}
 .card.navy{background:var(--navy);}
 .card h3{font-size:0.97rem;font-weight:700;color:var(--navy);margin-bottom:10px;}
 .card.navy h3{color:var(--gold);}
 .card p{font-size:0.86rem;color:var(--text-light);line-height:1.65;}
-.card.navy p{color:rgba(255,255,255,0.72);}
 
-/* CALLOUTS */
+/* ─── CALLOUTS ─── */
 .callout{border-radius:10px;padding:20px 24px;margin:24px 0;border-left:4px solid;}
 .callout.navy{background:var(--navy);border-color:var(--gold);}
 .callout.gold{background:rgba(245,166,35,0.08);border-color:var(--gold);}
@@ -109,6 +121,7 @@ section.sec-ai{background:linear-gradient(160deg,#0F1E2D 0%,#1B2A3B 60%,#1B3050 
 .callout.paid{background:var(--paid-light);border-color:var(--paid);}
 .callout.loop{background:var(--loop-light);border-color:var(--loop);}
 .callout.ai{background:rgba(59,47,107,0.08);border-color:#7B68CC;}
+.callout.both{background:linear-gradient(135deg,rgba(212,85,26,0.05),rgba(14,124,92,0.05));border-left:none;border-top:3px solid var(--paid);border-right:3px solid var(--seo);}
 .callout-label{font-size:0.7rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;}
 .callout.navy .callout-label{color:var(--gold);}
 .callout.gold .callout-label{color:#9A6800;}
@@ -116,22 +129,27 @@ section.sec-ai{background:linear-gradient(160deg,#0F1E2D 0%,#1B2A3B 60%,#1B3050 
 .callout.paid .callout-label{color:var(--paid);}
 .callout.loop .callout-label{color:var(--loop-dark);}
 .callout.ai .callout-label{color:#7B68CC;}
+.callout.both .callout-label{color:var(--slate);}
 .callout p{font-size:0.88rem;line-height:1.68;}
-.callout.navy p{color:rgba(255,255,255,0.82);}
+.callout.navy p{color:rgba(255,255,255,0.90);}
 
-/* PLAIN LISTS */
+/* ─── PLAIN LISTS ─── */
 ul.plain{list-style:none;padding:0;}
 ul.plain li{font-size:0.86rem;color:var(--text);padding:6px 0;border-bottom:1px solid var(--border);display:flex;gap:9px;align-items:flex-start;line-height:1.55;}
 ul.plain li:last-child{border-bottom:none;}
 ul.plain li::before{content:'▸';flex-shrink:0;font-size:0.8rem;margin-top:1px;}
-ul.plain.seo-b li::before{color:var(--seo);} ul.plain.paid-b li::before{color:var(--paid);}
-ul.plain.loop-b li::before{color:var(--loop);} ul.plain.navy-b li::before{color:var(--gold);}
+ul.plain.seo-b li::before{color:var(--seo);}
+ul.plain.paid-b li::before{color:var(--paid);}
+ul.plain.loop-b li::before{color:var(--loop);}
+ul.plain.navy-b li::before{color:var(--gold);}
 
-/* OPP COMPARE */
+/* ─── OPP COMPARE ─── */
 .opp-compare{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:14px;overflow:hidden;border:1px solid var(--border);}
 .oc-left{background:rgba(231,76,60,0.04);border-right:1px solid var(--border);padding:28px;}
 .oc-right{background:rgba(14,124,92,0.05);padding:28px;}
-.oc-title{font-weight:800;font-size:1rem;} .oc-left .oc-title{color:var(--error);} .oc-right .oc-title{color:var(--seo);}
+.oc-title{font-weight:800;font-size:1rem;}
+.oc-left .oc-title{color:var(--error);}
+.oc-right .oc-title{color:var(--seo);}
 .oc-sub{font-size:0.77rem;color:var(--text-light);margin-top:3px;margin-bottom:18px;font-style:italic;}
 .oc-items{list-style:none;padding:0;}
 .oc-items li{font-size:0.85rem;color:var(--text);padding:8px 0;border-bottom:1px solid var(--border);display:flex;gap:9px;align-items:flex-start;line-height:1.55;}
@@ -139,212 +157,223 @@ ul.plain.loop-b li::before{color:var(--loop);} ul.plain.navy-b li::before{color:
 .oc-left .oc-items li::before{content:'✗';color:var(--error);flex-shrink:0;font-weight:700;margin-top:1px;}
 .oc-right .oc-items li::before{content:'✓';color:var(--seo);flex-shrink:0;font-weight:700;margin-top:1px;}
 
-/* CHANNEL CARDS */
+/* ─── CHANNEL CARDS ─── */
 .ch-card{border-radius:14px;overflow:hidden;border:1px solid var(--border);display:flex;flex-direction:column;}
 .ch-header{padding:22px 24px;}
-.ch-header.seo{background:var(--seo);} .ch-header.paid{background:var(--paid);}
-.ch-header.email{background:var(--email);} .ch-header.ux{background:var(--ux);}
+.ch-header.seo{background:var(--seo);}
+.ch-header.paid{background:var(--paid);}
+.ch-header.email{background:var(--email);}
+.ch-header.ux{background:var(--ux);}
 .ch-icon{font-size:1.6rem;margin-bottom:8px;}
 .ch-name{color:#fff;font-size:1rem;font-weight:800;margin-bottom:4px;}
-.ch-role-tag{color:rgba(255,255,255,0.62);font-size:0.73rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;}
+.ch-role-tag{color:rgba(255,255,255,0.72);font-size:0.73rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;}
 .ch-body{background:#fff;padding:20px 24px;flex:1;}
 .ch-job-label{font-size:0.69rem;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:6px;}
-.ch-job-label.seo{color:var(--seo);} .ch-job-label.paid{color:var(--paid);}
-.ch-job-label.email{color:var(--email);} .ch-job-label.ux{color:var(--ux);}
+.ch-job-label.seo{color:var(--seo);}
+.ch-job-label.paid{color:var(--paid);}
+.ch-job-label.email{color:var(--email);}
+.ch-job-label.ux{color:var(--ux);}
 .ch-job-text{font-size:0.87rem;color:var(--text);font-weight:600;margin-bottom:14px;line-height:1.5;}
 .ch-body ul{list-style:none;padding:0;}
 .ch-body li{font-size:0.82rem;color:var(--text);padding:5px 0;border-bottom:1px solid var(--border);display:flex;gap:8px;line-height:1.5;}
 .ch-body li:last-child{border-bottom:none;}
 .ch-body li::before{content:'→';color:var(--text-light);flex-shrink:0;font-size:0.79rem;}
 .ch-footer{background:var(--light-gray);border-top:1px solid var(--border);padding:10px 24px;font-size:0.74rem;}
-.ch-footer-ref.seo{color:var(--seo);font-weight:700;} .ch-footer-ref.paid{color:var(--paid);font-weight:700;}
-.ch-footer-ref.email{color:var(--email);font-weight:700;} .ch-footer-ref.ux{color:var(--ux);font-weight:700;}
+.ch-footer-ref.seo{color:var(--seo);font-weight:700;}
+.ch-footer-ref.paid{color:var(--paid);font-weight:700;}
+.ch-footer-ref.email{color:var(--email);font-weight:700;}
+.ch-footer-ref.ux{color:var(--ux);font-weight:700;}
 
-/* B-SMART STRIP */
+/* ─── B-SMART STRIP ─── */
 .bsmart-strip{display:grid;grid-template-columns:repeat(6,1fr);gap:0;border-radius:12px;overflow:hidden;border:1px solid var(--border);}
 .bsm-cell{padding:14px 16px;text-align:center;}
 .bsm-cell:not(:last-child){border-right:1px solid var(--border);}
 .bsm-letter{font-size:1.8rem;font-weight:900;line-height:1;margin-bottom:4px;}
 .bsm-word{font-size:0.7rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;}
 .bsm-eg{font-size:0.72rem;color:var(--text-light);line-height:1.4;}
-.bsm-B{background:rgba(27,79,114,0.06);} .bsm-B .bsm-letter,.bsm-B .bsm-word{color:var(--navy);}
-.bsm-S{background:var(--seo-light);} .bsm-S .bsm-letter,.bsm-S .bsm-word{color:var(--seo);}
-.bsm-M{background:var(--loop-light);} .bsm-M .bsm-letter,.bsm-M .bsm-word{color:var(--loop);}
-.bsm-A{background:var(--paid-light);} .bsm-A .bsm-letter,.bsm-A .bsm-word{color:var(--paid);}
-.bsm-R{background:var(--email-light);} .bsm-R .bsm-letter,.bsm-R .bsm-word{color:var(--email);}
-.bsm-T{background:var(--ux-light);} .bsm-T .bsm-letter,.bsm-T .bsm-word{color:var(--ux);}
+.bsm-B{background:rgba(27,79,114,0.06);}.bsm-B .bsm-letter,.bsm-B .bsm-word{color:var(--navy);}
+.bsm-S{background:var(--seo-light);}.bsm-S .bsm-letter,.bsm-S .bsm-word{color:var(--seo);}
+.bsm-M{background:var(--loop-light);}.bsm-M .bsm-letter,.bsm-M .bsm-word{color:var(--loop);}
+.bsm-A{background:var(--paid-light);}.bsm-A .bsm-letter,.bsm-A .bsm-word{color:var(--paid);}
+.bsm-R{background:var(--email-light);}.bsm-R .bsm-letter,.bsm-R .bsm-word{color:var(--email);}
+.bsm-T{background:var(--ux-light);}.bsm-T .bsm-letter,.bsm-T .bsm-word{color:var(--ux);}
 
-/* ICP COMPONENTS */
+/* ─── ICP DIMENSIONS ─── */
 .icp-dim{border-radius:12px;overflow:hidden;border:1px solid var(--border);display:flex;flex-direction:column;transition:box-shadow 0.15s,transform 0.15s;}
 .icp-dim:hover{box-shadow:0 5px 20px rgba(0,0,0,0.07);transform:translateY(-2px);}
 .icp-dim-header{padding:20px 22px 18px;}
-.idh-company{background:var(--navy);} .idh-role{background:var(--loop);}
-.idh-language{background:var(--seo);} .idh-volume{background:var(--paid);}
-.idh-industry{background:var(--email);} .idh-geo{background:var(--ux);}
+.idh-company{background:var(--navy);}.idh-role{background:var(--loop);}
+.idh-language{background:var(--seo);}.idh-volume{background:var(--paid);}
+.idh-industry{background:var(--email);}.idh-geo{background:var(--ux);}
 .icp-dim-icon{font-size:1.5rem;margin-bottom:8px;line-height:1;}
 .icp-dim-title{color:#fff;font-weight:800;font-size:0.95rem;margin-bottom:4px;}
-.icp-dim-sub{color:rgba(255,255,255,0.58);font-size:0.74rem;line-height:1.45;}
+.icp-dim-sub{color:rgba(255,255,255,0.72);font-size:0.74rem;line-height:1.45;}
 .icp-dim-body{background:#fff;padding:18px 20px;flex:1;}
 .icp-cap-label{font-size:0.67rem;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px;}
-.icp-cap-label.company{color:var(--navy);} .icp-cap-label.role{color:var(--loop-dark);}
-.icp-cap-label.language{color:var(--seo-dark);} .icp-cap-label.volume{color:var(--paid);}
-.icp-cap-label.industry{color:var(--email);} .icp-cap-label.geo{color:var(--ux);}
+.icp-cap-label.company{color:var(--navy);}
+.icp-cap-label.role{color:var(--loop-dark);}
+.icp-cap-label.language{color:var(--seo-dark);}
+.icp-cap-label.volume{color:var(--paid);}
+.icp-cap-label.industry{color:var(--email);}
+.icp-cap-label.geo{color:var(--ux);}
 .icp-dim-list{list-style:none;padding:0;margin-bottom:12px;}
 .icp-dim-list li{font-size:0.81rem;color:var(--text);padding:6px 0;border-bottom:1px solid var(--border);display:flex;gap:8px;line-height:1.55;}
 .icp-dim-list li:last-child{border-bottom:none;}
 .icp-dim-list li::before{content:'→';color:var(--text-light);flex-shrink:0;font-size:0.79rem;margin-top:1px;}
 .icp-dim-q{font-size:0.77rem;color:var(--slate);font-style:italic;line-height:1.6;padding-top:10px;border-top:1px solid var(--border);}
 
-/* ICP ACTION TABLE */
+/* ─── ICP ACTION TABLE ─── */
 .icp-act-wrap{overflow-x:auto;margin-bottom:32px;}
 .icp-act-table{width:100%;border-collapse:collapse;border-radius:12px;overflow:hidden;border:1px solid var(--border);background:#fff;min-width:760px;}
 .icp-act-table th{padding:12px 16px;text-align:left;font-size:0.73rem;font-weight:700;letter-spacing:0.5px;text-transform:uppercase;color:#fff;}
-.iat-dim{background:var(--slate);width:140px;} .iat-paid{background:var(--paid);}
-.iat-seo{background:var(--seo);} .iat-email{background:var(--email);} .iat-ux{background:var(--ux);}
+.iat-dim{background:var(--slate);width:140px;}
+.iat-paid{background:var(--paid);}
+.iat-seo{background:var(--seo);}
+.iat-email{background:var(--email);}
+.iat-ux{background:var(--ux);}
 .icp-act-table td{padding:12px 16px;font-size:0.8rem;border-bottom:1px solid var(--border);color:var(--text);vertical-align:top;line-height:1.6;}
 .icp-act-table tr:last-child td{border-bottom:none;}
 .icp-act-table tr:nth-child(even) td{background:#F8FAFB;}
 .icp-act-table td:not(:last-child){border-right:1px solid var(--border);}
 .iat-rowlabel{font-weight:700;font-size:0.81rem;display:flex;align-items:center;gap:6px;}
-.iat-rowlabel.company{color:var(--navy);} .iat-rowlabel.role{color:var(--loop-dark);}
-.iat-rowlabel.language{color:var(--seo-dark);} .iat-rowlabel.volume{color:var(--paid);}
-.iat-rowlabel.industry{color:var(--email);} .iat-rowlabel.geo{color:var(--ux);}
+.iat-rowlabel.company{color:var(--navy);}
+.iat-rowlabel.role{color:var(--loop-dark);}
+.iat-rowlabel.language{color:var(--seo-dark);}
+.iat-rowlabel.volume{color:var(--paid);}
+.iat-rowlabel.industry{color:var(--email);}
+.iat-rowlabel.geo{color:var(--ux);}
 
-/* PATTERN CARDS */
-.pattern-card{background:#fff;border:1px solid var(--border);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;}
-.pc-signal{padding:14px 18px 12px;display:flex;align-items:flex-start;gap:11px;background:var(--loop-light);border-bottom:1px solid rgba(10,123,142,0.15);}
-.pc-tag{background:var(--loop);color:#fff;border-radius:6px;padding:3px 9px;font-size:0.65rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;white-space:nowrap;flex-shrink:0;margin-top:2px;}
-.pc-signal-text{font-size:0.85rem;color:var(--navy);font-weight:600;line-height:1.55;}
-.pc-action{padding:12px 18px 10px;font-size:0.82rem;color:var(--text);line-height:1.68;flex:1;}
-.pc-channels{display:flex;gap:5px;flex-wrap:wrap;padding:0 18px 14px;}
-.pc-ch-tag{font-size:0.66rem;font-weight:700;padding:2px 8px;border-radius:4px;}
-.pc-ch-tag.seo{background:var(--seo-light);color:var(--seo-dark);}
-.pc-ch-tag.paid{background:var(--paid-light);color:var(--paid);}
-.pc-ch-tag.email{background:var(--email-light);color:var(--email);}
-.pc-ch-tag.ux{background:var(--ux-light);color:var(--ux);}
-
-/* ─── AI SECTION SPECIFIC ─── */
-/* STATE OF SEARCH STAT STRIP */
-.sos-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-bottom:32px;border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.06);}
-.sos-stat{background:rgba(255,255,255,0.04);padding:20px 18px;text-align:center;border:1px solid rgba(255,255,255,0.06);transition:background 0.2s;}
-.sos-stat:hover{background:rgba(255,255,255,0.07);}
+/* ─── AI SECTION — STATE OF SEARCH STAT STRIP ─── */
+.sos-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-bottom:32px;border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.08);}
+.sos-stat{background:rgba(255,255,255,0.06);padding:20px 18px;text-align:center;border:1px solid rgba(255,255,255,0.08);transition:background 0.2s;}
+.sos-stat:hover{background:rgba(255,255,255,0.09);}
 .sos-num{font-size:2.4rem;font-weight:900;line-height:1;margin-bottom:6px;}
-.sos-label{font-size:0.76rem;color:rgba(255,255,255,0.65);line-height:1.45;margin-bottom:4px;}
-.sos-source{font-size:0.63rem;color:rgba(255,255,255,0.28);font-style:italic;}
+.sos-label{font-size:0.77rem;color:rgba(255,255,255,0.82);line-height:1.5;margin-bottom:4px;}
+.sos-source{font-size:0.65rem;color:rgba(255,255,255,0.45);font-style:italic;}
 .sos-stat.gold .sos-num{color:var(--gold);}
-.sos-stat.seo .sos-num{color:rgba(14,190,112,0.9);}
-.sos-stat.paid .sos-num{color:rgba(255,120,80,0.9);}
-.sos-stat.ai .sos-num{color:rgba(180,160,255,0.9);}
+.sos-stat.seo .sos-num{color:rgba(14,210,120,0.95);}
+.sos-stat.paid .sos-num{color:rgba(255,120,80,0.95);}
+.sos-stat.ai .sos-num{color:rgba(190,170,255,0.95);}
 
-/* TENSION BLOCK */
+/* ─── TENSION BLOCK ─── */
 .tension-block{display:grid;grid-template-columns:1fr auto 1fr;gap:0;border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,0.1);margin-bottom:28px;}
-.tb-left{background:rgba(231,76,60,0.12);padding:22px 24px;border-right:1px solid rgba(255,255,255,0.08);}
-.tb-right{background:rgba(14,190,112,0.1);padding:22px 24px;}
-.tb-mid{display:flex;align-items:center;justify-content:center;padding:0 16px;background:rgba(255,255,255,0.02);}
-.tb-vs{color:rgba(255,255,255,0.25);font-size:0.9rem;font-weight:900;}
+.tb-left{background:rgba(231,76,60,0.14);padding:22px 24px;border-right:1px solid rgba(255,255,255,0.08);}
+.tb-right{background:rgba(14,190,120,0.12);padding:22px 24px;}
+.tb-mid{display:flex;align-items:center;justify-content:center;padding:0 16px;background:rgba(255,255,255,0.03);}
+.tb-vs{color:rgba(255,255,255,0.35);font-size:0.9rem;font-weight:900;}
 .tb-pct{font-size:2.2rem;font-weight:900;line-height:1;margin-bottom:4px;}
-.tb-left .tb-pct{color:rgba(231,76,60,0.9);} .tb-right .tb-pct{color:rgba(14,190,112,0.9);}
+.tb-left .tb-pct{color:rgba(255,120,100,0.95);}
+.tb-right .tb-pct{color:rgba(14,210,120,0.95);}
 .tb-label{font-size:0.71rem;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;margin-bottom:8px;}
-.tb-left .tb-label{color:rgba(231,76,60,0.75);} .tb-right .tb-label{color:rgba(14,190,112,0.75);}
-.tb-desc{font-size:0.8rem;color:rgba(255,255,255,0.6);line-height:1.6;}
+.tb-left .tb-label{color:rgba(255,120,100,0.85);}
+.tb-right .tb-label{color:rgba(14,210,120,0.85);}
+.tb-desc{font-size:0.82rem;color:rgba(255,255,255,0.82);line-height:1.65;}
 
-/* SHIFT PANELS */
-.shift-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;border-radius:14px;overflow:hidden;border:2px solid rgba(255,255,255,0.06);}
-.shift-panel{padding:26px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);transition:background 0.2s;}
-.shift-panel:hover{background:rgba(255,255,255,0.07);}
-.sp-num{font-size:0.65rem;font-weight:800;text-transform:uppercase;letter-spacing:2px;margin-bottom:12px;opacity:0.5;}
+/* ─── SHIFT PANELS ─── */
+.shift-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;border-radius:14px;overflow:hidden;border:2px solid rgba(255,255,255,0.08);}
+.shift-panel{padding:26px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);transition:background 0.2s;}
+.shift-panel:hover{background:rgba(255,255,255,0.08);}
+.sp-num{font-size:0.65rem;font-weight:800;text-transform:uppercase;letter-spacing:2px;margin-bottom:12px;color:rgba(255,255,255,0.5);}
 .sp-icon{font-size:1.6rem;margin-bottom:10px;line-height:1;}
 .sp-title{color:#fff;font-size:1rem;font-weight:800;margin-bottom:8px;}
 .sp-data-pill{background:rgba(245,166,35,0.15);border:1px solid rgba(245,166,35,0.25);border-radius:6px;padding:7px 12px;margin-bottom:10px;display:inline-flex;gap:8px;align-items:baseline;flex-wrap:wrap;}
 .sp-data-num{color:var(--gold);font-size:1.1rem;font-weight:900;line-height:1;}
-.sp-data-text{color:rgba(255,255,255,0.65);font-size:0.77rem;line-height:1.4;}
-.sp-signal{background:rgba(245,166,35,0.08);border:1px solid rgba(245,166,35,0.15);border-radius:7px;padding:8px 12px;margin-bottom:10px;}
-.sp-signal-text{color:var(--gold);font-size:0.79rem;font-style:italic;line-height:1.55;}
-.sp-implication{color:rgba(255,255,255,0.62);font-size:0.81rem;line-height:1.65;}
+.sp-data-text{color:rgba(255,255,255,0.82);font-size:0.77rem;line-height:1.4;}
+.sp-signal{background:rgba(245,166,35,0.1);border:1px solid rgba(245,166,35,0.2);border-radius:7px;padding:8px 12px;margin-bottom:10px;}
+.sp-signal-text{color:var(--gold);font-size:0.8rem;font-style:italic;line-height:1.55;}
+.sp-implication{color:rgba(255,255,255,0.85);font-size:0.82rem;line-height:1.68;}
 
-/* AI IMPACT CARDS */
+/* ─── AI TRAFFIC SPLIT ─── */
+.ai-traffic-split{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,0.1);}
+.ats-left{background:rgba(14,124,92,0.18);padding:24px;border-right:1px solid rgba(255,255,255,0.08);}
+.ats-right{background:rgba(59,47,107,0.22);padding:24px;}
+.ats-head{font-size:0.78rem;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:12px;}
+.ats-left .ats-head{color:rgba(14,210,120,0.9);}
+.ats-right .ats-head{color:rgba(190,170,255,0.9);}
+.ats-title{color:#fff;font-size:0.97rem;font-weight:800;margin-bottom:6px;}
+.ats-sub{color:rgba(255,255,255,0.65);font-size:0.77rem;margin-bottom:14px;font-style:italic;}
+.ats-items{list-style:none;padding:0;}
+.ats-items li{font-size:0.82rem;color:rgba(255,255,255,0.85);padding:7px 0;border-bottom:1px solid rgba(255,255,255,0.08);display:flex;gap:9px;line-height:1.5;}
+.ats-items li:last-child{border-bottom:none;}
+.ats-left .ats-items li::before{content:'→';color:rgba(14,210,120,0.75);flex-shrink:0;}
+.ats-right .ats-items li::before{content:'→';color:rgba(190,170,255,0.75);flex-shrink:0;}
+.ats-badge{display:inline-block;padding:3px 9px;border-radius:5px;font-size:0.67rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;}
+.ats-badge.organic{background:rgba(14,124,92,0.35);color:rgba(14,210,120,0.95);}
+.ats-badge.referral{background:rgba(59,47,107,0.45);color:rgba(190,170,255,0.95);}
+
+/* ─── AI IMPACT CARDS ─── */
 .ai-impact{border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,0.1);}
 .ai-impact-head{padding:14px 20px;display:flex;align-items:center;gap:10px;}
-.ai-impact-head.seo{background:rgba(14,124,92,0.2);border-bottom:1px solid rgba(14,124,92,0.25);}
-.ai-impact-head.paid{background:rgba(212,85,26,0.2);border-bottom:1px solid rgba(212,85,26,0.25);}
-.ai-impact-head.email{background:rgba(91,63,168,0.2);border-bottom:1px solid rgba(91,63,168,0.25);}
-.ai-impact-head.ux{background:rgba(44,95,122,0.2);border-bottom:1px solid rgba(44,95,122,0.25);}
-.aih-icon{font-size:1.1rem;} .aih-name{color:#fff;font-weight:800;font-size:0.88rem;}
-.ai-impact-body{background:rgba(255,255,255,0.03);padding:0;}
-.ai-row{display:flex;gap:0;border-bottom:1px solid rgba(255,255,255,0.06);}
+.ai-impact-head.seo{background:rgba(14,124,92,0.22);border-bottom:1px solid rgba(14,124,92,0.3);}
+.ai-impact-head.paid{background:rgba(212,85,26,0.22);border-bottom:1px solid rgba(212,85,26,0.3);}
+.ai-impact-head.email{background:rgba(91,63,168,0.22);border-bottom:1px solid rgba(91,63,168,0.3);}
+.ai-impact-head.ux{background:rgba(44,95,122,0.22);border-bottom:1px solid rgba(44,95,122,0.3);}
+.aih-icon{font-size:1.1rem;}
+.aih-name{color:#fff;font-weight:800;font-size:0.88rem;}
+.ai-impact-body{background:rgba(255,255,255,0.04);padding:0;}
+.ai-row{display:flex;gap:0;border-bottom:1px solid rgba(255,255,255,0.07);}
 .ai-row:last-child{border-bottom:none;}
-.ai-row-label{width:110px;flex-shrink:0;padding:13px 14px;font-size:0.67rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;display:flex;align-items:flex-start;border-right:1px solid rgba(255,255,255,0.06);padding-top:14px;}
-.ai-row-label.disrupted{color:rgba(231,76,60,0.8);}
-.ai-row-label.response{color:rgba(39,174,96,0.8);}
-.ai-row-label.needs{color:rgba(245,166,35,0.8);}
-.ai-row-content{padding:12px 16px;font-size:0.81rem;color:rgba(255,255,255,0.72);line-height:1.65;flex:1;}
+.ai-row-label{width:110px;flex-shrink:0;padding:13px 14px;font-size:0.67rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;display:flex;align-items:flex-start;border-right:1px solid rgba(255,255,255,0.07);padding-top:14px;}
+.ai-row-label.disrupted{color:rgba(255,120,100,0.9);}
+.ai-row-label.response{color:rgba(14,210,120,0.9);}
+.ai-row-label.needs{color:rgba(245,166,35,0.9);}
+.ai-row-content{padding:12px 16px;font-size:0.82rem;color:rgba(255,255,255,0.88);line-height:1.68;flex:1;}
 
-/* AI TRAFFIC MEASUREMENT */
-.ai-traffic-split{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,0.1);}
-.ats-left{background:rgba(14,124,92,0.15);padding:24px;border-right:1px solid rgba(255,255,255,0.08);}
-.ats-right{background:rgba(59,47,107,0.2);padding:24px;}
-.ats-head{font-size:0.78rem;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:12px;}
-.ats-left .ats-head{color:rgba(14,190,112,0.8);} .ats-right .ats-head{color:rgba(180,160,255,0.8);}
-.ats-title{color:#fff;font-size:0.97rem;font-weight:800;margin-bottom:6px;}
-.ats-sub{color:rgba(255,255,255,0.5);font-size:0.77rem;margin-bottom:14px;font-style:italic;}
-.ats-items{list-style:none;padding:0;}
-.ats-items li{font-size:0.81rem;color:rgba(255,255,255,0.72);padding:7px 0;border-bottom:1px solid rgba(255,255,255,0.07);display:flex;gap:9px;line-height:1.5;}
-.ats-items li:last-child{border-bottom:none;}
-.ats-left .ats-items li::before{content:'→';color:rgba(14,190,112,0.7);flex-shrink:0;}
-.ats-right .ats-items li::before{content:'→';color:rgba(180,160,255,0.7);flex-shrink:0;}
-.ats-badge{display:inline-block;padding:3px 9px;border-radius:5px;font-size:0.67rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;}
-.ats-badge.organic{background:rgba(14,124,92,0.3);color:rgba(14,190,112,0.9);}
-.ats-badge.referral{background:rgba(59,47,107,0.4);color:rgba(180,160,255,0.9);}
-
-/* PAGE 2 CTA */
-.p2-cta{background:linear-gradient(135deg,rgba(212,85,26,0.15) 0%,rgba(14,124,92,0.12) 100%);border:1px solid rgba(255,255,255,0.12);border-radius:14px;padding:28px 32px;display:flex;align-items:center;gap:24px;margin-top:32px;}
-.p2-cta-text{flex:1;}
-.p2-cta-tag{font-size:0.67rem;font-weight:800;text-transform:uppercase;letter-spacing:2px;color:var(--gold);margin-bottom:6px;}
-.p2-cta-title{color:#fff;font-size:1.1rem;font-weight:800;margin-bottom:6px;}
-.p2-cta-desc{color:rgba(255,255,255,0.6);font-size:0.82rem;line-height:1.6;}
-.p2-cta-btn{background:linear-gradient(135deg,var(--paid) 0%,var(--seo) 100%);color:#fff;text-decoration:none;padding:14px 24px;border-radius:8px;font-size:0.84rem;font-weight:800;white-space:nowrap;transition:all 0.15s;display:flex;align-items:center;gap:6px;}
-.p2-cta-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,0.3);}
-
-/* INTERDEPENDENCE TABLE */
+/* ─── INTERDEPENDENCE TABLE ─── */
 .interdep-wrap{overflow-x:auto;}
 .interdep-table{width:100%;border-collapse:collapse;border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.1);min-width:700px;}
-.interdep-table th{padding:11px 16px;font-size:0.71rem;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:rgba(255,255,255,0.75);text-align:left;background:rgba(255,255,255,0.06);}
-.interdep-table td{padding:13px 16px;font-size:0.8rem;color:rgba(255,255,255,0.65);border-top:1px solid rgba(255,255,255,0.06);vertical-align:top;line-height:1.6;}
-.interdep-table td:not(:last-child){border-right:1px solid rgba(255,255,255,0.06);}
-.it-trigger{font-weight:700;font-size:0.82rem;}
-.it-trigger.seo{color:rgba(14,190,112,0.9);} .it-trigger.paid{color:rgba(212,85,26,0.9);} .it-trigger.both{color:rgba(245,166,35,0.9);}
+.interdep-table th{padding:11px 16px;font-size:0.71rem;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:rgba(255,255,255,0.88);text-align:left;background:rgba(255,255,255,0.08);}
+.interdep-table td{padding:13px 16px;font-size:0.81rem;color:rgba(255,255,255,0.85);border-top:1px solid rgba(255,255,255,0.07);vertical-align:top;line-height:1.62;}
+.interdep-table td:not(:last-child){border-right:1px solid rgba(255,255,255,0.07);}
+.it-trigger{font-weight:700;font-size:0.83rem;}
+.it-trigger.seo{color:rgba(14,210,120,0.95);}
+.it-trigger.paid{color:rgba(255,120,80,0.95);}
+.it-trigger.both{color:rgba(245,166,35,0.95);}
 
-/* SYNC MODEL */
+/* ─── SYNC MODEL ─── */
 .sync-wrap{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
-.sync-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.09);border-radius:12px;overflow:hidden;}
-.sync-head{padding:14px 18px;display:flex;align-items:center;gap:10px;border-bottom:1px solid rgba(255,255,255,0.07);}
-.sync-head.seo{background:rgba(14,124,92,0.18);} .sync-head.paid{background:rgba(212,85,26,0.18);}
-.sync-head.email{background:rgba(91,63,168,0.18);} .sync-head.ux{background:rgba(44,95,122,0.18);}
-.sync-head.il{background:rgba(74,99,117,0.3);}
+.sync-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;overflow:hidden;}
+.sync-head{padding:14px 18px;display:flex;align-items:center;gap:10px;border-bottom:1px solid rgba(255,255,255,0.08);}
+.sync-head.seo{background:rgba(14,124,92,0.2);}
+.sync-head.paid{background:rgba(212,85,26,0.2);}
+.sync-head.email{background:rgba(91,63,168,0.2);}
+.sync-head.ux{background:rgba(44,95,122,0.2);}
+.sync-head.il{background:rgba(74,99,117,0.35);}
 .sync-role{color:#fff;font-weight:800;font-size:0.84rem;}
-.sync-role-sub{color:rgba(255,255,255,0.45);font-size:0.71rem;margin-top:2px;}
+.sync-role-sub{color:rgba(255,255,255,0.62);font-size:0.71rem;margin-top:2px;}
 .sync-body{padding:14px 16px;}
-.sync-item{margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,0.06);}
+.sync-item{margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,0.07);}
 .sync-item:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none;}
 .sync-to{font-size:0.67rem;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:5px;}
-.sync-to.seo{color:rgba(14,190,112,0.75);} .sync-to.paid{color:rgba(212,85,26,0.75);}
-.sync-to.email{color:rgba(91,63,168,0.75);} .sync-to.ux{color:rgba(44,95,122,0.8);}
-.sync-to.all{color:rgba(245,166,35,0.75);}
-.sync-detail{font-size:0.79rem;color:rgba(255,255,255,0.62);line-height:1.6;}
+.sync-to.seo{color:rgba(14,210,120,0.85);}
+.sync-to.paid{color:rgba(255,120,80,0.85);}
+.sync-to.email{color:rgba(150,130,220,0.85);}
+.sync-to.ux{color:rgba(80,140,170,0.85);}
+.sync-to.all{color:rgba(245,166,35,0.85);}
+.sync-detail{font-size:0.80rem;color:rgba(255,255,255,0.85);line-height:1.65;}
 
-/* MOAT BLOCK */
-.moat-block{border-radius:14px;overflow:hidden;border:1px solid rgba(10,123,142,0.3);}
+/* ─── MOAT BLOCK ─── */
+.moat-block{border-radius:14px;overflow:hidden;border:1px solid rgba(10,123,142,0.35);}
 .moat-head{background:var(--loop);padding:22px 26px;}
 .moat-head h3{color:#fff;font-size:1rem;font-weight:800;margin-bottom:6px;}
-.moat-head p{color:rgba(255,255,255,0.65);font-size:0.84rem;line-height:1.6;}
+.moat-head p{color:rgba(255,255,255,0.85);font-size:0.85rem;line-height:1.62;}
 .moat-body{background:var(--loop-light);padding:22px 26px;}
-.moat-row{display:flex;gap:14px;align-items:flex-start;padding:11px 0;border-bottom:1px solid rgba(10,123,142,0.12);}
+.moat-row{display:flex;gap:14px;align-items:flex-start;padding:11px 0;border-bottom:1px solid rgba(10,123,142,0.14);}
 .moat-row:last-child{border-bottom:none;}
 .moat-arrow{color:var(--loop);font-weight:800;font-size:1rem;flex-shrink:0;margin-top:2px;}
 .moat-label{font-size:0.7rem;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;color:var(--loop-dark);margin-bottom:3px;}
-.moat-text{font-size:0.82rem;color:var(--text);line-height:1.6;}
+.moat-text{font-size:0.83rem;color:var(--text);line-height:1.62;}
 
-/* FLOW CHAIN */
+/* ─── PAGE 2 CTA ─── */
+.p2-cta{background:linear-gradient(135deg,rgba(212,85,26,0.18) 0%,rgba(14,124,92,0.14) 100%);border:1px solid rgba(255,255,255,0.14);border-radius:14px;padding:28px 32px;display:flex;align-items:center;gap:24px;margin-top:32px;}
+.p2-cta-text{flex:1;}
+.p2-cta-tag{font-size:0.67rem;font-weight:800;text-transform:uppercase;letter-spacing:2px;color:var(--gold);margin-bottom:6px;}
+.p2-cta-title{color:#fff;font-size:1.1rem;font-weight:800;margin-bottom:6px;}
+.p2-cta-desc{color:rgba(255,255,255,0.82);font-size:0.83rem;line-height:1.62;}
+.p2-cta-btn{background:linear-gradient(135deg,var(--paid) 0%,var(--seo) 100%);color:#fff;text-decoration:none;padding:14px 24px;border-radius:8px;font-size:0.84rem;font-weight:800;white-space:nowrap;transition:all 0.15s;display:flex;align-items:center;gap:6px;}
+.p2-cta-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,0.35);}
+
+/* ─── FLOW CHAIN ─── */
 .flow-chain{display:flex;flex-direction:column;}
 .flow-step{display:grid;grid-template-columns:158px 1fr;border:1px solid var(--border);border-bottom:none;overflow:hidden;}
 .flow-step:first-child{border-radius:12px 12px 0 0;}
@@ -357,129 +386,140 @@ ul.plain.loop-b li::before{color:var(--loop);} ul.plain.navy-b li::before{color:
 .fs-channel.loop{background:var(--loop-light);border-right:3px solid var(--loop);}
 .fs-ch-icon{font-size:1rem;margin-bottom:4px;}
 .fs-ch-name{font-weight:700;font-size:0.83rem;}
-.fs-ch-name.seo{color:var(--seo);} .fs-ch-name.paid{color:var(--paid);}
-.fs-ch-name.email{color:var(--email);} .fs-ch-name.ux{color:var(--ux);} .fs-ch-name.loop{color:var(--loop);}
+.fs-ch-name.seo{color:var(--seo);}
+.fs-ch-name.paid{color:var(--paid);}
+.fs-ch-name.email{color:var(--email);}
+.fs-ch-name.ux{color:var(--ux);}
+.fs-ch-name.loop{color:var(--loop);}
 .fs-content{padding:14px 20px;background:#fff;}
 .fs-action{font-size:0.85rem;color:var(--text);line-height:1.6;margin-bottom:6px;font-weight:600;}
 .fs-feeds{font-size:0.78rem;color:var(--text-light);font-style:italic;line-height:1.5;}
 .flow-connector{display:flex;align-items:center;height:18px;background:var(--light-gray);border-left:1px solid var(--border);border-right:1px solid var(--border);padding-left:78px;}
 .flow-connector::after{content:'↓';color:var(--text-light);font-size:0.82rem;}
 
-/* METRIC TABLE */
+/* ─── METRIC TABLE ─── */
 .metric-table{background:#fff;border:1px solid var(--border);border-radius:12px;overflow:hidden;}
 .metric-hrow{display:grid;grid-template-columns:1.1fr 1.2fr 1.5fr;}
 .mhc{padding:12px 18px;font-size:0.74rem;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:#fff;}
-.mhc.c1{background:var(--slate);} .mhc.c2{background:var(--navy);} .mhc.c3{background:#9A6800;}
+.mhc.c1{background:var(--slate);}
+.mhc.c2{background:var(--navy);}
+.mhc.c3{background:#9A6800;}
 .metric-row{display:grid;grid-template-columns:1.1fr 1.2fr 1.5fr;border-top:1px solid var(--border);}
 .metric-row:nth-child(odd) .mrc{background:#F8FAFB;}
 .mrc{padding:13px 18px;font-size:0.84rem;line-height:1.55;display:flex;align-items:flex-start;gap:9px;}
 .mrc:not(:last-child){border-right:1px solid var(--border);}
 .m-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;margin-top:5px;}
-.m-dot.seo{background:var(--seo);} .m-dot.paid{background:var(--paid);}
-.m-dot.email{background:var(--email);} .m-dot.loop{background:var(--loop);} .m-dot.navy{background:var(--navy);}
+.m-dot.seo{background:var(--seo);}
+.m-dot.paid{background:var(--paid);}
+.m-dot.email{background:var(--email);}
+.m-dot.loop{background:var(--loop);}
+.m-dot.navy{background:var(--navy);}
 
-/* REPORTING */
+/* ─── REPORTING CARDS ─── */
 .rq-card{background:#fff;border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:12px;}
 .rq-num{width:36px;height:36px;background:var(--navy);color:#fff;border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:0.9rem;flex-shrink:0;}
 .rq-header{padding:14px 18px;display:flex;align-items:center;gap:12px;background:var(--pb-light);border-bottom:1px solid var(--border);}
 .rq-q{font-weight:700;color:var(--navy);font-size:0.9rem;}
 .rq-body{padding:14px 18px;font-size:0.84rem;color:var(--text);line-height:1.65;}
 
-/* NARRATIVE */
+/* ─── NARRATIVE ─── */
 .narrative{background:var(--navy-dark);border-radius:14px;padding:28px;}
 .narrative-label{font-size:0.69rem;font-weight:800;text-transform:uppercase;letter-spacing:2px;color:var(--gold);margin-bottom:18px;}
-.narrative-block{margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,0.08);}
+.narrative-block{margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,0.1);}
 .narrative-block:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none;}
 .nb-channel{display:flex;align-items:center;gap:8px;margin-bottom:8px;}
 .nb-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;}
-.nb-name{font-size:0.73rem;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,0.5);}
-.nb-text{font-size:0.85rem;color:rgba(255,255,255,0.78);line-height:1.72;}
+.nb-name{font-size:0.73rem;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,0.6);}
+.nb-text{font-size:0.85rem;color:rgba(255,255,255,0.88);line-height:1.72;}
 
-/* ROLE CARDS */
+/* ─── ROLE CARDS ─── */
 .role-card{border-radius:12px;overflow:hidden;border:1px solid var(--border);display:flex;flex-direction:column;}
 .role-header{padding:16px 20px;}
-.role-header.seo{background:var(--seo);} .role-header.paid{background:var(--paid);}
-.role-header.email{background:var(--email);} .role-header.ux{background:var(--ux);}
-.role-header.il{background:var(--slate);} .role-header.loop{background:var(--loop);}
+.role-header.seo{background:var(--seo);}
+.role-header.paid{background:var(--paid);}
+.role-header.email{background:var(--email);}
+.role-header.ux{background:var(--ux);}
+.role-header.il{background:var(--slate);}
+.role-header.loop{background:var(--loop);}
 .role-header h3{color:#fff;font-weight:700;font-size:0.88rem;margin-bottom:3px;}
-.role-header p{color:rgba(255,255,255,0.62);font-size:0.74rem;}
+.role-header p{color:rgba(255,255,255,0.72);font-size:0.74rem;}
 .role-body{background:#fff;padding:16px 20px;flex:1;}
 .role-body ul{list-style:none;padding:0;}
 .role-body li{font-size:0.81rem;color:var(--text);padding:5px 0;border-bottom:1px solid var(--border);display:flex;gap:8px;line-height:1.5;}
 .role-body li:last-child{border-bottom:none;}
 .role-body li::before{content:'▸';color:var(--text-light);flex-shrink:0;font-size:0.78rem;}
 
-/* REF RIBBON */
+/* ─── REF RIBBON ─── */
 .ref-ribbon{background:rgba(27,79,114,0.08);border:1px solid rgba(27,79,114,0.15);border-radius:10px;padding:14px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
 .rr-label{color:var(--slate);font-size:0.68rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;white-space:nowrap;flex-shrink:0;}
 .rr-links{display:flex;gap:8px;flex-wrap:wrap;}
 .rr-link{background:#fff;border:1px solid var(--border);color:var(--navy);font-size:0.72rem;font-weight:700;padding:4px 11px;border-radius:6px;text-decoration:none;transition:all 0.15s;white-space:nowrap;}
 .rr-link:hover{background:var(--navy);color:#fff;border-color:var(--navy);}
 
-/* RECAP */
+/* ─── RECAP ─── */
 .recap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
-.recap-item{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:22px;}
-.recap-num{font-size:2rem;font-weight:900;color:var(--gold);opacity:0.3;line-height:1;margin-bottom:4px;}
+.recap-item{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:22px;}
+.recap-num{font-size:2rem;font-weight:900;color:var(--gold);opacity:0.35;line-height:1;margin-bottom:4px;}
 .recap-title{color:var(--gold);font-weight:700;font-size:0.88rem;margin-bottom:8px;}
-.recap-desc{color:rgba(255,255,255,0.62);font-size:0.81rem;line-height:1.6;}
+.recap-desc{color:rgba(255,255,255,0.82);font-size:0.82rem;line-height:1.62;}
 
-/* TBL */
+/* ─── TBL ─── */
 .tbl{width:100%;border-collapse:collapse;border-radius:12px;overflow:hidden;background:#fff;}
 .tbl th{background:var(--slate);color:#fff;padding:13px 18px;text-align:left;font-size:0.78rem;font-weight:700;letter-spacing:0.5px;text-transform:uppercase;}
 .tbl td{padding:13px 18px;font-size:0.86rem;border-bottom:1px solid var(--border);color:var(--text);vertical-align:top;line-height:1.55;}
-.tbl tr:last-child td{border-bottom:none;} .tbl tr:nth-child(even) td{background:#F8FAFB;}
+.tbl tr:last-child td{border-bottom:none;}
+.tbl tr:nth-child(even) td{background:#F8FAFB;}
 
-/* FOOTER */
+/* ─── FOOTER ─── */
 .footer{background:#0D1C2B;padding:42px 48px;text-align:center;}
 .footer-brand{color:#fff;font-size:1.4rem;font-weight:900;margin-bottom:5px;}
 .footer-brand em{color:var(--gold);font-style:normal;}
 .footer-school{color:var(--gold);font-size:0.7rem;font-weight:800;letter-spacing:3px;text-transform:uppercase;margin-bottom:14px;}
 .footer-meta{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;}
-.footer-meta span{color:rgba(255,255,255,0.27);font-size:0.73rem;}
+.footer-meta span{color:rgba(255,255,255,0.32);font-size:0.73rem;}
 
-/* UTILITIES */
-.mt16{margin-top:16px;} .mt24{margin-top:24px;} .mt32{margin-top:32px;}
-.mb16{margin-bottom:16px;} .mb24{margin-bottom:24px;} .mb32{margin-bottom:32px;}
-[id]::before{content:'';display:block;height:80px;margin-top:-80px;pointer-events:none;}
+/* ─── UTILITIES ─── */
+.mt16{margin-top:16px;}.mt24{margin-top:24px;}.mt32{margin-top:32px;}
+.mb16{margin-bottom:16px;}.mb24{margin-bottom:24px;}.mb32{margin-bottom:32px;}
+[id]::before{content:'';display:block;height:160px;margin-top:-160px;pointer-events:none;}
 
 @media(max-width:860px){
   .g2,.g3,.g4,.opp-compare,.shift-grid,.sync-wrap,.ai-traffic-split,.sos-strip{grid-template-columns:1fr;}
   .bsmart-strip{grid-template-columns:repeat(3,1fr);}
-  .container{padding:0 24px;} .top-nav,.section-nav{padding:0 24px;}
-  .part-header{padding:52px 24px 48px;} .ph-title{font-size:2rem;}
-  .recap-grid{grid-template-columns:1fr;} .flow-step{grid-template-columns:1fr;}
+  .container{padding:0 24px;}
+  .top-nav,.section-nav,.playbook-nav{padding:0 24px;}
+  .part-header{padding:52px 24px 48px;}
+  .ph-title{font-size:2rem;}
+  .recap-grid{grid-template-columns:1fr;}
+  .flow-step{grid-template-columns:1fr;}
   .metric-hrow,.metric-row{grid-template-columns:1fr;}
   .channel-strip,.p2-cta{flex-direction:column;}
-  .ai-row{flex-direction:column;} .ai-row-label{width:auto;border-right:none;border-bottom:1px solid rgba(255,255,255,0.06);}
+  .ai-row{flex-direction:column;}
+  .ai-row-label{width:auto;border-right:none;border-bottom:1px solid rgba(255,255,255,0.07);}
   .tension-block{grid-template-columns:1fr;}
 }
 </style>
 </head>
 <body>
 
+<!-- ═══ TOP NAV -->
 <nav class="top-nav">
   <div class="brand">
     <span class="brand-main">Outer<em>Box</em></span>
     <span class="brand-school">B·SCHOOL</span>
   </div>
-  <div class="nav-right">
-    <span class="nav-badge">Integrated Strategy Playbook · All Verticals</span>
-    <a href="seo-paid-partnership.html" class="nav-link-pill">SEO + Paid Partnership →</a>
-  </div>
+  <span class="nav-badge">Integrated Strategy Playbook · All Verticals</span>
 </nav>
 
-<div class="section-nav">
-  <span class="snav-label">Playbook</span>
-  <a href="#principle" class="snav-link"><span class="snav-num sn-s">1</span>Core Principle</a>
-  <a href="#channels"  class="snav-link"><span class="snav-num sn-seo">2</span>Four Channels</a>
-  <a href="#bsmart"    class="snav-link"><span class="snav-num sn-loop">3</span>B-SMART®</a>
-  <a href="#loop"      class="snav-link"><span class="snav-num sn-gold">4</span>Loop → ICP</a>
-  <a href="#ai"        class="snav-link"><span class="snav-num sn-ai">5</span>AI &amp; The Landscape</a>
-  <a href="#compound"  class="snav-link"><span class="snav-num sn-navy">6</span>Compound Effect</a>
-  <a href="#metrics"   class="snav-link"><span class="snav-num sn-paid">7</span>Metrics → Opps</a>
-  <a href="#reporting" class="snav-link"><span class="snav-num sn-email">8</span>Reporting + Roles</a>
+<!-- ═══ PLAYBOOK NAV -->
+<div class="playbook-nav">
+  <span class="pn-label">📚 B·School Series</span>
+  <a class="pn-link active" href="integrated-strategy-playbook.html">All Channels · Integrated Strategy Playbook</a>
+  <span class="pn-sep">→</span>
+  <a class="pn-link other" href="seo-paid-partnership.html">🔍💰 SEO + Paid Search Partnership Playbook</a>
 </div>
 
+<!-- ═══ HEADER -->
 <div class="part-header">
   <div class="ph-blob"></div><div class="ph-sq1"></div><div class="ph-sq2"></div>
   <div class="ph-inner">
@@ -507,15 +547,29 @@ ul.plain.loop-b li::before{color:var(--loop);} ul.plain.navy-b li::before{color:
 </div>
 <div class="accent-bar"></div>
 
+<!-- ═══ SECTION NAV — positioned below header -->
+<div class="section-nav">
+  <span class="snav-label">Sections</span>
+  <a href="#principle" class="snav-link"><span class="snav-num sn-s">1</span>Core Principle</a>
+  <a href="#channels"  class="snav-link"><span class="snav-num sn-seo">2</span>Four Channels</a>
+  <a href="#bsmart"    class="snav-link"><span class="snav-num sn-loop">3</span>B-SMART®</a>
+  <a href="#loop"      class="snav-link"><span class="snav-num sn-gold">4</span>Loop → ICP</a>
+  <a href="#ai"        class="snav-link"><span class="snav-num sn-ai">5</span>AI &amp; The Landscape</a>
+  <a href="#compound"  class="snav-link"><span class="snav-num sn-navy">6</span>Compound Effect</a>
+  <a href="#metrics"   class="snav-link"><span class="snav-num sn-paid">7</span>Metrics → Opps</a>
+  <a href="#reporting" class="snav-link"><span class="snav-num sn-email">8</span>Reporting + Roles</a>
+</div>
 
-<!-- ══ SECTION 1 -->
+
+<!-- ══ SECTION 1: CORE PRINCIPLE -->
 <section class="sec-white" id="principle">
   <div class="container">
     <div class="sh">
-      <div class="sh-tag">Section 1 — The Foundation</div>
+      <div class="sh-tag navy">Section 1 — The Foundation</div>
       <h2 class="sh-title">We Generate Opportunities, Not Just Metrics</h2>
       <p class="sh-desc">Every team member — regardless of channel specialty or role — is responsible for connecting their work to pipeline-relevant outcomes for the client. The shift from metric reporter to opportunity generator changes every decision you make.</p>
     </div>
+
     <div class="opp-compare mb32">
       <div class="oc-left">
         <div class="oc-title">❌ The Metric Reporter</div>
@@ -535,17 +589,19 @@ ul.plain.loop-b li::before{color:var(--loop);} ul.plain.navy-b li::before{color:
         <ul class="oc-items">
           <li>"Traffic grew 22% — 8 sessions led to spec-complete RFQ submissions from aerospace procurement leads."</li>
           <li>"47 paid leads — 12 were quote-ready per Loop scores; 3 moved to proposal stage."</li>
-          <li>"Lower bounce means buyers are landing on the grade-specific page they searched for."</li>
+          <li>"Lower bounce means buyers land on the grade-specific page they searched for."</li>
           <li>"12 ranking improvements drive discovery from engineers searching DFARS-compliant titanium."</li>
           <li>"Email re-engaged 4 dormant leads — 2 submitted new RFQs this month."</li>
           <li>Reports outcomes — and recommends next actions based on what was generated</li>
         </ul>
       </div>
     </div>
+
     <div class="callout navy">
       <div class="callout-label">The Core Principle</div>
       <p><strong style="color:var(--gold)">The shift isn't just about framing — it's about how you build strategy.</strong> When you think in opportunities, you make different keyword decisions, different content decisions, different budget decisions. You ask different questions. You bring more value. This playbook operationalizes that mindset across every channel and every role — regardless of vertical.</p>
     </div>
+
     <div class="g2 mt32">
       <div class="card">
         <h3>Why This Matters to Clients</h3>
@@ -572,17 +628,22 @@ ul.plain.loop-b li::before{color:var(--loop);} ul.plain.navy-b li::before{color:
 </section>
 
 
-<!-- ══ SECTION 2 -->
+<!-- ══ SECTION 2: FOUR CHANNELS -->
 <section class="sec-light" id="channels">
   <div class="container">
     <div class="sh">
-      <div class="sh-tag">Section 2 — The Channel Roles</div>
+      <div class="sh-tag navy">Section 2 — The Channel Roles</div>
       <h2 class="sh-title">Four Channels, Each With a Specific Job</h2>
       <p class="sh-desc">SEO, Paid Search, Email, and UX are not interchangeable. Each has a distinct role in generating and advancing opportunities. Understanding how they differ is what allows them to work together — and why each strategist needs to understand what the others are doing.</p>
     </div>
+
     <div class="g2 mb16">
       <div class="ch-card">
-        <div class="ch-header seo"><div class="ch-icon">🔍</div><div class="ch-name">SEO / Organic Search</div><div class="ch-role-tag">Top-of-Funnel Discovery Engine</div></div>
+        <div class="ch-header seo">
+          <div class="ch-icon">🔍</div>
+          <div class="ch-name">SEO / Organic Search</div>
+          <div class="ch-role-tag">Top-of-Funnel Discovery Engine</div>
+        </div>
         <div class="ch-body">
           <div class="ch-job-label seo">Primary Job</div>
           <div class="ch-job-text">Attract the right buyers at the right moment of active intent — before they've decided who they want to work with.</div>
@@ -591,13 +652,18 @@ ul.plain.loop-b li::before{color:var(--loop);} ul.plain.navy-b li::before{color:
             <li>Builds authority for specific materials, certifications, applications, and industries</li>
             <li>Creates compounding assets: content that generates opportunities for months and years</li>
             <li>Earns visibility across the full buying journey — early research through vendor shortlisting</li>
-            <li>Adapts to AI Overview landscape by targeting transactional and authority queries</li>
+            <li>Adapts to AI Overview landscape by targeting transactional and authority queries AI won't absorb</li>
           </ul>
         </div>
         <div class="ch-footer"><span style="color:var(--text-light);">Connects to Loop: </span><span class="ch-footer-ref seo">ICP language and industry patterns from Loop form data feed keyword strategy and content prioritization</span></div>
       </div>
+
       <div class="ch-card">
-        <div class="ch-header paid"><div class="ch-icon">💰</div><div class="ch-name">Paid Search</div><div class="ch-role-tag">Demand Capture + Acceleration Engine</div></div>
+        <div class="ch-header paid">
+          <div class="ch-icon">💰</div>
+          <div class="ch-name">Paid Search</div>
+          <div class="ch-role-tag">Demand Capture + Acceleration Engine</div>
+        </div>
         <div class="ch-body">
           <div class="ch-job-label paid">Primary Job</div>
           <div class="ch-job-text">Capture high-intent, in-market demand and accelerate time-to-opportunity — especially for buyers with urgency or specificity.</div>
@@ -612,9 +678,14 @@ ul.plain.loop-b li::before{color:var(--loop);} ul.plain.navy-b li::before{color:
         <div class="ch-footer"><span style="color:var(--text-light);">Connects to Loop: </span><span class="ch-footer-ref paid">ICP role, industry, and language patterns tell you which keywords to bid, which to block, and how to write ad copy</span></div>
       </div>
     </div>
+
     <div class="g2 mb32">
       <div class="ch-card">
-        <div class="ch-header email"><div class="ch-icon">📧</div><div class="ch-name">Email</div><div class="ch-role-tag">Pipeline Velocity + Re-Engagement Engine</div></div>
+        <div class="ch-header email">
+          <div class="ch-icon">📧</div>
+          <div class="ch-name">Email</div>
+          <div class="ch-role-tag">Pipeline Velocity + Re-Engagement Engine</div>
+        </div>
         <div class="ch-body">
           <div class="ch-job-label email">Primary Job</div>
           <div class="ch-job-text">Nurture leads that aren't ready to buy yet, re-activate past opportunities, and move contacts from interested to ready without new acquisition spend.</div>
@@ -628,8 +699,13 @@ ul.plain.loop-b li::before{color:var(--loop);} ul.plain.navy-b li::before{color:
         </div>
         <div class="ch-footer"><span style="color:var(--text-light);">Connects to Loop: </span><span class="ch-footer-ref email">ICP segmentation from form content drives who gets which sequence, with what language, at what cadence</span></div>
       </div>
+
       <div class="ch-card">
-        <div class="ch-header ux"><div class="ch-icon">🖥️</div><div class="ch-name">UX / Web Experience</div><div class="ch-role-tag">Conversion Confidence Engine</div></div>
+        <div class="ch-header ux">
+          <div class="ch-icon">🖥️</div>
+          <div class="ch-name">UX / Web Experience</div>
+          <div class="ch-role-tag">Conversion Confidence Engine</div>
+        </div>
         <div class="ch-body">
           <div class="ch-job-label ux">Primary Job</div>
           <div class="ch-job-text">Remove friction so buyers who've already decided to engage can take action without hesitation — making every other channel more efficient.</div>
@@ -644,15 +720,16 @@ ul.plain.loop-b li::before{color:var(--loop);} ul.plain.navy-b li::before{color:
         <div class="ch-footer"><span style="color:var(--text-light);">Connects to Loop: </span><span class="ch-footer-ref ux">Behavioral friction patterns and repeated page visit data from Loop tell you exactly where to fix and what to add</span></div>
       </div>
     </div>
+
     <div class="callout gold">
       <div class="callout-label">The Integrated Point of View</div>
-      <p><strong>SEO tells you who's finding you. Paid tells you who's ready to act now. Email tells you who you can re-engage. UX tells you who nearly converted but didn't.</strong> Loop ICP data — built from real submissions — is what sharpens all four simultaneously. For a deep dive on how SEO and Paid specifically work together, see the <strong><a href="seo-paid-partnership.html" style="color:var(--navy);">SEO + Paid Partnership Playbook</a></strong>.</p>
+      <p><strong>SEO tells you who's finding you. Paid tells you who's ready to act now. Email tells you who you can re-engage. UX tells you who nearly converted but didn't.</strong> Loop ICP data — built from real submissions — is what sharpens all four simultaneously. For a deep dive on how SEO and Paid specifically work together, see the <strong><a href="seo-paid-partnership.html" style="color:var(--navy);">SEO + Paid Partnership Playbook →</a></strong></p>
     </div>
   </div>
 </section>
 
 
-<!-- ══ SECTION 3 -->
+<!-- ══ SECTION 3: B-SMART -->
 <section class="sec-white" id="bsmart">
   <div class="container">
     <div class="sh">
@@ -660,6 +737,7 @@ ul.plain.loop-b li::before{color:var(--loop);} ul.plain.navy-b li::before{color:
       <h2 class="sh-title">B-SMART® Applies Across Every Channel</h2>
       <p class="sh-desc">B-SMART® is OBx's proprietary keyword strategy framework — built for industrial and B2B buyers. It's equally applicable in Paid Search, Email, and UX. Loop's ICP data continuously validates which B-SMART® dimensions your actual buyers use most.</p>
     </div>
+
     <div class="bsmart-strip mb32">
       <div class="bsm-cell bsm-B"><div class="bsm-letter">B</div><div class="bsm-word">Brand</div><div class="bsm-eg">Carpenter, Nucor, AL-6XN</div></div>
       <div class="bsm-cell bsm-S"><div class="bsm-letter">S</div><div class="bsm-word">Size / Shape</div><div class="bsm-eg">1" bar, 4×8 sheet, .125" thick</div></div>
@@ -668,6 +746,7 @@ ul.plain.loop-b li::before{color:var(--loop);} ul.plain.navy-b li::before{color:
       <div class="bsm-cell bsm-R"><div class="bsm-letter">R</div><div class="bsm-word">Requirements</div><div class="bsm-eg">DFARS, ISO 9001, ASTM, AMS</div></div>
       <div class="bsm-cell bsm-T"><div class="bsm-letter">T</div><div class="bsm-word">Type</div><div class="bsm-eg">Plate, bar, sheet, tube, coil</div></div>
     </div>
+
     <table class="tbl mb32" style="border:1px solid var(--border);border-radius:12px;overflow:hidden;">
       <thead><tr>
         <th style="background:var(--slate);">Channel</th>
@@ -676,11 +755,12 @@ ul.plain.loop-b li::before{color:var(--loop);} ul.plain.navy-b li::before{color:
       </tr></thead>
       <tbody>
         <tr><td><strong style="color:var(--seo);">🔍 SEO Strategist</strong></td><td>Grade + form + application combinations become page targets — Loop ICP validates which combos real buyers actually search</td><td><em>"DFARS compliant titanium bar"</em> → dedicated product page after Loop shows aerospace PMs submitting that request repeatedly</td></tr>
-        <tr><td><strong style="color:var(--paid);">💰 Paid Media Strategist</strong></td><td>B-SMART dimensions map to match types — layered terms (M+S+T) get top bids; Loop ICP flags wrong-fit dimensions for negatives</td><td>Exact match on <em>"2205 duplex plate distributor"</em>; negative match on <em>"stainless steel"</em> alone</td></tr>
+        <tr><td><strong style="color:var(--paid);">💰 Paid Media Strategist</strong></td><td>B-SMART dimensions map to match types — layered terms (M+S+T) get top bids; Loop ICP flags wrong-fit dimensions for negatives</td><td>Exact match on <em>"2205 duplex plate distributor"</em>; negative match on <em>"stainless steel"</em> alone after Loop shows generic terms attract low-quality volume</td></tr>
         <tr><td><strong style="color:var(--email);">📧 Email Strategist</strong></td><td>Segment re-engagement by M (material) and A (application/industry) from Loop form data</td><td>Subject: <em>"In-Stock 6061 Aluminum Ready to Ship"</em> sent to leads who specified aluminum + urgent timeline</td></tr>
         <tr><td><strong style="color:var(--ux);">🖥️ UX Strategist</strong></td><td>Page headlines and trust callouts use B-SMART language that matches how the buyer arrived</td><td>PPC landing page leads with <em>"DOM tubing cut-to-size"</em> — the exact phrase buyers use in Loop comment fields</td></tr>
       </tbody>
     </table>
+
     <div class="callout navy">
       <div class="callout-label">The Universal Rule</div>
       <p><strong style="color:var(--gold)">Keyword search volume is not a decision driver.</strong> Optimize for material-, grade-, and form-based intent. A term like <em>"17-4ph bar"</em> generates a better opportunity than <em>"steel bar"</em> because it reflects a buyer who already knows what they need. That principle applies in every channel — and Loop ICP data tells you which specific terms your actual buyers use. <em>See Part 1 — Foundations for the full B-SMART® framework.</em></p>
@@ -689,7 +769,7 @@ ul.plain.loop-b li::before{color:var(--loop);} ul.plain.navy-b li::before{color:
 </section>
 
 
-<!-- ══ SECTION 4 -->
+<!-- ══ SECTION 4: LOOP → ICP -->
 <section class="sec-light" id="loop">
   <div class="container">
     <div class="sh">
@@ -697,6 +777,7 @@ ul.plain.loop-b li::before{color:var(--loop);} ul.plain.navy-b li::before{color:
       <h2 class="sh-title">Building Your Client's ICP From Loop Data</h2>
       <p class="sh-desc">The most accurate picture of who a client's ideal customer actually is doesn't come from a kickoff call — it comes from who actually submits. Patterns across real submissions become a living ICP that sharpens every channel decision simultaneously and gets more accurate every month.</p>
     </div>
+
     <div class="opp-compare mb32">
       <div class="oc-left">
         <div class="oc-title">❌ The Assumed ICP</div>
@@ -721,6 +802,7 @@ ul.plain.loop-b li::before{color:var(--loop);} ul.plain.navy-b li::before{color:
         </ul>
       </div>
     </div>
+
     <div class="callout loop mb32">
       <div class="callout-label">Why ICP Clarity Is the Foundation of All Channel Strategy</div>
       <p><strong>It tells the SEO Strategist which pages to build. It tells the Paid Media Strategist which keywords to bid and block. It tells the Email Strategist who to re-engage and how. It tells the UX Strategist where buyers are getting stuck and why.</strong> The ICP is not a kickoff deliverable — it's a living profile that Loop updates with every submission.</p>
@@ -731,7 +813,11 @@ ul.plain.loop-b li::before{color:var(--loop);} ul.plain.navy-b li::before{color:
 
     <div class="g3 mb16">
       <div class="icp-dim">
-        <div class="icp-dim-header idh-company"><div class="icp-dim-icon">🏢</div><div class="icp-dim-title">Company Intelligence</div><div class="icp-dim-sub">Who is submitting — not who you assumed would be</div></div>
+        <div class="icp-dim-header idh-company">
+          <div class="icp-dim-icon">🏢</div>
+          <div class="icp-dim-title">Company Intelligence</div>
+          <div class="icp-dim-sub">Who is submitting — not who you assumed would be</div>
+        </div>
         <div class="icp-dim-body">
           <div class="icp-cap-label company">What Loop Captures</div>
           <ul class="icp-dim-list">
@@ -745,12 +831,16 @@ ul.plain.loop-b li::before{color:var(--loop);} ul.plain.navy-b li::before{color:
         </div>
       </div>
       <div class="icp-dim">
-        <div class="icp-dim-header idh-role"><div class="icp-dim-icon">👤</div><div class="icp-dim-title">Role & Title Patterns</div><div class="icp-dim-sub">Who initiates, who approves, who deserves dedicated content</div></div>
+        <div class="icp-dim-header idh-role">
+          <div class="icp-dim-icon">👤</div>
+          <div class="icp-dim-title">Role & Title Patterns</div>
+          <div class="icp-dim-sub">Who initiates, who approves, who deserves dedicated content</div>
+        </div>
         <div class="icp-dim-body">
           <div class="icp-cap-label role">What Loop Captures</div>
           <ul class="icp-dim-list">
             <li>Role/title: Procurement Manager, Design Engineer, Plant Manager, Owner, Buyer, Estimator</li>
-            <li>Role mix reveals initiators vs. decision-makers — they need different content depth and CTAs</li>
+            <li>Role mix reveals initiators vs. decision-makers — they need different content and CTAs</li>
             <li>Which roles correlate with high-scoring, spec-complete submissions vs. exploratory contacts</li>
             <li>Role + industry combinations signal very different content and messaging needs</li>
             <li>Patterns reveal whether channels are attracting the right buyer level for this client's sales cycle</li>
@@ -759,7 +849,11 @@ ul.plain.loop-b li::before{color:var(--loop);} ul.plain.navy-b li::before{color:
         </div>
       </div>
       <div class="icp-dim">
-        <div class="icp-dim-header idh-language"><div class="icp-dim-icon">💬</div><div class="icp-dim-title">Request Language & Terminology</div><div class="icp-dim-sub">How buyers describe what they need — your best keyword data</div></div>
+        <div class="icp-dim-header idh-language">
+          <div class="icp-dim-icon">💬</div>
+          <div class="icp-dim-title">Request Language & Terminology</div>
+          <div class="icp-dim-sub">How buyers describe what they need — your best keyword data</div>
+        </div>
         <div class="icp-dim-body">
           <div class="icp-cap-label language">What Loop Captures</div>
           <ul class="icp-dim-list">
@@ -773,9 +867,14 @@ ul.plain.loop-b li::before{color:var(--loop);} ul.plain.navy-b li::before{color:
         </div>
       </div>
     </div>
+
     <div class="g3 mb32">
       <div class="icp-dim">
-        <div class="icp-dim-header idh-volume"><div class="icp-dim-icon">📦</div><div class="icp-dim-title">Volume, Quantity & Frequency</div><div class="icp-dim-sub">Order patterns that reveal buyer type and procurement depth</div></div>
+        <div class="icp-dim-header idh-volume">
+          <div class="icp-dim-icon">📦</div>
+          <div class="icp-dim-title">Volume, Quantity & Frequency</div>
+          <div class="icp-dim-sub">Order patterns that reveal buyer type and procurement depth</div>
+        </div>
         <div class="icp-dim-body">
           <div class="icp-cap-label volume">What Loop Captures</div>
           <ul class="icp-dim-list">
@@ -789,7 +888,11 @@ ul.plain.loop-b li::before{color:var(--loop);} ul.plain.navy-b li::before{color:
         </div>
       </div>
       <div class="icp-dim">
-        <div class="icp-dim-header idh-industry"><div class="icp-dim-icon">🏭</div><div class="icp-dim-title">Industry & Sector Patterns</div><div class="icp-dim-sub">Which verticals are finding you — and which should be</div></div>
+        <div class="icp-dim-header idh-industry">
+          <div class="icp-dim-icon">🏭</div>
+          <div class="icp-dim-title">Industry & Sector Patterns</div>
+          <div class="icp-dim-sub">Which verticals are finding you — and which should be</div>
+        </div>
         <div class="icp-dim-body">
           <div class="icp-cap-label industry">What Loop Captures</div>
           <ul class="icp-dim-list">
@@ -803,7 +906,11 @@ ul.plain.loop-b li::before{color:var(--loop);} ul.plain.navy-b li::before{color:
         </div>
       </div>
       <div class="icp-dim">
-        <div class="icp-dim-header idh-geo"><div class="icp-dim-icon">📍</div><div class="icp-dim-title">Geographic & Location Patterns</div><div class="icp-dim-sub">Where buyers are — and what it means for targeting</div></div>
+        <div class="icp-dim-header idh-geo">
+          <div class="icp-dim-icon">📍</div>
+          <div class="icp-dim-title">Geographic & Location Patterns</div>
+          <div class="icp-dim-sub">Where buyers are — and what it means for targeting</div>
+        </div>
         <div class="icp-dim-body">
           <div class="icp-cap-label geo">What Loop Captures</div>
           <ul class="icp-dim-list">
@@ -830,9 +937,9 @@ ul.plain.loop-b li::before{color:var(--loop);} ul.plain.navy-b li::before{color:
         <tbody>
           <tr><td><span class="iat-rowlabel company">🏢 Company</span></td><td>Build Customer Match audiences from high-value company types; adjust geo bids where they cluster</td><td>Build case studies and "industries served" content around the company types actually submitting</td><td>Segment nurture by company type — a distributor and a manufacturer have different buying triggers</td><td>Update hero messaging and social proof to reflect the company types actually converting</td></tr>
           <tr><td><span class="iat-rowlabel role">👤 Role</span></td><td>Align CTAs to buyer priority — engineers want specs, procurement wants availability, owners want proof</td><td>Tailor content depth by role: spec tables for engineers; availability clarity for procurement</td><td>Build role-specific email sequences — PM language differs entirely from Engineer or Owner</td><td>Add role-based navigation pathways for roles appearing most in high-scoring submissions</td></tr>
-          <tr><td><span class="iat-rowlabel language">💬 Language</span></td><td>Extract exact-match keywords from comment fields; add wrong-fit language as negatives</td><td>Rewrite page headlines in buyer terminology — "HR coil" not "hot rolled coil" if that's what they use</td><td>Mirror buyer language in subject lines — terms recurring in comments are your best subject line candidates</td><td>Align form labels, CTA buttons, and callouts to buyer language</td></tr>
+          <tr><td><span class="iat-rowlabel language">💬 Language</span></td><td>Extract exact-match keywords from comment fields; add wrong-fit language as negatives</td><td>Rewrite page headlines in buyer terminology — "HR coil" not "hot rolled coil" if that's what they use</td><td>Mirror buyer language in subject lines — terms recurring in comments are your best validated candidates</td><td>Align form labels, CTA buttons, and callouts to buyer language</td></tr>
           <tr><td><span class="iat-rowlabel volume">📦 Volume</span></td><td>Add minimum quantity qualifiers to ad copy to filter low-fit clicks before they hit the page</td><td>Build volume-specific content: blanket order pages, volume discount FAQs, procurement program pages</td><td>Segment by volume tier — large-volume leads get different content and cadence</td><td>Surface minimum order callouts and volume pricing tiers on product pages</td></tr>
-          <tr><td><span class="iat-rowlabel industry">🏭 Industry</span></td><td>Build industry-specific campaigns — aerospace responds to DFARS; defense to ITAR; don't run one generic campaign</td><td>Create dedicated industry pages for sectors that over-index; build compliance hubs buyers ask about most</td><td>Send vertical-specific resources — an aerospace buyer gets an ITAR guide; construction gets lead time content</td><td>Add industry-specific cert badges on pages where that industry's buyers are landing</td></tr>
+          <tr><td><span class="iat-rowlabel industry">🏭 Industry</span></td><td>Build industry-specific campaigns — aerospace responds to DFARS; defense to ITAR; don't run one generic campaign</td><td>Create dedicated industry pages for sectors that over-index; build compliance hubs buyers ask about most</td><td>Send vertical-specific resources — aerospace buyers get ITAR guides; construction gets lead time content</td><td>Add industry-specific cert badges on pages where that industry's buyers are landing</td></tr>
           <tr><td><span class="iat-rowlabel geo">📍 Geography</span></td><td>Adjust bid modifiers based on regions producing best Loop-scored submissions; don't default to a 50-mile radius</td><td>Build location + material content for high-volume regions — "stainless steel supplier Ohio" if that over-indexes</td><td>Build regional campaigns for clusters showing high submission volume</td><td>Add shipping coverage maps and transit time callouts where high-volume geography buyers are landing</td></tr>
         </tbody>
       </table>
@@ -855,106 +962,72 @@ ul.plain.loop-b li::before{color:var(--loop);} ul.plain.navy-b li::before{color:
       <p class="sh-desc wht">AI has fundamentally redistributed how buyers research, how algorithms target, and how content competes. The teams that win aren't the ones who double down on one channel — they're the ones whose channels compensate for each other, informed by the same first-party intelligence.</p>
     </div>
 
-    <!-- STAT STRIP -->
-    <h3 style="font-size:0.72rem;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:14px;">State of Search — By the Numbers</h3>
-    <div class="sos-strip mb32">
-      <div class="sos-stat gold">
-        <div class="sos-num">5T</div>
-        <div class="sos-label">Searches on Google annually — the search pie is growing, not shrinking</div>
-        <div class="sos-source">Google Internal Data, Jan 2025</div>
-      </div>
-      <div class="sos-stat seo">
-        <div class="sos-num">94%</div>
-        <div class="sos-label">Of frequent LLM users are also frequent Google Search users</div>
-        <div class="sos-source">Google / Ipsos Global Consumer Journeys, Dec 2025</div>
-      </div>
-      <div class="sos-stat paid">
-        <div class="sos-num">2–3×</div>
-        <div class="sos-label">Longer queries in AI Mode than traditional searches — B-SMART® specificity is more relevant, not less</div>
-        <div class="sos-source">Google Internal Data</div>
-      </div>
-      <div class="sos-stat ai">
-        <div class="sos-num">77.9%</div>
-        <div class="sos-label">Of SEO professionals fear AI-generated answers will reduce organic clicks</div>
-        <div class="sos-source">SEJ State of SEO 2026, n=371</div>
-      </div>
+    <h3 style="font-size:0.72rem;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:14px;">State of Search — By the Numbers</h3>
+    <div class="sos-strip mb24">
+      <div class="sos-stat gold"><div class="sos-num">5T</div><div class="sos-label">Searches on Google annually — the search pie is growing, not shrinking with AI</div><div class="sos-source">Google Internal Data, Jan 2025</div></div>
+      <div class="sos-stat seo"><div class="sos-num">94%</div><div class="sos-label">Of frequent LLM users are also frequent Google Search users — AI is additive</div><div class="sos-source">Google / Ipsos Global Consumer Journeys, Dec 2025</div></div>
+      <div class="sos-stat paid"><div class="sos-num">2–3×</div><div class="sos-label">Longer queries in AI Mode than traditional search — B-SMART® specificity is more relevant, not less</div><div class="sos-source">Google Internal Data</div></div>
+      <div class="sos-stat ai"><div class="sos-num">77.9%</div><div class="sos-label">Of SEO professionals fear AI-generated answers will reduce organic clicks — real concern, strategic response required</div><div class="sos-source">SEJ State of SEO 2026, n=371</div></div>
     </div>
-
-    <div class="sos-strip mb32" style="grid-template-columns:repeat(4,1fr);">
-      <div class="sos-stat gold">
-        <div class="sos-num">\$6</div>
-        <div class="sos-label">Back for every \$1 spent on Google Search globally (incremental ROAS)</div>
-        <div class="sos-source">Google Conversion Lift Analysis, 143 studies</div>
-      </div>
-      <div class="sos-stat paid">
-        <div class="sos-num">27%</div>
-        <div class="sos-label">More conversions with AI Max at similar CPA/ROAS vs. exact &amp; phrase match</div>
-        <div class="sos-source">Google Internal Data, 2025</div>
-      </div>
-      <div class="sos-stat seo">
-        <div class="sos-num">66.3%</div>
-        <div class="sos-label">Of SEO professionals say original content creation had the greatest positive impact</div>
-        <div class="sos-source">SEJ State of SEO 2026</div>
-      </div>
-      <div class="sos-stat ai">
-        <div class="sos-num">49.6%</div>
-        <div class="sos-label">Plan E-E-A-T reinforcement — the strategic response to AI content commoditization</div>
-        <div class="sos-source">SEJ State of SEO 2026</div>
-      </div>
+    <div class="sos-strip mb32">
+      <div class="sos-stat gold"><div class="sos-num">$6</div><div class="sos-label">Back for every $1 spent on Google Search globally (incremental ROAS)</div><div class="sos-source">Google Conversion Lift Analysis, 143 studies</div></div>
+      <div class="sos-stat paid"><div class="sos-num">27%</div><div class="sos-label">More conversions with AI Max at similar CPA/ROAS vs. exact &amp; phrase match</div><div class="sos-source">Google Internal Data, 2025</div></div>
+      <div class="sos-stat seo"><div class="sos-num">66.3%</div><div class="sos-label">Of SEO professionals say original content creation had the greatest positive impact this year</div><div class="sos-source">SEJ State of SEO 2026</div></div>
+      <div class="sos-stat ai"><div class="sos-num">49.6%</div><div class="sos-label">Plan E-E-A-T reinforcement — the strategic response to AI content commoditization</div><div class="sos-source">SEJ State of SEO 2026</div></div>
     </div>
 
     <!-- TENSION BLOCK -->
-    <h3 style="font-size:0.72rem;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:14px;">The Central Tension in Search Right Now</h3>
+    <h3 style="font-size:0.72rem;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:14px;">The Central Tension in Search Right Now</h3>
     <div class="tension-block mb32">
       <div class="tb-left">
         <div class="tb-pct">77.9%</div>
         <div class="tb-label">Fear AI Will Reduce Clicks</div>
-        <div class="tb-desc">Of SEO professionals are concerned AI-generated answers will reduce website traffic by absorbing informational queries directly in the SERP — a real concern for top-of-funnel content strategies built on informational volume.</div>
+        <div class="tb-desc">Of SEO professionals are concerned AI-generated answers will reduce website traffic by absorbing informational queries directly in the SERP. A real concern for top-of-funnel content strategies built on informational volume.</div>
       </div>
       <div class="tb-mid"><div class="tb-vs">vs.</div></div>
       <div class="tb-right">
         <div class="tb-pct">94%</div>
         <div class="tb-label">Of LLM Users Also Use Google</div>
-        <div class="tb-desc">AI is additive to search, not replacing it. Users who use ChatGPT and other LLMs are also frequent Google users. The search pie is growing — but the distribution of where clicks land is changing, which is why channel integration matters more than ever.</div>
+        <div class="tb-desc">AI is additive to search, not replacing it. Users who use ChatGPT and other LLMs are also frequent Google users. The search pie is growing — but the distribution of where clicks land is changing, which is exactly why channel integration matters more than ever.</div>
       </div>
     </div>
 
     <!-- FOUR SHIFTS -->
-    <h3 style="font-size:0.72rem;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:16px;">Four Shifts That Are Actively Changing How We Work</h3>
+    <h3 style="font-size:0.72rem;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:16px;">Four Shifts That Are Actively Changing How We Work</h3>
     <div class="shift-grid mb32">
       <div class="shift-panel">
         <div class="sp-num">Shift 01 · Search</div>
         <div class="sp-icon">🤖</div>
         <div class="sp-title">AI Overviews &amp; AI Mode</div>
-        <div class="sp-data-pill"><span class="sp-data-num">2B</span><span class="sp-data-text">people use AI Overviews in 200+ countries · Ads now serve within AI Overviews and AI Mode · 77% make decisions faster because of them</span></div>
-        <div class="sp-implication">AI Overviews are a competitive intelligence signal: which competitors are being cited, what content types Google considers authoritative, and where gaps exist. The SEO Strategist evaluates this during every SERP analysis. Ads appearing within AI answers creates new paid inventory — same intent principle, new placement. <em>As OBx's SERP analysis guidance states: "Note which competitors or sources are cited, what information is prioritized, and what gaps your client's content could fill."</em></div>
+        <div class="sp-data-pill"><span class="sp-data-num">2B</span><span class="sp-data-text">people use AI Overviews in 200+ countries · Ads now serve within AI answers · 77% make decisions faster because of them</span></div>
+        <div class="sp-implication">AI Overviews are a competitive intelligence signal: which competitors are being cited, what content types Google considers authoritative, and where gaps exist. The SEO Strategist evaluates this during every SERP analysis. Ads appearing within AI answers creates new paid inventory — same intent principle, new placement. As OBx's SERP analysis guidance states: <em>"Note which competitors or sources are cited, what information is prioritized, and what gaps your client's content could fill."</em></div>
       </div>
       <div class="shift-panel">
         <div class="sp-num">Shift 02 · Behavior</div>
         <div class="sp-icon">💬</div>
         <div class="sp-title">Conversational Search Behavior</div>
         <div class="sp-data-pill"><span class="sp-data-num">2–3×</span><span class="sp-data-text">longer queries in AI Mode · Buyers describe complete scenarios, not isolated keywords</span></div>
-        <div class="sp-implication">Search behavior is evolving toward full-sentence, solution-focused queries: "who supplies DFARS-compliant titanium bar in the Midwest with same-week ship?" This is B-SMART® layered intent in action — the exact search behavior that generic broad terms will never capture. Conversational queries favor the specific, layered keyword combinations that all four channels should already be optimizing for. Every strategist benefits when this shift is understood.</div>
+        <div class="sp-implication">Search behavior is evolving toward full-sentence, solution-focused queries: "who supplies DFARS-compliant titanium bar in the Midwest with same-week ship?" This is B-SMART® layered intent in action — the exact search behavior that generic broad terms will never capture. Conversational queries favor the specific, layered keyword combinations that all four channels should already be optimizing for.</div>
       </div>
       <div class="shift-panel">
         <div class="sp-num">Shift 03 · Paid Automation</div>
         <div class="sp-icon">⚙️</div>
         <div class="sp-title">AI-Powered Paid Automation</div>
-        <div class="sp-data-pill"><span class="sp-data-num">27%</span><span class="sp-data-text">more conversions with AI Max · PMax: 8% higher ROAS + 10% higher sales effectiveness vs. Search-only strategies · 63% of PMax users rank its ROI higher than Meta Advantage+</span></div>
-        <div class="sp-implication">PMax and Smart Bidding make targeting decisions algorithmically. The Paid Media Strategist's job has shifted from manual control to signal quality: audiences, creative, goals, and first-party data inputs. <em>As PPC practitioners note: "Conversions are the fuel needed to teach AI who are the most valuable people to you."</em> The quality of Loop ICP audience signals determines whether the algorithm makes smart decisions or expensive ones. A siloed Paid Strategist working without the SEO Strategist's keyword data and the UX Strategist's landing page quality is handing the algorithm incomplete information.</div>
+        <div class="sp-data-pill"><span class="sp-data-num">27%</span><span class="sp-data-text">more conversions with AI Max · PMax: 8% higher ROAS + 10% higher sales effectiveness vs. Search-only strategies</span></div>
+        <div class="sp-implication">PMax and Smart Bidding make targeting decisions algorithmically. The Paid Media Strategist's job has shifted from manual control to signal quality: audiences, creative, goals, and first-party data inputs. <em>As PPC practitioners note: "Conversions are the fuel needed to teach AI who are the most valuable people to you."</em> The quality of Loop ICP audience signals determines whether the algorithm makes smart decisions or expensive ones.</div>
       </div>
       <div class="shift-panel">
         <div class="sp-num">Shift 04 · Content</div>
         <div class="sp-icon">📄</div>
         <div class="sp-title">Content Commoditization</div>
         <div class="sp-data-pill"><span class="sp-data-num">66.3%</span><span class="sp-data-text">say original content creation is most impactful · yet AI tools have made generic content infinite and free</span></div>
-        <div class="sp-implication">Generic content is no longer a competitive asset — it's table stakes. <em>The SEO Trends 2026 report advises: "Find content opportunities AI can't cannibalize."</em> The only content that stands out is built from real buyer intelligence AI cannot fabricate: the exact language buyers use in Loop comment fields, the specific grades appearing in call transcripts, the compliance requirements emerging from real inbound patterns. <em>"The age of information articles is fading quickly. Focus on topics or queries that help searchers discover the brands and product solutions they need."</em> This is why Loop ICP data feeds the SEO Strategist's content strategy — and why that strategy can't be built from a keyword planner alone.</div>
+        <div class="sp-implication">Generic content is no longer a competitive asset — it's table stakes. <em>The SEO Trends 2026 report advises: "Find content opportunities AI can't cannibalize."</em> The only content that stands out is built from real buyer intelligence AI cannot fabricate: the exact language buyers use in Loop comment fields, the specific grades appearing in call transcripts, the compliance requirements emerging from real inbound patterns. This is why Loop ICP data feeds the SEO Strategist's content strategy.</div>
       </div>
     </div>
 
     <!-- AI TRAFFIC IN GA -->
-    <h3 style="font-size:0.72rem;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:14px;">Measuring AI Traffic in Your Reports</h3>
-    <p style="font-size:0.84rem;color:rgba(255,255,255,0.55);margin-bottom:16px;line-height:1.65;">AI traffic is not a single channel — it comes from two distinct sources with different measurement realities in Google Analytics 4. Every strategist reporting on organic performance needs to understand this distinction.</p>
+    <h3 style="font-size:0.72rem;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:14px;">Measuring AI Traffic in Your Reports</h3>
+    <p style="font-size:0.85rem;color:rgba(255,255,255,0.82);margin-bottom:16px;line-height:1.65;">AI traffic is not a single channel — it comes from two distinct sources with different measurement realities in Google Analytics 4. Every strategist reporting on organic performance needs to understand this distinction.</p>
     <div class="ai-traffic-split mb32">
       <div class="ats-left">
         <div class="ats-head">Source A — Google Native AI</div>
@@ -963,7 +1036,7 @@ ul.plain.loop-b li::before{color:var(--loop);} ul.plain.navy-b li::before{color:
         <div style="margin-bottom:10px;"><span class="ats-badge organic">Classified as: Organic Search</span></div>
         <ul class="ats-items">
           <li>Automatically captured as part of the Organic Search default channel group</li>
-          <li><strong style="color:rgba(255,255,255,0.85);">Cannot be segmented out</strong> in GA4 default views — no specific dimension isolates AIO/AIM clicks from standard organic</li>
+          <li><strong style="color:#fff;">Cannot be segmented out</strong> in GA4 default views — no specific dimension isolates AIO/AIM clicks from standard organic</li>
           <li>Google treats these as a natural extension of the search journey — still Google Search, just new format</li>
           <li>To analyze impact: monitor <em>overall</em> Organic Search channel for changes in traffic volume, engagement, and key events over time</li>
           <li>Watch for organic session dips on informational queries alongside SERP feature expansion as an indirect signal</li>
@@ -975,31 +1048,30 @@ ul.plain.loop-b li::before{color:var(--loop);} ul.plain.navy-b li::before{color:
         <div class="ats-sub">Clicks from third-party conversational AI tools and LLMs</div>
         <div style="margin-bottom:10px;"><span class="ats-badge referral">Classified as: Referral or Unassigned</span></div>
         <ul class="ats-items">
-          <li><strong style="color:rgba(255,255,255,0.85);">Can be segmented</strong> using a Custom Channel Group in GA4</li>
-          <li>Create a new channel named "AI Assistants" using a regex matching AI tool URLs (chatgpt, gemini, perplexity, copilot, claude)</li>
-          <li>Regex example: <code style="font-size:0.72rem;background:rgba(255,255,255,0.1);padding:2px 6px;border-radius:4px;">^.*ai|.*openai.*|.*chatgpt.*|.*gemini.*|.*perplexity.*|.*copilot.*</code></li>
-          <li>Fast indexing via <strong style="color:rgba(255,255,255,0.85);">IndexNow / Bing Webmaster Tools</strong> increases pickup by ChatGPT and Perplexity — a direct OBx onboarding recommendation</li>
+          <li><strong style="color:#fff;">Can be segmented</strong> using a Custom Channel Group in GA4 named "AI Assistants"</li>
+          <li>Use regex matching AI tool URLs: <code style="font-size:0.72rem;background:rgba(255,255,255,0.12);padding:2px 6px;border-radius:4px;">^.*ai|.*openai.*|.*chatgpt.*|.*gemini.*|.*perplexity.*|.*copilot.*</code></li>
+          <li>Fast indexing via <strong style="color:#fff;">IndexNow / Bing Webmaster Tools</strong> increases content pickup by ChatGPT and Perplexity — a direct OBx onboarding recommendation</li>
           <li><em>Future state:</em> GA4 will add a default "AI Assistants" channel group automatically — manual setup bridges the gap until then</li>
         </ul>
       </div>
     </div>
 
     <!-- CHANNEL IMPACT -->
-    <h3 style="font-size:0.72rem;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:16px;">How Each Channel's Role Is Evolving</h3>
+    <h3 style="font-size:0.72rem;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:16px;">How Each Channel's Role Is Evolving</h3>
     <div class="g2 mb32">
       <div class="ai-impact">
         <div class="ai-impact-head seo"><span class="aih-icon">🔍</span><span class="aih-name">SEO Strategist</span></div>
         <div class="ai-impact-body">
-          <div class="ai-row"><div class="ai-row-label disrupted">Disrupted</div><div class="ai-row-content">Informational queries increasingly answered by AI without a click. Generic content is being commoditized simultaneously. <em>"Top-of-funnel content has long been a scalable tactic, especially for agency teams, and no longer looks like such an obvious win."</em> — Tom Capper, STAT/Moz</div></div>
-          <div class="ai-row"><div class="ai-row-label response">Response</div><div class="ai-row-content">Shift to transactional intent pages (B-SMART® layered terms), citation-worthy authority content, and E-E-A-T reinforcement. Evaluate AI Overview citations in SERP analysis as competitive intelligence. Use IndexNow for fast pickup by AI tools. <em>65% of SEO professionals expect stable or increased SEO investment over the next 12 months — the channel isn't going away, it's evolving.</em></div></div>
-          <div class="ai-row"><div class="ai-row-label needs">Needs From Others</div><div class="ai-row-content">Paid Media Strategist's search term reports surface high-converting queries to build permanent organic authority around. UX Strategist's conversion data shows which pages are worth content investment. Loop ICP language replaces assumptions with real buyer vocabulary.</div></div>
+          <div class="ai-row"><div class="ai-row-label disrupted">Disrupted</div><div class="ai-row-content">Informational queries increasingly answered by AI without a click. Generic content is being commoditized simultaneously. <em>"Top-of-funnel content has long been a scalable tactic for agency teams, and no longer looks like such an obvious win."</em> — Tom Capper, STAT/Moz</div></div>
+          <div class="ai-row"><div class="ai-row-label response">Response</div><div class="ai-row-content">Shift to transactional intent pages (B-SMART® layered terms), citation-worthy authority content, and E-E-A-T reinforcement. Evaluate AI Overview citations in SERP analysis as competitive intelligence. Use IndexNow for fast pickup by AI tools. 65% of SEO professionals expect stable or increased SEO investment — the channel is evolving, not dying.</div></div>
+          <div class="ai-row"><div class="ai-row-label needs">Needs From Others</div><div class="ai-row-content">Paid Media Strategist's search term reports surface high-converting queries to build permanent organic authority around. UX Strategist's conversion data shows which pages are worth the content investment. Loop ICP language replaces keyword planner assumptions with real buyer vocabulary.</div></div>
         </div>
       </div>
       <div class="ai-impact">
         <div class="ai-impact-head paid"><span class="aih-icon">💰</span><span class="aih-name">Paid Media Strategist</span></div>
         <div class="ai-impact-body">
           <div class="ai-row"><div class="ai-row-label disrupted">Disrupted</div><div class="ai-row-content">Manual keyword management is no longer the primary lever. PMax and Smart Bidding make targeting decisions algorithmically — the value of traditional keyword-level control has shifted to signal quality. <em>"Granular controls are harder to find. Legacy tactics don't always translate."</em> — PPC Trends 2026</div></div>
-          <div class="ai-row"><div class="ai-row-label response">Response</div><div class="ai-row-content">Use Loop ICP buyer profiles as first-party audience signals. Ads now appear in AI Overviews and AI Mode — creating new placement opportunities with the same intent principles. Broad match is now effective <em>specifically because</em> the algorithm can use better signals — feeding it better data is the primary optimization lever.</div></div>
+          <div class="ai-row"><div class="ai-row-label response">Response</div><div class="ai-row-content">Use Loop ICP buyer profiles as first-party audience signals. Ads now appear in AI Overviews and AI Mode — creating new placement opportunities. Broad match is now effective specifically because the algorithm can use better signals — feeding it better first-party data is the primary optimization lever.</div></div>
           <div class="ai-row"><div class="ai-row-label needs">Needs From Others</div><div class="ai-row-content">SEO Strategist's keyword research informs broad match seed terms. UX Strategist's landing page quality is the ceiling for PMax performance. Integrated Strategy Lead's Loop ICP is the upstream first-party data that makes algorithm decisions smarter.</div></div>
         </div>
       </div>
@@ -1007,51 +1079,51 @@ ul.plain.loop-b li::before{color:var(--loop);} ul.plain.navy-b li::before{color:
         <div class="ai-impact-head email"><span class="aih-icon">📧</span><span class="aih-name">Email Strategist</span></div>
         <div class="ai-impact-body">
           <div class="ai-row"><div class="ai-row-label disrupted">Disrupted</div><div class="ai-row-content">AI-fragmented discovery leaves more buyers in partial consideration cycles — they researched via AI tools, found the client, submitted a form, then went quiet. These leads are harder to re-acquire through new organic or paid impressions alone.</div></div>
-          <div class="ai-row"><div class="ai-row-label response">Response</div><div class="ai-row-content">Email's pipeline velocity role becomes more critical in the AI-fragmented discovery landscape. Use Loop ICP data (material, role, industry, urgency) to build hyper-relevant sequences that meet buyers where they left off — not blast the full list.</div></div>
-          <div class="ai-row"><div class="ai-row-label needs">Needs From Others</div><div class="ai-row-content">Loop ICP data (from Integrated Strategy Lead) is the segmentation engine. SEO Strategist's AI-citation-earning content is the asset library for nurture sequences. UX Strategist ensures landing pages that email clicks lead to actually convert.</div></div>
+          <div class="ai-row"><div class="ai-row-label response">Response</div><div class="ai-row-content">Email's pipeline velocity role becomes more critical in the AI-fragmented discovery landscape. Use Loop ICP data (material, role, industry, urgency) to build hyper-relevant sequences that meet buyers where they left off — not blast the full list with generic messaging.</div></div>
+          <div class="ai-row"><div class="ai-row-label needs">Needs From Others</div><div class="ai-row-content">Loop ICP data from the Integrated Strategy Lead is the segmentation engine — without it, email is sending noise. SEO Strategist's authority content is the asset library for nurture sequences. UX Strategist ensures landing pages that email clicks lead to actually convert.</div></div>
         </div>
       </div>
       <div class="ai-impact">
         <div class="ai-impact-head ux"><span class="aih-icon">🖥️</span><span class="aih-name">UX Strategist</span></div>
         <div class="ai-impact-body">
-          <div class="ai-row"><div class="ai-row-label disrupted">Disrupted</div><div class="ai-row-content">Buyers arriving after AI-assisted research are more informed than ever. They're not arriving for a general introduction — they're validating a decision they're close to making. UX built for a first-introduction buyer fails this more informed visitor.</div></div>
+          <div class="ai-row"><div class="ai-row-label disrupted">Disrupted</div><div class="ai-row-content">Buyers arriving after AI-assisted research are more informed than ever. They're not arriving for a general introduction — they're validating a decision they're close to making. UX built for a first-introduction buyer fails this more informed visitor entirely.</div></div>
           <div class="ai-row"><div class="ai-row-label response">Response</div><div class="ai-row-content">Design for the confident validator, not the curious browser. Lead with specificity: exact grades, compliance certifications, lead times, response commitments. The buyer arriving from AI-assisted research has already done the education stage — they need proof and a frictionless conversion path.</div></div>
-          <div class="ai-row"><div class="ai-row-label needs">Needs From Others</div><div class="ai-row-content">Loop behavioral data shows exactly where AI-era buyers get stuck after they arrive. Paid Media Strategist's landing page requirements must inform UX decisions — PMax performance has a ceiling set by page quality. SEO Strategist's content strategy determines information depth after the click.</div></div>
+          <div class="ai-row"><div class="ai-row-label needs">Needs From Others</div><div class="ai-row-content">Loop behavioral data shows exactly where AI-era buyers get stuck after they arrive. Paid Media Strategist's landing page requirements must inform UX decisions — PMax performance has a ceiling set by page quality. SEO Strategist's content strategy determines the depth of information available after the click.</div></div>
         </div>
       </div>
     </div>
 
-    <!-- INTERDEPENDENCE -->
-    <h3 style="font-size:0.72rem;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:16px;">When AI Disrupts One Channel, Others Must Respond</h3>
+    <!-- INTERDEPENDENCE TABLE -->
+    <h3 style="font-size:0.72rem;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:16px;">When AI Disrupts One Channel, Others Must Respond</h3>
     <div class="interdep-wrap mb32">
       <table class="interdep-table">
         <thead><tr><th style="width:200px;">AI Landscape Trigger</th><th>Channel Most Affected</th><th>Required Cross-Channel Response</th></tr></thead>
         <tbody>
-          <tr><td><span class="it-trigger seo">AI Overviews absorb informational clicks</span></td><td style="color:rgba(14,190,112,0.85);font-weight:600;">SEO Strategist</td><td>Paid compensates for top-of-funnel visibility with awareness campaigns. UX optimizes for the more informed buyer now arriving. Email re-engages the leads organic no longer re-attracts on its own.</td></tr>
-          <tr><td><span class="it-trigger paid">PMax needs first-party signals to optimize</span></td><td style="color:rgba(212,85,26,0.85);font-weight:600;">Paid Media Strategist</td><td>Integrated Strategy Lead provides Loop ICP buyer profiles as audience signals. UX ensures landing pages meet PMax quality threshold. SEO provides keyword intelligence for broad match seed terms.</td></tr>
-          <tr><td><span class="it-trigger seo">Conversational queries favor B-SMART® specificity</span></td><td style="color:rgba(14,190,112,0.85);font-weight:600;">SEO Strategist</td><td>Paid mirrors the same layered keyword combinations in exact-match. UX ensures landing pages answer full conversational intent, not just the head term. Email uses the same specific language in subject lines.</td></tr>
-          <tr><td><span class="it-trigger both">Generic content is commoditized by AI tools</span></td><td style="color:rgba(245,166,35,0.85);font-weight:600;">All Channels</td><td>Every channel shifts to ICP-grounded specificity. The Integrated Strategy Lead's monthly Loop review becomes the team's primary content intelligence source. Generic strategy is no longer defensible — real buyer data is the moat.</td></tr>
-          <tr><td><span class="it-trigger both">Buyers arrive more informed via AI research</span></td><td style="color:rgba(245,166,35,0.85);font-weight:600;">UX Strategist</td><td>SEO provides deep, spec-level content that earns AI citation. Paid focuses messaging on trust and proof, not just awareness. Email can shorten nurture sequences for AI-researched leads who are closer to deciding.</td></tr>
+          <tr><td><span class="it-trigger seo">AI Overviews absorb informational clicks</span></td><td style="color:rgba(14,210,120,0.95);font-weight:600;">SEO Strategist</td><td>Paid compensates for top-of-funnel visibility with awareness campaigns. UX optimizes for the more informed buyer arriving from AI-assisted research. Email re-engages the leads organic no longer re-attracts on its own.</td></tr>
+          <tr><td><span class="it-trigger paid">PMax needs first-party signals to optimize</span></td><td style="color:rgba(255,120,80,0.95);font-weight:600;">Paid Media Strategist</td><td>Integrated Strategy Lead provides Loop ICP buyer profiles as audience signals. UX ensures landing pages meet PMax quality threshold. SEO provides keyword intelligence for broad match seed terms.</td></tr>
+          <tr><td><span class="it-trigger seo">Conversational queries favor B-SMART® specificity</span></td><td style="color:rgba(14,210,120,0.95);font-weight:600;">SEO Strategist</td><td>Paid mirrors the same layered keyword combinations in exact-match campaigns. UX ensures landing pages answer full conversational intent. Email uses the same specific language in subject lines and segment messaging.</td></tr>
+          <tr><td><span class="it-trigger both">Generic content is commoditized by AI tools</span></td><td style="color:rgba(245,166,35,0.95);font-weight:600;">All Channels</td><td>Every channel shifts to ICP-grounded specificity. The Integrated Strategy Lead's monthly Loop review becomes the team's primary content intelligence source. Generic strategy is no longer defensible — real buyer data is the moat.</td></tr>
+          <tr><td><span class="it-trigger both">Buyers arrive more informed via AI research</span></td><td style="color:rgba(245,166,35,0.95);font-weight:600;">UX Strategist</td><td>SEO provides deep, spec-level content that earns AI citation. Paid focuses messaging on trust and proof, not just awareness. Email can shorten nurture sequences for AI-researched leads who are closer to deciding.</td></tr>
         </tbody>
       </table>
     </div>
 
     <!-- SYNC MODEL -->
-    <h3 style="font-size:0.72rem;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:16px;">The Strategist Sync Model</h3>
+    <h3 style="font-size:0.72rem;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:16px;">The Strategist Sync Model</h3>
     <div class="sync-wrap mb32">
       <div class="sync-card">
         <div class="sync-head seo"><div><div class="sync-role">🔍 SEO Strategist</div><div class="sync-role-sub">Shares with the team</div></div></div>
         <div class="sync-body">
-          <div class="sync-item"><div class="sync-to paid">→ To Paid Media Strategist</div><div class="sync-detail">Keyword clusters with high ICP-intent signal but low organic ranking — immediate paid opportunity. New B-SMART® terms from Loop ICP language. Competitor gap analysis for queries AI Overviews are resolving.</div></div>
-          <div class="sync-item"><div class="sync-to ux">→ To UX Strategist</div><div class="sync-detail">Pages cited in AI Overviews to prioritize for depth and conversion optimization. High-intent landing pages in the organic conversion path that need trust signal upgrades.</div></div>
+          <div class="sync-item"><div class="sync-to seo">→ To Paid Media Strategist</div><div class="sync-detail">Keyword clusters with high ICP-intent signal but low organic ranking — immediate paid opportunity. New B-SMART® terms from Loop ICP language. Competitor gap analysis for queries AI Overviews are resolving.</div></div>
+          <div class="sync-item"><div class="sync-to ux">→ To UX Strategist</div><div class="sync-detail">Pages cited in AI Overviews to prioritize for depth and conversion optimization. High-intent landing pages in organic conversion path that need trust signal upgrades. Content gaps from Loop ICP comment fields.</div></div>
           <div class="sync-item"><div class="sync-to email">→ To Email Strategist</div><div class="sync-detail">AI-citation-earning content assets suitable for nurture sequences. Informational content that educates leads during long consideration cycles without requiring new traffic acquisition.</div></div>
         </div>
       </div>
       <div class="sync-card">
         <div class="sync-head paid"><div><div class="sync-role">💰 Paid Media Strategist</div><div class="sync-role-sub">Shares with the team</div></div></div>
         <div class="sync-body">
-          <div class="sync-item"><div class="sync-to seo">→ To SEO Strategist</div><div class="sync-detail">Search term reports showing high-converting queries the algorithm discovered — organic page-build opportunities. Keywords where conversion rate is strong but organic ranking is low.</div></div>
-          <div class="sync-item"><div class="sync-to ux">→ To UX Strategist</div><div class="sync-detail">Landing pages where PMax is sending volume but conversion is below benchmark. Ad copy that's converting well — surface those messages as on-page trust callouts.</div></div>
+          <div class="sync-item"><div class="sync-to paid">→ To SEO Strategist</div><div class="sync-detail">Search term reports showing high-converting queries the algorithm discovered — organic page-build opportunities. Keywords where conversion rate is strong but organic ranking is low.</div></div>
+          <div class="sync-item"><div class="sync-to ux">→ To UX Strategist</div><div class="sync-detail">Landing pages where PMax is sending volume but conversion is below benchmark. Ad copy converting well — surface those messages as on-page trust callouts.</div></div>
           <div class="sync-item"><div class="sync-to email">→ To Email Strategist</div><div class="sync-detail">High-intent clicks that didn't convert — warm leads email can re-engage. Remarketing audience data identifying repeat visitors worth prioritizing in re-engagement sequences.</div></div>
         </div>
       </div>
@@ -1072,17 +1144,17 @@ ul.plain.loop-b li::before{color:var(--loop);} ul.plain.navy-b li::before{color:
       </div>
     </div>
 
-    <!-- FIRST PARTY MOAT -->
+    <!-- FIRST-PARTY MOAT -->
     <div class="moat-block mb32">
       <div class="moat-head">
         <h3>🔁 First-Party Data Is the Competitive Moat in the AI Era</h3>
-        <p>As third-party signals erode, AI platforms optimize based on the signals you provide. The quality of your first-party data determines the quality of your algorithm's decisions. <em>"Your first-party data is not just your remarketing lists."</em> — PPC Trends 2026. Every other competitor is working with the same AI tools. The ones who win are the ones those tools have better data to work with.</p>
+        <p>As third-party signals erode, AI platforms optimize based on the signals you provide. The quality of your first-party data determines the quality of your algorithm's decisions. <em>"Your first-party data is not just your remarketing lists."</em> — PPC Trends 2026. Every competitor is using the same AI tools. The ones who win are the ones those tools have better data to work with.</p>
       </div>
       <div class="moat-body">
         <div class="moat-row"><div class="moat-arrow">→</div><div class="moat-content"><div class="moat-label">Feeds Paid Automation</div><div class="moat-text">Loop ICP buyer profiles (company types, roles, industries, request language) become first-party audience signals that PMax and Smart Bidding use to decide who to show ads to. A strategist using ICP-validated buyer profiles is running a fundamentally different campaign than one using generic demographic targeting — even on the same platform.</div></div></div>
         <div class="moat-row"><div class="moat-arrow">→</div><div class="moat-content"><div class="moat-label">Differentiates Content</div><div class="moat-text">No AI writing tool has access to the specific grades buyers are requesting in your client's form comments this month. No keyword planner knows that procurement managers at aerospace companies are using "DFARS titanium plate" in their submissions. That intelligence is yours — and it's the only content strategy AI tools can't replicate.</div></div></div>
-        <div class="moat-row"><div class="moat-arrow">→</div><div class="moat-content"><div class="moat-label">Validates AI Overview Strategy</div><div class="moat-text">AI Overviews evaluated as competitive intelligence: who's cited, what content types are prioritized, what gaps exist. Loop ICP tells you which of those gaps your actual buyers care about — so content investments target AI Overview citations that also drive form submissions, not just visibility for its own sake.</div></div></div>
-        <div class="moat-row"><div class="moat-arrow">→</div><div class="moat-content"><div class="moat-label">Enables Faster AI Tool Pickup</div><div class="moat-text">IndexNow ensures that content built from Loop ICP insights gets picked up by ChatGPT, Perplexity, and other AI models quickly. Fast indexing means your real-buyer-intelligence content reaches AI search tools before a slower competitor's generic alternative does — a direct OBx onboarding recommendation.</div></div></div>
+        <div class="moat-row"><div class="moat-arrow">→</div><div class="moat-content"><div class="moat-label">Validates AI Overview Strategy</div><div class="moat-text">Loop ICP tells you which of the gaps competitors leave in AI Overviews your actual buyers care about — so content investments target AI Overview citations that also drive form submissions, not just visibility for its own sake.</div></div></div>
+        <div class="moat-row"><div class="moat-arrow">→</div><div class="moat-content"><div class="moat-label">Enables Faster AI Tool Pickup</div><div class="moat-text">IndexNow ensures that content built from Loop ICP insights gets picked up by ChatGPT, Perplexity, and other AI models quickly. Fast indexing means your real-buyer-intelligence content reaches AI search tools before a slower competitor's generic alternative does.</div></div></div>
       </div>
     </div>
 
@@ -1091,27 +1163,28 @@ ul.plain.loop-b li::before{color:var(--loop);} ul.plain.navy-b li::before{color:
       <div class="p2-cta-text">
         <div class="p2-cta-tag">Related Playbook</div>
         <div class="p2-cta-title">SEO + Paid Search: The Partnership Playbook</div>
-        <div class="p2-cta-desc">Deep dive into how SEO Strategists and Paid Media Strategists work together — including full user path attribution, what to bring to every cross-channel strategy meeting, which metrics from the other channel actually matter, and the six strategy plays that require both channels to coordinate.</div>
+        <div class="p2-cta-desc">Deep dive into how SEO Strategists and Paid Media Strategists work together — including full user path attribution, what to bring to every cross-channel strategy meeting, which metrics from the other channel actually matter, and six strategy plays that require both channels to coordinate.</div>
       </div>
       <a href="seo-paid-partnership.html" class="p2-cta-btn">Open Partnership Playbook →</a>
     </div>
 
     <div class="callout ai mt32">
       <div class="callout-label">The Integrated Strategy Imperative</div>
-      <p><strong>AI hasn't created new problems for integrated teams — it's exposed the cost of siloed ones.</strong> When the SEO Strategist's informational traffic declines, a siloed team reports a traffic drop. An integrated team responds: Paid adjusts for top-of-funnel coverage, Email activates re-engagement for leads already in the system, UX improves conversion on pages still earning clicks, and the Integrated Strategy Lead explains it all as a coordinated strategic pivot. That's the difference.</p>
+      <p><strong>AI hasn't created new problems for integrated teams — it's exposed the cost of siloed ones.</strong> When the SEO Strategist's informational traffic declines, a siloed team reports a traffic drop. An integrated team responds: Paid adjusts for top-of-funnel coverage, Email activates re-engagement for leads already in the system, UX improves conversion on pages still earning clicks, and the Integrated Strategy Lead explains it all as a coordinated strategic pivot — not a performance failure. That's the difference.</p>
     </div>
   </div>
 </section>
 
 
-<!-- ══ SECTION 6 -->
+<!-- ══ SECTION 6: COMPOUND EFFECT -->
 <section class="sec-white" id="compound">
   <div class="container">
     <div class="sh">
-      <div class="sh-tag">Section 6 — Strategic Integration</div>
+      <div class="sh-tag navy">Section 6 — Strategic Integration</div>
       <h2 class="sh-title">The Compound Effect: Why Integration Beats Isolation</h2>
       <p class="sh-desc">Channels operating in silos don't just underperform — they leave AI landscape shifts unaddressed. When channels work together through a shared, Loop-refined ICP, each makes the others smarter, faster, and more resilient to disruption.</p>
     </div>
+
     <div class="g2 mb32">
       <div class="card">
         <h3 style="color:var(--error);">❌ Channels in Silos</h3>
@@ -1136,18 +1209,20 @@ ul.plain.loop-b li::before{color:var(--loop);} ul.plain.navy-b li::before{color:
         </ul>
       </div>
     </div>
+
     <h3 style="font-size:1.05rem;font-weight:800;color:var(--navy);margin-bottom:18px;">The Integrated Opportunity Flow</h3>
     <div class="flow-chain mb32">
       <div class="flow-step"><div class="fs-channel seo"><div class="fs-ch-icon">🔍</div><div class="fs-ch-name seo">SEO Strategist</div></div><div class="fs-content"><div class="fs-action">Attracts the right buyers through B-SMART® intent-matched content — using ICP language patterns from Loop and SERP AI Overview analysis to write pages in exact buyer terminology, targeting transactional queries AI Overviews won't absorb</div><div class="fs-feeds">→ Delivers buyers to optimized landing pages · First-touch attribution and organic behavior data flows into Loop ICP · Search term data shared with Paid Media Strategist</div></div></div>
       <div class="flow-connector"></div>
-      <div class="flow-step"><div class="fs-channel ux"><div class="fs-ch-icon">🖥️</div><div class="fs-ch-name ux">UX Strategist</div></div><div class="fs-content"><div class="fs-action">Converts arriving buyers by matching page content to the intent that brought them there, removing ICP-identified friction, and serving the more informed buyer the AI era is delivering. Page quality sets the ceiling for PMax performance</div><div class="fs-feeds">→ Turns traffic into form fills and calls · Loop behavioral data shows exactly where buyers stall · Conversion data validates content and paid investment</div></div></div>
+      <div class="flow-step"><div class="fs-channel ux"><div class="fs-ch-icon">🖥️</div><div class="fs-ch-name ux">UX Strategist</div></div><div class="fs-content"><div class="fs-action">Converts arriving buyers by matching page content to the intent that brought them there, removing ICP-identified friction, and serving the more informed buyer the AI era is delivering. Page quality sets the ceiling for PMax performance.</div><div class="fs-feeds">→ Turns traffic into form fills and calls · Loop behavioral data shows exactly where buyers stall · Conversion data validates content and paid investment</div></div></div>
       <div class="flow-connector"></div>
-      <div class="flow-step"><div class="fs-channel loop"><div class="fs-ch-icon">🔁</div><div class="fs-ch-name loop">Loop ICP</div></div><div class="fs-content"><div class="fs-action">Captures company, role, language, volume, industry, and geography from every form fill — building the client's ICP from real buyer data, not assumptions. Scores opportunity quality in real time. The first-party intelligence that feeds AI algorithm performance across paid platforms</div><div class="fs-feeds">→ Updated ICP shared with all strategists monthly · Audience signals feed PMax · Language feeds SEO and Email · Friction data feeds UX</div></div></div>
+      <div class="flow-step"><div class="fs-channel loop"><div class="fs-ch-icon">🔁</div><div class="fs-ch-name loop">Loop ICP</div></div><div class="fs-content"><div class="fs-action">Captures company, role, language, volume, industry, and geography from every form fill — building the client's ICP from real buyer data, not assumptions. Scores opportunity quality in real time. The first-party intelligence that feeds AI algorithm performance across paid platforms.</div><div class="fs-feeds">→ Updated ICP shared with all strategists monthly · Audience signals feed PMax · Language feeds SEO and Email · Friction data feeds UX</div></div></div>
       <div class="flow-connector"></div>
-      <div class="flow-step"><div class="fs-channel paid"><div class="fs-ch-icon">💰</div><div class="fs-ch-name paid">Paid Media Strategist</div></div><div class="fs-content"><div class="fs-action">Accelerates opportunity generation using ICP-validated keywords and buyer language from Loop — with PMax audience signals fed by real ICP buyer profiles. Compensates for organic top-of-funnel compression from AI Overviews. Discovers new queries through search term reports shared back with SEO</div><div class="fs-feeds">→ Captures buyers who need answers now · Ads serve within AI Overviews and AI Mode · Loop ICP validates which campaigns attract the right company types</div></div></div>
+      <div class="flow-step"><div class="fs-channel paid"><div class="fs-ch-icon">💰</div><div class="fs-ch-name paid">Paid Media Strategist</div></div><div class="fs-content"><div class="fs-action">Accelerates opportunity generation using ICP-validated keywords and buyer language from Loop — with PMax audience signals fed by real ICP buyer profiles. Compensates for organic top-of-funnel compression from AI Overviews. Discovers new queries through search term reports shared back with SEO.</div><div class="fs-feeds">→ Captures buyers who need answers now · Ads serve within AI Overviews and AI Mode · Loop ICP validates which campaigns attract the right company types</div></div></div>
       <div class="flow-connector"></div>
-      <div class="flow-step"><div class="fs-channel email"><div class="fs-ch-icon">📧</div><div class="fs-ch-name email">Email Strategist</div></div><div class="fs-content"><div class="fs-action">Nurtures and re-activates opportunities using Loop ICP segmentation — recovering the "not yet" leads that AI-fragmented discovery left in partial consideration cycles. More critical than ever as AI compresses the linear research journey</div><div class="fs-feeds">→ Converts dormant pipeline without additional acquisition spend · Re-engagement signals feed back into ICP to reveal seasonal buying behavior</div></div></div>
+      <div class="flow-step"><div class="fs-channel email"><div class="fs-ch-icon">📧</div><div class="fs-ch-name email">Email Strategist</div></div><div class="fs-content"><div class="fs-action">Nurtures and re-activates opportunities using Loop ICP segmentation — recovering the "not yet" leads that AI-fragmented discovery left in partial consideration cycles. More critical than ever as AI compresses the linear research journey.</div><div class="fs-feeds">→ Converts dormant pipeline without additional acquisition spend · Re-engagement signals feed back into ICP to reveal seasonal buying behavior</div></div></div>
     </div>
+
     <div class="callout navy">
       <div class="callout-label">The B2B &amp; Industrial Context</div>
       <p>Industrial and B2B buyers are already <strong style="color:var(--gold)">57% through the buying process before they contact you</strong> — and AI tools are now part of how they complete that 57%. Your SEO, Paid, and UX work competes for that pre-contact window. Loop ICP tells you who those buyers are, what they're looking for, and which channels bring you the best ones. <em>See Part 5 — Loop + CallRail and Part 1 — Foundations for the full industrial buying context.</em></p>
@@ -1156,7 +1231,7 @@ ul.plain.loop-b li::before{color:var(--loop);} ul.plain.navy-b li::before{color:
 </section>
 
 
-<!-- ══ SECTION 7 -->
+<!-- ══ SECTION 7: METRICS → OPPORTUNITIES -->
 <section class="sec-light" id="metrics">
   <div class="container">
     <div class="sh">
@@ -1164,6 +1239,7 @@ ul.plain.loop-b li::before{color:var(--loop);} ul.plain.navy-b li::before{color:
       <h2 class="sh-title">From Metrics to Opportunities: The "So What" Framework</h2>
       <p class="sh-desc">Every metric you track has a downstream opportunity implication. The metric is the <em>what</em>. The ICP context from Loop gives you the <em>so what</em>. Your job is to connect them — in your strategy AND in every client conversation.</p>
     </div>
+
     <div class="metric-table mb32">
       <div class="metric-hrow">
         <div class="mhc c1">Metric Reported</div>
@@ -1171,7 +1247,7 @@ ul.plain.loop-b li::before{color:var(--loop);} ul.plain.navy-b li::before{color:
         <div class="mhc c3">The "So What" — ICP + Opportunity Connection</div>
       </div>
       <div class="metric-row"><div class="mrc"><span class="m-dot seo"></span><span style="color:var(--slate);font-weight:600;">Organic sessions +22%</span></div><div class="mrc" style="color:var(--text);">More buyers finding the client through search</div><div class="mrc" style="color:var(--navy);font-weight:600;">Are those sessions from ICP-matched B-SMART® keywords? Loop shows which sessions converted to qualified form fills by the right company types and roles — not just total visits</div></div>
-      <div class="metric-row"><div class="mrc"><span class="m-dot paid"></span><span style="color:var(--slate);font-weight:600;">47 paid form submissions</span></div><div class="mrc" style="color:var(--text);">Paid campaigns generated inbound activity</div><div class="mrc" style="color:var(--navy);font-weight:600;">How many were from ICP-matching company types with spec-complete requests? Loop's AI scoring separates real pipeline from noise — the volume number alone says nothing about opportunity quality</div></div>
+      <div class="metric-row"><div class="mrc"><span class="m-dot paid"></span><span style="color:var(--slate);font-weight:600;">47 paid form submissions</span></div><div class="mrc" style="color:var(--text);">Paid campaigns generated inbound activity</div><div class="mrc" style="color:var(--navy);font-weight:600;">How many were from ICP-matching company types with spec-complete requests? Loop's AI scoring separates real pipeline from noise — volume alone says nothing about opportunity quality</div></div>
       <div class="metric-row"><div class="mrc"><span class="m-dot navy"></span><span style="color:var(--slate);font-weight:600;">CTR 4.8% on branded keyword</span></div><div class="mrc" style="color:var(--text);">Ad resonates with buyers who know the brand</div><div class="mrc" style="color:var(--navy);font-weight:600;">Brand-intent buyers have higher close rates — are they converting to form fills with the right ICP profile, or bouncing because the page doesn't match their expectation?</div></div>
       <div class="metric-row"><div class="mrc"><span class="m-dot loop"></span><span style="color:var(--slate);font-weight:600;">Form CVR 3.2%</span></div><div class="mrc" style="color:var(--text);">1 in 30 sessions results in a form submission</div><div class="mrc" style="color:var(--navy);font-weight:600;">Are those 1-in-30 submitters from the ICP industries and roles that matter? Loop identity data answers this — and shows which traffic sources produce the most ICP-aligned CVR</div></div>
       <div class="metric-row"><div class="mrc"><span class="m-dot navy"></span><span style="color:var(--slate);font-weight:600;">Call volume +18%</span></div><div class="mrc" style="color:var(--text);">More buyers calling from campaigns</div><div class="mrc" style="color:var(--navy);font-weight:600;">Are calls from ICP-aligned industries using ICP-aligned language? CallRail transcripts answer this — and the patterns feed back into B-SMART® keyword decisions across SEO and Paid</div></div>
@@ -1179,6 +1255,7 @@ ul.plain.loop-b li::before{color:var(--loop);} ul.plain.navy-b li::before{color:
       <div class="metric-row"><div class="mrc"><span class="m-dot email"></span><span style="color:var(--slate);font-weight:600;">Email open rate 24%</span></div><div class="mrc" style="color:var(--text);">Subject line resonated with the segment</div><div class="mrc" style="color:var(--navy);font-weight:600;">Did those opens generate return form submissions from ICP-profile contacts? Open rate is attention, not pipeline. Track re-engagement-to-RFQ from the ICP segments that matter most</div></div>
       <div class="metric-row"><div class="mrc"><span class="m-dot seo"></span><span style="color:var(--slate);font-weight:600;">12 new keyword rankings</span></div><div class="mrc" style="color:var(--text);">Visibility expanded for new search terms</div><div class="mrc" style="color:var(--navy);font-weight:600;">Are those keywords B-SMART®-specific and ICP-matched — or generic terms AI Overviews will absorb anyway? Cross-reference with Loop to see if ranked pages appear in quality ICP-aligned conversion paths</div></div>
     </div>
+
     <div class="callout gold">
       <div class="callout-label">Always Connect the Two</div>
       <p><strong>The metric is the what. The ICP context from Loop is the so what. Your job is to connect them in your strategy AND in every client conversation.</strong> Every metric you report should be followed by either "and here's what that means for the pipeline we're building" or "and here's what we're changing based on what the ICP data showed us this month."</p>
@@ -1187,7 +1264,7 @@ ul.plain.loop-b li::before{color:var(--loop);} ul.plain.navy-b li::before{color:
 </section>
 
 
-<!-- ══ SECTION 8 -->
+<!-- ══ SECTION 8: REPORTING + ROLES -->
 <section class="sec-white" id="reporting">
   <div class="container">
     <div class="sh">
@@ -1203,10 +1280,15 @@ ul.plain.loop-b li::before{color:var(--loop);} ul.plain.navy-b li::before{color:
     <h3 style="font-size:1.05rem;font-weight:800;color:var(--navy);margin-top:36px;margin-bottom:16px;">Sample Monthly Report Narrative</h3>
     <div class="narrative mb32">
       <div class="narrative-label">📋 ICP + Opportunity-Led Format</div>
-      <div class="narrative-block"><div class="nb-channel"><span class="nb-dot" style="background:var(--seo);"></span><span class="nb-name">SEO Strategist</span></div><div class="nb-text">Organic drove 14 form submissions. Loop shows 9 from Procurement Managers at industrial manufacturing companies — our highest-value ICP segment. Three used "DOM tubing cut-to-size" in comments, which isn't currently a page or keyword target. Building that page this month and passing the term to Paid Media for an exact-match test while organic authority builds. We reviewed AI Overview presence for our top 10 queries — two competitors are being cited that we're not, and we've identified their content format.</div></div>
+      <div class="narrative-block"><div class="nb-channel"><span class="nb-dot" style="background:var(--seo);"></span><span class="nb-name">SEO Strategist</span></div><div class="nb-text">Organic drove 14 form submissions. Loop shows 9 from Procurement Managers at industrial manufacturing companies — our highest-value ICP segment. Three used "DOM tubing cut-to-size" in comments, which isn't currently a page or keyword target. Building that page this month and passing the term to Paid Media for an exact-match test while organic authority builds. We reviewed AI Overview presence for our top 10 queries — two competitors are being cited that we're not, and we've identified their content format to build toward.</div></div>
       <div class="narrative-block"><div class="nb-channel"><span class="nb-dot" style="background:var(--paid);"></span><span class="nb-name">Paid Media Strategist</span></div><div class="nb-text">Paid drove 33 submissions. ICP breakdown: 11 from Procurement Managers at 50+ employee companies, 6 from Design Engineers at aerospace companies — both strong ICP matches. PMax audience signals updated this month to include our top ICP buyer profile from Loop. Flagged 4 hobbyist/retail submissions and extracted their language as new negatives. Adding "DFARS compliant" as ad copy callout after 3 aerospace submissions mentioned compliance in comments — sharing those queries with SEO Strategist as organic page-build candidates.</div></div>
       <div class="narrative-block"><div class="nb-channel"><span class="nb-dot" style="background:var(--email);"></span><span class="nb-name">Email Strategist</span></div><div class="nb-text">Two new segments built from Loop ICP: (1) aluminum buyers with urgent timelines, (2) aerospace companies who submitted but went quiet. Aluminum sequence generated 4 return submissions in two weeks. Coordinated subject line language with SEO Strategist — "in-stock 6061 ready to ship" performed well in email and is now being tested as an organic page headline. Aerospace re-engagement is live — any notable company names that respond will be flagged within 24 hours.</div></div>
       <div class="narrative-block"><div class="nb-channel"><span class="nb-dot" style="background:var(--ux);"></span><span class="nb-name">UX Strategist</span></div><div class="nb-text">Loop behavioral data shows paid buyers visiting the Certifications page before converting at 2× the rate of organic visitors. Adding inline DFARS and MTR compliance callouts to the top paid landing page this sprint — coordinated with Paid Media Strategist to improve PMax landing page quality scores. Also adding "Needed By Date" field to the RFQ form after urgency language appears in 28% of comment fields, giving Email Strategist an additional segmentation signal going forward.</div></div>
+    </div>
+
+    <div class="callout navy mb32">
+      <div class="callout-label">The Strategic Partner Punchline</div>
+      <p><strong style="color:var(--gold)">"We're not guessing buyer priorities — we can point to what prospects asked for, what company types submitted, how AI landscape shifts affected where they arrived from, and what each strategist is doing differently because of it."</strong> We bring patterns, not opinions. We ask questions tied to observed ICP signals. We align marketing, sales, and operations around lead quality and feasibility. That's what separates strategic partners from order-takers — and it's what drives Heartbeat health scores toward 85+.</p>
     </div>
 
     <h3 style="font-size:1.1rem;font-weight:800;color:var(--navy);margin-bottom:18px;">Role Ownership</h3>
@@ -1250,9 +1332,21 @@ ul.plain.loop-b li::before{color:var(--loop);} ul.plain.navy-b li::before{color:
       <div class="recap-item"><div class="recap-num">01</div><div class="recap-title">Think in Opportunities</div><div class="recap-desc">Every channel action either generates, advances, or misses an opportunity. Move beyond metrics — connect every data point to pipeline relevance. A lead is more than a number, and a metric is more than a report line.</div></div>
       <div class="recap-item"><div class="recap-num">02</div><div class="recap-title">Know Each Channel's Job</div><div class="recap-desc">SEO attracts. Paid accelerates. Email nurtures. UX converts. Each has a distinct role — and each depends on the others. The Integrated Strategy Lead connects them. Silos destroy compound value.</div></div>
       <div class="recap-item"><div class="recap-num">03</div><div class="recap-title">Apply B-SMART® Everywhere</div><div class="recap-desc">Buyer specificity — material, grade, size, requirement — drives better performance in every channel. Loop ICP data continuously validates which B-SMART® dimensions your actual buyers use most, keeping all four channels aligned to real intent.</div></div>
-<div class="recap-item"><div class="recap-num">04</div><div class="recap-title">Build the ICP From Loop</div><div class="recap-desc">Company, role, language, volume, industry, geography — six dimensions of ICP clarity that get sharper every month. Not a kickoff deliverable. A living profile updated by every submission that sharpens every channel decision.</div></div>
-<div class="recap-item"><div class="recap-num">05</div><div class="recap-title">Respond to AI as a Team</div><div class="recap-desc">AI Overviews, conversational search, PMax automation, and content commoditization each affect a different channel. When one channel is disrupted, the others must compensate. Integrated response is the only effective one. First-party data is the moat.</div></div>
-<div class="recap-item"><div class="recap-num">06</div><div class="recap-title">Everyone Owns the Strategy</div><div class="recap-desc">Integrated strategy isn't a senior-only responsibility. Every SEO Strategist, Paid Media Strategist, Email Strategist, UX Strategist, and Integrated Strategy Lead contributes to the same ICP and pipeline outcome.</div></div>
-</div>
+      <div class="recap-item"><div class="recap-num">04</div><div class="recap-title">Build the ICP From Loop</div><div class="recap-desc">Company, role, language, volume, industry, geography — six dimensions of ICP clarity that get sharper every month. Not a kickoff deliverable. A living profile updated by every submission that sharpens every channel decision.</div></div>
+      <div class="recap-item"><div class="recap-num">05</div><div class="recap-title">Respond to AI as a Team</div><div class="recap-desc">AI Overviews, conversational search, PMax automation, and content commoditization each affect a different channel. When one channel is disrupted, the others must compensate. Integrated response is the only effective one. First-party data is the moat.</div></div>
+      <div class="recap-item"><div class="recap-num">06</div><div class="recap-title">Everyone Owns the Strategy</div><div class="recap-desc">Integrated strategy isn't a senior-only responsibility. Every SEO Strategist, Paid Media Strategist, Email Strategist, UX Strategist, and Integrated Strategy Lead contributes to the same ICP and pipeline outcome.</div></div>
+    </div>
+  </div>
+</section>
 
-</div> </section> <footer class="footer"> <div class="footer-brand">Outer<em>Box</em></div> <div class="footer-school">B · S C H O O L</div> <div class="footer-meta"> <span>Integrated Strategy Playbook · All Verticals</span> <span>May 2026</span> <span>Confidential · Employee Training Use Only</span> </div> </footer> </body> </html>
+<footer class="footer">
+  <div class="footer-brand">Outer<em>Box</em></div>
+  <div class="footer-school">B · S C H O O L</div>
+  <div class="footer-meta">
+    <span>Integrated Strategy Playbook · All Verticals</span>
+    <span>May 2026</span>
+    <span>Confidential · Employee Training Use Only</span>
+  </div>
+</footer>
+</body>
+</html>
