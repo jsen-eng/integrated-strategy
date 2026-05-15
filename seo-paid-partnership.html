@@ -6,101 +6,103 @@
 <title>OBx B-School | SEO + Paid Search Partnership Playbook</title>
 <style>
 :root {
-  --navy: #1B4F72; --navy-dark: #154360; --gold: #F5A623;
-  --slate: #4A6375; --light-gray: #F0F2F5; --border: #DDE3EA;
-  --text: #2C3E50; --text-light: #7F8C8D; --success: #27AE60; --error: #E74C3C;
-  --seo: #0E7C5C;   --seo-light: rgba(14,124,92,0.08);  --seo-dark: #0A5C43;
-  --paid: #D4551A;  --paid-light: rgba(212,85,26,0.07); --paid-dark: #A63D10;
-  --loop: #0A7B8E;  --loop-light: rgba(10,123,142,0.07); --loop-dark: #086B7A;
-  --attr: #5B3FA8;  --attr-light: rgba(91,63,168,0.08);
-  --pb-light: rgba(27,79,114,0.06);
+  --navy:#1B4F72; --navy-dark:#154360; --gold:#F5A623;
+  --slate:#4A6375; --light-gray:#F0F2F5; --border:#DDE3EA;
+  --text:#2C3E50; --text-light:#7F8C8D; --success:#27AE60; --error:#E74C3C;
+  --seo:#0E7C5C; --seo-light:rgba(14,124,92,0.08); --seo-dark:#0A5C43;
+  --paid:#D4551A; --paid-light:rgba(212,85,26,0.07); --paid-dark:#A63D10;
+  --loop:#0A7B8E; --loop-light:rgba(10,123,142,0.07); --loop-dark:#086B7A;
+  --attr:#5B3FA8; --attr-light:rgba(91,63,168,0.08);
+  --pb-light:rgba(27,79,114,0.06);
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{font-family:'Segoe UI',-apple-system,Arial,sans-serif;background:var(--light-gray);color:var(--text);line-height:1.65;}
 
-/* ─── NAV ─── */
-.top-nav{position:sticky;top:0;z-index:300;background:var(--navy);height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 48px;box-shadow:0 2px 12px rgba(0,0,0,0.25);}
+/* ── TOP NAV ── */
+.top-nav{position:sticky;top:0;z-index:300;background:var(--navy);height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 48px;box-shadow:0 2px 12px rgba(0,0,0,.25);}
 .brand{display:flex;align-items:center;}
-.brand-main{color:#fff;font-size:1.3rem;font-weight:900;letter-spacing:-0.5px;}
+.brand-main{color:#fff;font-size:1.3rem;font-weight:900;letter-spacing:-.5px;}
 .brand-main em{color:var(--gold);font-style:normal;}
-.brand-school{color:var(--gold);font-size:0.65rem;font-weight:800;letter-spacing:3px;text-transform:uppercase;border-left:2px solid rgba(245,166,35,0.35);margin-left:12px;padding-left:12px;}
-.nav-right{display:flex;align-items:center;gap:10px;}
-.nav-badge{background:linear-gradient(135deg,rgba(212,85,26,0.2),rgba(14,124,92,0.2));color:#fff;border:1px solid rgba(255,255,255,0.2);padding:3px 12px;border-radius:20px;font-size:0.71rem;font-weight:600;}
-.nav-back{background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.7);border:1px solid rgba(255,255,255,0.2);padding:4px 12px;border-radius:20px;font-size:0.71rem;font-weight:700;text-decoration:none;transition:all 0.15s;}
-.nav-back:hover{background:rgba(255,255,255,0.2);color:#fff;}
+.brand-school{color:var(--gold);font-size:.65rem;font-weight:800;letter-spacing:3px;text-transform:uppercase;border-left:2px solid rgba(245,166,35,.35);margin-left:12px;padding-left:12px;}
+.nav-badge{background:linear-gradient(135deg,rgba(212,85,26,.2),rgba(14,124,92,.2));color:#fff;border:1px solid rgba(255,255,255,.2);padding:3px 12px;border-radius:20px;font-size:.71rem;font-weight:600;}
 
-/* ─── SECTION NAV ─── */
-.section-nav{background:var(--navy-dark);border-bottom:2px solid rgba(245,166,35,0.12);display:flex;align-items:center;padding:0 48px;gap:4px;overflow-x:auto;position:sticky;top:56px;z-index:190;}
-.snav-label{color:rgba(255,255,255,0.27);font-size:0.67rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding-right:14px;border-right:1px solid rgba(255,255,255,0.08);margin-right:8px;white-space:nowrap;flex-shrink:0;}
-.snav-link{display:flex;align-items:center;gap:7px;color:rgba(255,255,255,0.42);text-decoration:none;font-size:0.76rem;font-weight:600;padding:13px 14px;border-bottom:3px solid transparent;margin-bottom:-2px;transition:all 0.15s;white-space:nowrap;}
-.snav-link:hover{color:rgba(255,255,255,0.8);}
-.snav-num{width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.65rem;font-weight:800;color:#fff;flex-shrink:0;}
+/* ── PLAYBOOK NAV ── */
+.playbook-nav{position:sticky;top:56px;z-index:290;background:#0D1C2B;height:44px;display:flex;align-items:center;padding:0 48px;gap:10px;border-bottom:1px solid rgba(255,255,255,.08);overflow-x:auto;}
+.pn-label{color:rgba(255,255,255,.32);font-size:.64rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding-right:14px;border-right:1px solid rgba(255,255,255,.1);white-space:nowrap;flex-shrink:0;}
+.pn-link{display:flex;align-items:center;gap:6px;padding:5px 13px;border-radius:6px;font-size:.74rem;font-weight:600;text-decoration:none;transition:all .15s;white-space:nowrap;flex-shrink:0;}
+.pn-link.active{background:rgba(255,255,255,.12);color:#fff;cursor:default;border:1px solid rgba(255,255,255,.18);}
+.pn-link.other{color:rgba(255,255,255,.5);border:1px solid rgba(255,255,255,.1);}
+.pn-link.other:hover{background:rgba(255,255,255,.07);color:rgba(255,255,255,.88);border-color:rgba(255,255,255,.22);}
+.pn-sep{color:rgba(255,255,255,.15);font-size:.9rem;flex-shrink:0;}
+
+/* ── SECTION NAV ── */
+.section-nav{background:var(--navy-dark);border-bottom:2px solid rgba(245,166,35,.12);display:flex;align-items:center;padding:0 48px;gap:4px;overflow-x:auto;position:sticky;top:100px;z-index:180;}
+.snav-label{color:rgba(255,255,255,.3);font-size:.67rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding-right:14px;border-right:1px solid rgba(255,255,255,.08);margin-right:8px;white-space:nowrap;flex-shrink:0;}
+.snav-link{display:flex;align-items:center;gap:7px;color:rgba(255,255,255,.5);text-decoration:none;font-size:.76rem;font-weight:600;padding:13px 14px;border-bottom:3px solid transparent;margin-bottom:-2px;transition:all .15s;white-space:nowrap;}
+.snav-link:hover{color:rgba(255,255,255,.88);}
+.snav-num{width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.65rem;font-weight:800;color:#fff;flex-shrink:0;}
 .sn-both{background:linear-gradient(135deg,var(--paid),var(--seo));}
 .sn-seo{background:var(--seo);} .sn-paid{background:var(--paid);}
 .sn-attr{background:var(--attr);} .sn-loop{background:var(--loop);}
 .sn-navy{background:var(--navy);} .sn-slate{background:var(--slate);}
 
-/* ─── HEADER ─── */
+/* ── HEADER ── */
 .part-header{background:linear-gradient(135deg,#0D1C2B 0%,#1A2E1A 35%,#2E1008 70%,#1B3050 100%);padding:72px 48px 64px;position:relative;overflow:hidden;}
-.ph-blob{position:absolute;border-radius:50%;pointer-events:none;top:-80px;right:-60px;width:420px;height:420px;background:rgba(245,166,35,0.03);}
+.ph-blob{position:absolute;border-radius:50%;pointer-events:none;top:-80px;right:-60px;width:420px;height:420px;background:rgba(245,166,35,.03);}
 .ph-inner{max-width:1060px;margin:0 auto;position:relative;z-index:1;}
-.ph-series{font-size:0.7rem;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:12px;display:flex;align-items:center;gap:10px;}
-.ph-series::before{content:'';display:block;width:24px;height:2px;background:rgba(255,255,255,0.38);}
+.ph-series{font-size:.7rem;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:12px;display:flex;align-items:center;gap:10px;}
+.ph-series::before{content:'';display:block;width:24px;height:2px;background:rgba(255,255,255,.4);}
 .ph-badges{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap;}
-.ph-badge-seo{display:inline-flex;background:rgba(14,124,92,0.2);border:1px solid rgba(14,124,92,0.4);border-radius:6px;padding:5px 12px;color:rgba(14,190,112,0.9);font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;}
-.ph-badge-paid{display:inline-flex;background:rgba(212,85,26,0.2);border:1px solid rgba(212,85,26,0.4);border-radius:6px;padding:5px 12px;color:rgba(255,120,80,0.9);font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;}
+.ph-badge-seo{display:inline-flex;background:rgba(14,124,92,.2);border:1px solid rgba(14,124,92,.4);border-radius:6px;padding:5px 12px;color:rgba(14,210,120,.95);font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;}
+.ph-badge-paid{display:inline-flex;background:rgba(212,85,26,.2);border:1px solid rgba(212,85,26,.4);border-radius:6px;padding:5px 12px;color:rgba(255,130,80,.95);font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;}
 .ph-title{color:#fff;font-size:2.8rem;font-weight:900;line-height:1.12;margin-bottom:16px;}
-.ph-sub{color:rgba(255,255,255,0.65);font-size:0.98rem;max-width:620px;line-height:1.72;margin-bottom:30px;}
+.ph-sub{color:rgba(255,255,255,.85);font-size:.98rem;max-width:620px;line-height:1.72;margin-bottom:30px;}
 .ph-objs{display:flex;flex-wrap:wrap;gap:9px;}
-.ph-obj{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.13);border-radius:7px;padding:7px 13px;color:rgba(255,255,255,0.78);font-size:0.77rem;}
-.ph-obj::before{content:'✓ ';color:rgba(255,255,255,0.45);font-size:0.72rem;}
+.ph-obj{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);border-radius:7px;padding:7px 13px;color:rgba(255,255,255,.88);font-size:.77rem;}
+.ph-obj::before{content:'✓ ';color:rgba(255,255,255,.5);font-size:.72rem;}
 
-/* ─── DUAL STRIP ─── */
+/* ── DUAL STRIP ── */
 .dual-strip{height:5px;background:linear-gradient(90deg,var(--paid) 0%,var(--paid) 50%,var(--seo) 50%,var(--seo) 100%);}
 
-/* ─── LAYOUT ─── */
+/* ── LAYOUT ── */
 .container{max-width:1060px;margin:0 auto;padding:0 48px;}
 section.sec-light{background:var(--light-gray);padding:64px 0;}
 section.sec-white{background:#fff;padding:64px 0;}
 section.sec-dark{background:var(--navy);padding:64px 0;}
 section.sec-attr{background:linear-gradient(160deg,#1A0F30 0%,#231545 60%,#1B1F3B 100%);padding:64px 0;}
 
-/* ─── SECTION HEADERS ─── */
+/* ── SECTION HEADERS ── */
 .sh{margin-bottom:36px;}
-.sh-tag{font-size:0.72rem;font-weight:800;letter-spacing:3px;text-transform:uppercase;margin-bottom:8px;}
-.sh-tag.navy{color:var(--navy);} .sh-tag.wht{color:rgba(255,255,255,0.48);}
-.sh-tag.gold{color:var(--gold);} .sh-tag.seo{color:var(--seo);}
-.sh-tag.paid{color:var(--paid);} .sh-tag.loop{color:var(--loop);}
-.sh-tag.attr{color:rgba(180,160,255,0.85);}
+.sh-tag{font-size:.72rem;font-weight:800;letter-spacing:3px;text-transform:uppercase;margin-bottom:8px;}
+.sh-tag.navy{color:var(--navy);} .sh-tag.wht{color:rgba(255,255,255,.65);}
+.sh-tag.seo{color:var(--seo);} .sh-tag.paid{color:var(--paid);}
+.sh-tag.loop{color:var(--loop);} .sh-tag.attr{color:rgba(190,170,255,.95);}
 .sh-tag.both{background:linear-gradient(90deg,var(--paid),var(--seo));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
 .sh-title{font-size:1.9rem;font-weight:800;color:var(--navy);line-height:1.2;margin-bottom:12px;}
 .sh-title.wht{color:#fff;}
-.sh-desc{color:var(--text-light);font-size:0.91rem;max-width:700px;line-height:1.7;}
-.sh-desc.wht{color:rgba(255,255,255,0.6);}
+.sh-desc{color:var(--text-light);font-size:.91rem;max-width:700px;line-height:1.7;}
+.sh-desc.wht{color:rgba(255,255,255,.85);}
 
-/* ─── GRIDS ─── */
+/* ── GRIDS ── */
 .g2{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
 .g3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
 
-/* ─── CARDS ─── */
-.card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:26px;transition:box-shadow 0.15s,transform 0.15s;}
-.card:hover{box-shadow:0 5px 20px rgba(0,0,0,0.07);transform:translateY(-2px);}
-.card.navy{background:var(--navy);}
-.card h3{font-size:0.97rem;font-weight:700;color:var(--navy);margin-bottom:10px;}
-.card.navy h3{color:var(--gold);}
-.card p,.card li{font-size:0.86rem;color:var(--text-light);line-height:1.65;}
+/* ── CARDS ── */
+.card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:26px;transition:box-shadow .15s,transform .15s;}
+.card:hover{box-shadow:0 5px 20px rgba(0,0,0,.07);transform:translateY(-2px);}
+.card h3{font-size:.97rem;font-weight:700;color:var(--navy);margin-bottom:10px;}
 
-/* ─── CALLOUTS ─── */
+/* ── CALLOUTS ── */
 .callout{border-radius:10px;padding:20px 24px;margin:24px 0;border-left:4px solid;}
 .callout.navy{background:var(--navy);border-color:var(--gold);}
-.callout.gold{background:rgba(245,166,35,0.08);border-color:var(--gold);}
+.callout.gold{background:rgba(245,166,35,.08);border-color:var(--gold);}
 .callout.seo{background:var(--seo-light);border-color:var(--seo);}
 .callout.paid{background:var(--paid-light);border-color:var(--paid);}
 .callout.loop{background:var(--loop-light);border-color:var(--loop);}
 .callout.attr{background:var(--attr-light);border-color:var(--attr);}
-.callout.both{background:linear-gradient(135deg,rgba(212,85,26,0.05),rgba(14,124,92,0.05));border-left:none;border-top:3px solid var(--paid);border-right:3px solid var(--seo);}
-.callout-label{font-size:0.7rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;}
+.callout.both{background:linear-gradient(135deg,rgba(212,85,26,.05),rgba(14,124,92,.05));border-left:none;border-top:3px solid var(--paid);border-right:3px solid var(--seo);}
+.callout-label{font-size:.7rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;}
 .callout.navy .callout-label{color:var(--gold);}
 .callout.gold .callout-label{color:#9A6800;}
 .callout.seo .callout-label{color:var(--seo-dark);}
@@ -108,180 +110,184 @@ section.sec-attr{background:linear-gradient(160deg,#1A0F30 0%,#231545 60%,#1B1F3
 .callout.loop .callout-label{color:var(--loop-dark);}
 .callout.attr .callout-label{color:var(--attr);}
 .callout.both .callout-label{color:var(--slate);}
-.callout p{font-size:0.88rem;line-height:1.68;}
-.callout.navy p{color:rgba(255,255,255,0.82);}
+.callout p{font-size:.88rem;line-height:1.68;}
+.callout.navy p{color:rgba(255,255,255,.92);}
 
-/* ─── PLAIN LISTS ─── */
+/* ── LISTS ── */
 ul.plain{list-style:none;padding:0;}
-ul.plain li{font-size:0.86rem;color:var(--text);padding:6px 0;border-bottom:1px solid var(--border);display:flex;gap:9px;align-items:flex-start;line-height:1.55;}
+ul.plain li{font-size:.86rem;color:var(--text);padding:6px 0;border-bottom:1px solid var(--border);display:flex;gap:9px;align-items:flex-start;line-height:1.55;}
 ul.plain li:last-child{border-bottom:none;}
-ul.plain li::before{content:'▸';flex-shrink:0;font-size:0.8rem;margin-top:1px;}
+ul.plain li::before{content:'▸';flex-shrink:0;font-size:.8rem;margin-top:1px;}
 ul.plain.seo-b li::before{color:var(--seo);}
 ul.plain.paid-b li::before{color:var(--paid);}
-ul.plain.loop-b li::before{color:var(--loop);}
-ul.plain.navy-b li::before{color:var(--navy);}
-ul.plain.wht li{color:rgba(255,255,255,0.72);border-color:rgba(255,255,255,0.08);}
-ul.plain.wht li::before{color:var(--gold);}
 
-/* ─── STAT STRIP ─── */
-.stat-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-radius:12px;overflow:hidden;border:1px solid var(--border);}
+/* ── STAT STRIPS ── */
+.stat-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-radius:12px;overflow:hidden;border:1px solid var(--border);margin-bottom:28px;}
 .stat-cell{padding:20px 18px;text-align:center;background:#fff;}
 .stat-cell:not(:last-child){border-right:1px solid var(--border);}
 .stat-num{font-size:2.2rem;font-weight:900;line-height:1;margin-bottom:6px;}
-.stat-label{font-size:0.76rem;color:var(--text-light);line-height:1.45;margin-bottom:4px;}
-.stat-source{font-size:0.63rem;color:rgba(0,0,0,0.28);font-style:italic;}
+.stat-label{font-size:.77rem;color:var(--text-light);line-height:1.5;margin-bottom:4px;}
+.stat-source{font-size:.63rem;color:rgba(0,0,0,.3);font-style:italic;}
 .stat-cell.seo .stat-num{color:var(--seo);}
 .stat-cell.paid .stat-num{color:var(--paid);}
 .stat-cell.gold .stat-num{color:#9A6800;}
 .stat-cell.navy .stat-num{color:var(--navy);}
-.stat-cell.attr .stat-num{color:var(--attr);}
 
-/* ─── DARK STAT STRIP ─── */
-.dark-stat-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;}
-.dss-cell{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);padding:20px 18px;text-align:center;border-radius:2px;}
+/* dark stat strip */
+.dss{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-bottom:28px;}
+.dss-cell{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:20px 18px;text-align:center;border-radius:2px;}
 .dss-num{font-size:2rem;font-weight:900;line-height:1;margin-bottom:6px;}
-.dss-label{font-size:0.77rem;color:rgba(255,255,255,0.62);line-height:1.45;margin-bottom:4px;}
-.dss-source{font-size:0.63rem;color:rgba(255,255,255,0.28);font-style:italic;}
-.dss-cell.seo .dss-num{color:rgba(14,190,112,0.9);}
-.dss-cell.paid .dss-num{color:rgba(255,120,80,0.9);}
+.dss-label{font-size:.78rem;color:rgba(255,255,255,.88);line-height:1.5;margin-bottom:4px;}
+.dss-source{font-size:.65rem;color:rgba(255,255,255,.45);font-style:italic;}
+.dss-cell.seo .dss-num{color:rgba(14,210,120,.95);}
+.dss-cell.paid .dss-num{color:rgba(255,130,80,.95);}
+.dss-cell.attr .dss-num{color:rgba(190,170,255,.95);}
 .dss-cell.gold .dss-num{color:var(--gold);}
-.dss-cell.attr .dss-num{color:rgba(180,160,255,0.9);}
 
-/* ─── CHANNEL VISIBILITY SPLIT ─── */
+/* ── CHANNEL VISIBILITY SPLIT ── */
 .vis-split{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:14px;overflow:hidden;border:1px solid var(--border);}
 .vs-head{padding:22px 24px;}
 .vs-icon{font-size:1.6rem;margin-bottom:8px;line-height:1;}
 .vs-name{color:#fff;font-size:1rem;font-weight:800;margin-bottom:4px;}
-.vs-tag{color:rgba(255,255,255,0.62);font-size:0.73rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;}
+.vs-tag{color:rgba(255,255,255,.75);font-size:.73rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;}
 .vs-body{background:#fff;padding:20px 24px;border-top:1px solid var(--border);}
-.vs-section-label{font-size:0.67rem;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px;margin-top:14px;}
-.vs-section-label:first-child{margin-top:0;}
+.vs-slabel{font-size:.67rem;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px;margin-top:14px;}
+.vs-slabel:first-child{margin-top:0;}
 .vs-items{list-style:none;padding:0;}
-.vs-items li{font-size:0.81rem;color:var(--text);padding:5px 0;border-bottom:1px solid var(--border);display:flex;gap:8px;line-height:1.5;}
+.vs-items li{font-size:.81rem;color:var(--text);padding:5px 0;border-bottom:1px solid var(--border);display:flex;gap:8px;line-height:1.5;}
 .vs-items li:last-child{border-bottom:none;}
 .vs-left .vs-items li::before{content:'→';color:var(--seo);flex-shrink:0;}
 .vs-right .vs-items li::before{content:'→';color:var(--paid);flex-shrink:0;}
-.vs-blind{background:rgba(231,76,60,0.05);border-left:3px solid var(--error);padding:10px 14px;border-radius:0 7px 7px 0;font-size:0.77rem;color:var(--text);line-height:1.6;margin-top:14px;}
+.vs-blind{background:rgba(231,76,60,.06);border-left:3px solid var(--error);padding:10px 14px;border-radius:0 7px 7px 0;font-size:.77rem;color:var(--text);line-height:1.6;margin-top:14px;}
 .vs-blind strong{color:var(--error);}
 
-/* ─── USER PATH ─── */
-.path-wrap{background:#fff;border:1px solid var(--border);border-radius:14px;overflow:hidden;}
-.path-head{background:var(--navy);padding:18px 24px;display:flex;align-items:center;justify-content:space-between;}
-.path-head-title{color:#fff;font-weight:800;font-size:0.92rem;}
-.path-head-sub{color:rgba(255,255,255,0.5);font-size:0.75rem;}
+/* ── USER PATH ── */
+.path-wrap{background:#fff;border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:28px;}
+.path-head{background:var(--navy);padding:18px 24px;}
+.path-head-title{color:#fff;font-weight:800;font-size:.92rem;margin-bottom:3px;}
+.path-head-sub{color:rgba(255,255,255,.65);font-size:.75rem;}
 .path-body{padding:28px 24px;}
 .path-journey{margin-bottom:28px;padding-bottom:28px;border-bottom:1px solid var(--border);}
 .path-journey:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none;}
-.path-journey-label{font-size:0.67rem;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;color:var(--slate);margin-bottom:12px;}
+.pj-label{font-size:.67rem;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;color:var(--slate);margin-bottom:12px;}
 .path-steps{display:flex;align-items:flex-start;gap:4px;flex-wrap:wrap;margin-bottom:10px;}
 .path-step{display:flex;flex-direction:column;align-items:center;gap:4px;}
-.ps-touch{padding:8px 12px;border-radius:8px;font-size:0.72rem;font-weight:700;text-align:center;white-space:nowrap;min-width:96px;line-height:1.35;}
-.ps-touch.organic{background:var(--seo-light);border:1px solid rgba(14,124,92,0.25);color:var(--seo-dark);}
-.ps-touch.paid{background:var(--paid-light);border:1px solid rgba(212,85,26,0.25);color:var(--paid-dark);}
-.ps-touch.direct{background:rgba(74,99,117,0.08);border:1px solid rgba(74,99,117,0.2);color:var(--slate);}
-.ps-touch.social{background:rgba(91,63,168,0.07);border:1px solid rgba(91,63,168,0.2);color:var(--attr);}
-.ps-touch.ai{background:rgba(59,47,107,0.07);border:1px solid rgba(59,47,107,0.2);color:#4B3A8A;}
-.ps-touch.convert{background:rgba(39,174,96,0.1);border:1px solid rgba(39,174,96,0.25);color:#1a7a4a;}
-.ps-credit{font-size:0.62rem;text-align:center;font-weight:700;}
-.ps-credit.none{color:rgba(231,76,60,0.7);}
-.ps-credit.full{color:rgba(39,174,96,0.9);}
-.ps-credit.partial{color:rgba(245,166,35,0.8);}
+.ps-touch{padding:8px 12px;border-radius:8px;font-size:.72rem;font-weight:700;text-align:center;white-space:nowrap;min-width:96px;line-height:1.35;}
+.ps-touch.organic{background:var(--seo-light);border:1px solid rgba(14,124,92,.25);color:var(--seo-dark);}
+.ps-touch.paid-t{background:var(--paid-light);border:1px solid rgba(212,85,26,.25);color:var(--paid-dark);}
+.ps-touch.direct{background:rgba(74,99,117,.08);border:1px solid rgba(74,99,117,.2);color:var(--slate);}
+.ps-touch.social{background:rgba(91,63,168,.07);border:1px solid rgba(91,63,168,.2);color:var(--attr);}
+.ps-touch.ai-t{background:rgba(59,47,107,.07);border:1px solid rgba(59,47,107,.2);color:#4B3A8A;}
+.ps-touch.convert{background:rgba(39,174,96,.1);border:1px solid rgba(39,174,96,.25);color:#1a7a4a;font-weight:800;}
+.ps-credit{font-size:.62rem;text-align:center;font-weight:700;}
+.ps-credit.none{color:rgba(231,76,60,.8);}
+.ps-credit.full{color:rgba(39,174,96,.9);}
 .path-arrow{color:var(--border);font-size:1rem;padding:0 2px;align-self:center;flex-shrink:0;margin-top:-10px;}
-.path-note{padding:10px 14px;background:var(--light-gray);border-radius:7px;font-size:0.77rem;color:var(--text-light);line-height:1.6;}
+.path-note{padding:10px 14px;background:var(--light-gray);border-radius:7px;font-size:.77rem;color:var(--text-light);line-height:1.6;}
 
-/* ─── ATTRIBUTION COMPARISON ─── */
-.attr-compare{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;border-radius:14px;overflow:hidden;border:1px solid var(--border);}
+/* ── ATTRIBUTION COMPARE ── */
+.attr-compare{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;border-radius:14px;overflow:hidden;border:1px solid var(--border);margin-bottom:28px;}
 .ac-col{display:flex;flex-direction:column;}
 .ac-head{padding:16px 18px;display:flex;flex-direction:column;gap:4px;}
-.ac-head.last{background:rgba(231,76,60,0.08);border-bottom:1px solid rgba(231,76,60,0.15);}
-.ac-head.multi{background:rgba(91,63,168,0.07);border-bottom:1px solid rgba(91,63,168,0.15);}
-.ac-head.full{background:rgba(39,174,96,0.07);border-bottom:1px solid rgba(39,174,96,0.15);}
+.ac-head.last-c{background:rgba(231,76,60,.08);border-bottom:1px solid rgba(231,76,60,.15);}
+.ac-head.multi{background:rgba(91,63,168,.07);border-bottom:1px solid rgba(91,63,168,.15);}
+.ac-head.full-c{background:rgba(39,174,96,.07);border-bottom:1px solid rgba(39,174,96,.15);}
 .ac-head:not(:last-child){border-right:1px solid var(--border);}
-.ac-model{font-size:0.67rem;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;}
-.ac-head.last .ac-model{color:var(--error);}
+.ac-model{font-size:.67rem;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;}
+.ac-head.last-c .ac-model{color:var(--error);}
 .ac-head.multi .ac-model{color:var(--attr);}
-.ac-head.full .ac-model{color:var(--success);}
-.ac-desc{font-size:0.79rem;color:var(--text-light);line-height:1.5;}
+.ac-head.full-c .ac-model{color:var(--success);}
+.ac-desc{font-size:.79rem;color:var(--text-light);line-height:1.5;}
 .ac-body{flex:1;padding:16px 18px;background:#fff;}
 .ac-body:not(:last-child){border-right:1px solid var(--border);}
 .ac-touch-list{list-style:none;padding:0;}
 .ac-touch{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--border);}
 .ac-touch:last-child{border-bottom:none;}
-.ac-touch-name{font-size:0.81rem;color:var(--text);flex:1;}
-.ac-credit-bar{height:8px;border-radius:4px;min-width:4px;flex-shrink:0;}
-.ac-credit-bar.seo{background:var(--seo);}
-.ac-credit-bar.paid{background:var(--paid);}
-.ac-credit-bar.direct{background:var(--slate);}
-.ac-credit-bar.none{background:var(--border);width:4px !important;}
-.ac-credit-pct{font-size:0.72rem;font-weight:700;min-width:32px;text-align:right;}
-.ac-credit-pct.seo{color:var(--seo);}
-.ac-credit-pct.paid{color:var(--paid);}
-.ac-credit-pct.direct{color:var(--slate);}
-.ac-credit-pct.none{color:rgba(150,150,150,0.6);}
-.ac-verdict{margin-top:12px;padding:10px 12px;border-radius:7px;font-size:0.77rem;line-height:1.6;}
-.ac-head.last + .ac-body .ac-verdict{background:rgba(231,76,60,0.05);color:var(--text);}
-.ac-head.multi + .ac-body .ac-verdict{background:rgba(91,63,168,0.05);color:var(--text);}
-.ac-head.full + .ac-body .ac-verdict{background:rgba(39,174,96,0.05);color:var(--text);}
+.ac-touch-name{font-size:.81rem;color:var(--text);flex:1;}
+.ac-bar{height:8px;border-radius:4px;min-width:4px;flex-shrink:0;}
+.ac-bar.seo{background:var(--seo);} .ac-bar.paid{background:var(--paid);}
+.ac-bar.direct{background:var(--slate);} .ac-bar.none{background:var(--border);width:4px !important;}
+.ac-pct{font-size:.72rem;font-weight:700;min-width:32px;text-align:right;}
+.ac-pct.seo{color:var(--seo);} .ac-pct.paid{color:var(--paid);}
+.ac-pct.direct{color:var(--slate);} .ac-pct.none{color:rgba(150,150,150,.6);}
+.ac-verdict{margin-top:12px;padding:10px 12px;border-radius:7px;font-size:.77rem;line-height:1.6;color:var(--text);}
+.ac-head.last-c + .ac-body .ac-verdict{background:rgba(231,76,60,.05);}
+.ac-head.multi + .ac-body .ac-verdict{background:rgba(91,63,168,.05);}
+.ac-head.full-c + .ac-body .ac-verdict{background:rgba(39,174,96,.05);}
 
-/* ─── PLATFORM MATH ─── */
-.platform-math{display:grid;grid-template-columns:1fr auto 1fr;gap:0;border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,0.1);}
-.pm-left{background:rgba(212,85,26,0.12);padding:24px;border-right:1px solid rgba(255,255,255,0.07);}
-.pm-right{background:rgba(14,124,92,0.1);padding:24px;}
-.pm-mid{display:flex;align-items:center;justify-content:center;padding:0 18px;background:rgba(255,255,255,0.02);}
-.pm-icon{color:rgba(255,255,255,0.25);font-size:1.8rem;font-weight:900;}
-.pm-platform{font-size:0.67rem;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:6px;}
-.pm-left .pm-platform{color:rgba(255,120,80,0.75);}
-.pm-right .pm-platform{color:rgba(14,190,112,0.75);}
+/* ── PLATFORM MATH ── */
+.pm-wrap{display:grid;grid-template-columns:1fr auto 1fr;gap:0;border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.1);margin-bottom:28px;}
+.pm-left{background:rgba(212,85,26,.14);padding:24px;border-right:1px solid rgba(255,255,255,.08);}
+.pm-right{background:rgba(14,124,92,.12);padding:24px;}
+.pm-mid{display:flex;align-items:center;justify-content:center;padding:0 18px;background:rgba(255,255,255,.02);}
+.pm-icon{color:rgba(255,255,255,.4);font-size:1.8rem;font-weight:900;}
+.pm-platform{font-size:.67rem;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:6px;}
+.pm-left .pm-platform{color:rgba(255,130,80,.9);}
+.pm-right .pm-platform{color:rgba(14,210,120,.9);}
 .pm-num{font-size:2.4rem;font-weight:900;line-height:1;margin-bottom:4px;}
-.pm-left .pm-num{color:rgba(255,120,80,0.9);}
-.pm-right .pm-num{color:rgba(14,190,112,0.9);}
-.pm-label{font-size:0.78rem;color:rgba(255,255,255,0.55);margin-bottom:12px;}
+.pm-left .pm-num{color:rgba(255,130,80,.95);}
+.pm-right .pm-num{color:rgba(14,210,120,.95);}
+.pm-sub{font-size:.79rem;color:rgba(255,255,255,.8);margin-bottom:12px;}
 .pm-items{list-style:none;padding:0;}
-.pm-items li{font-size:0.79rem;color:rgba(255,255,255,0.65);padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.07);display:flex;gap:8px;line-height:1.5;}
+.pm-items li{font-size:.81rem;color:rgba(255,255,255,.88);padding:5px 0;border-bottom:1px solid rgba(255,255,255,.08);display:flex;gap:8px;line-height:1.5;}
 .pm-items li:last-child{border-bottom:none;}
-.pm-left .pm-items li::before{content:'→';color:rgba(255,120,80,0.6);flex-shrink:0;}
-.pm-right .pm-items li::before{content:'→';color:rgba(14,190,112,0.6);flex-shrink:0;}
+.pm-left .pm-items li::before{content:'→';color:rgba(255,130,80,.7);flex-shrink:0;}
+.pm-right .pm-items li::before{content:'→';color:rgba(14,210,120,.7);flex-shrink:0;}
 
-/* ─── MEETING CARDS ─── */
-.mp-card{border-radius:12px;overflow:hidden;border:1px solid var(--border);}
+/* ── RED / GREEN SPLIT ── */
+.rg-split{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:14px;overflow:hidden;border:1px solid var(--border);}
+.rg-left{background:rgba(231,76,60,.04);border-right:1px solid var(--border);padding:24px;}
+.rg-right{background:rgba(39,174,96,.04);padding:24px;}
+.rg-title{font-weight:800;font-size:.95rem;margin-bottom:4px;}
+.rg-left .rg-title{color:var(--error);}
+.rg-right .rg-title{color:var(--success);}
+.rg-sub{font-size:.77rem;color:var(--text-light);margin-bottom:14px;font-style:italic;}
+.rg-items{list-style:none;padding:0;}
+.rg-items li{font-size:.83rem;color:var(--text);padding:7px 0;border-bottom:1px solid var(--border);display:flex;gap:9px;align-items:flex-start;line-height:1.55;}
+.rg-items li:last-child{border-bottom:none;}
+.rg-left .rg-items li::before{content:'✗';color:var(--error);flex-shrink:0;font-weight:700;margin-top:1px;}
+.rg-right .rg-items li::before{content:'✓';color:var(--success);flex-shrink:0;font-weight:700;margin-top:1px;}
+
+/* ── MEETING CARDS ── */
+.mp-card{border-radius:12px;overflow:hidden;border:1px solid var(--border);margin-bottom:20px;}
 .mp-head{padding:20px 22px;}
 .mp-head.seo-to-paid{background:linear-gradient(135deg,var(--seo) 0%,#0A6B4E 100%);}
 .mp-head.paid-to-seo{background:linear-gradient(135deg,var(--paid) 0%,#A63D10 100%);}
 .mp-direction{display:flex;align-items:center;gap:8px;margin-bottom:8px;}
-.mp-from{background:rgba(255,255,255,0.15);border-radius:5px;padding:3px 9px;font-size:0.67rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:#fff;}
-.mp-arrow-icon{color:rgba(255,255,255,0.6);font-size:0.9rem;}
-.mp-to{background:rgba(255,255,255,0.2);border-radius:5px;padding:3px 9px;font-size:0.67rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:#fff;}
-.mp-title{color:#fff;font-weight:800;font-size:0.95rem;margin-bottom:4px;}
-.mp-sub{color:rgba(255,255,255,0.62);font-size:0.75rem;}
+.mp-from{background:rgba(255,255,255,.15);border-radius:5px;padding:3px 9px;font-size:.67rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:#fff;}
+.mp-arrow-icon{color:rgba(255,255,255,.7);font-size:.9rem;}
+.mp-to{background:rgba(255,255,255,.2);border-radius:5px;padding:3px 9px;font-size:.67rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:#fff;}
+.mp-title{color:#fff;font-weight:800;font-size:.95rem;margin-bottom:4px;}
+.mp-sub{color:rgba(255,255,255,.78);font-size:.75rem;}
 .mp-body{background:#fff;padding:0;}
 .mp-item{display:flex;gap:0;border-bottom:1px solid var(--border);}
 .mp-item:last-child{border-bottom:none;}
-.mp-item-label{background:var(--light-gray);width:130px;flex-shrink:0;padding:12px 14px;font-size:0.71rem;font-weight:700;color:var(--slate);border-right:1px solid var(--border);display:flex;align-items:flex-start;line-height:1.4;}
-.mp-item-value{padding:12px 16px;font-size:0.8rem;color:var(--text);line-height:1.6;flex:1;}
-.mp-item-value strong{color:var(--navy);display:block;margin-bottom:3px;font-size:0.82rem;}
+.mp-item-label{background:var(--light-gray);width:130px;flex-shrink:0;padding:12px 14px;font-size:.71rem;font-weight:700;color:var(--slate);border-right:1px solid var(--border);display:flex;align-items:flex-start;line-height:1.4;}
+.mp-item-value{padding:12px 16px;font-size:.8rem;color:var(--text);line-height:1.6;flex:1;}
+.mp-item-value strong{color:var(--navy);display:block;margin-bottom:3px;font-size:.82rem;}
 
-/* ─── CROSS-CHANNEL METRICS ─── */
-.cm-block{border-radius:12px;overflow:hidden;border:1px solid var(--border);}
+/* ── JOINT QUESTIONS ── */
+.jq-block{background:#fff;border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:12px;}
+.jq-head{display:flex;align-items:center;gap:12px;padding:14px 18px;background:var(--pb-light);border-bottom:1px solid var(--border);}
+.jq-num{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.84rem;color:#fff;flex-shrink:0;background:linear-gradient(135deg,var(--paid),var(--seo));}
+.jq-q{font-weight:700;color:var(--navy);font-size:.89rem;line-height:1.4;}
+.jq-body{padding:12px 18px;font-size:.82rem;color:var(--text-light);line-height:1.65;}
+
+/* ── CROSS-CHANNEL METRICS ── */
+.cm-block{border-radius:12px;overflow:hidden;border:1px solid var(--border);margin-bottom:20px;}
 .cm-head{padding:16px 20px;}
 .cm-head.seo-tracks{background:var(--seo);}
 .cm-head.paid-tracks{background:var(--paid);}
-.cm-head h3{color:#fff;font-weight:800;font-size:0.92rem;margin-bottom:3px;}
-.cm-head p{color:rgba(255,255,255,0.62);font-size:0.74rem;}
+.cm-head h3{color:#fff;font-weight:800;font-size:.92rem;margin-bottom:3px;}
+.cm-head p{color:rgba(255,255,255,.8);font-size:.74rem;}
 .cm-body{background:#fff;}
 .cm-row{display:flex;gap:0;border-bottom:1px solid var(--border);}
 .cm-row:last-child{border-bottom:none;}
-.cm-metric{background:var(--light-gray);width:150px;flex-shrink:0;padding:11px 14px;font-size:0.73rem;font-weight:700;color:var(--navy);border-right:1px solid var(--border);display:flex;align-items:flex-start;line-height:1.5;}
-.cm-meaning{padding:11px 14px;font-size:0.78rem;color:var(--text);line-height:1.6;flex:1;}
-.cm-meaning em{color:var(--slate);font-style:normal;display:block;font-size:0.72rem;margin-top:3px;}
+.cm-metric{background:var(--light-gray);width:150px;flex-shrink:0;padding:11px 14px;font-size:.73rem;font-weight:700;color:var(--navy);border-right:1px solid var(--border);display:flex;align-items:flex-start;line-height:1.5;}
+.cm-meaning{padding:11px 14px;font-size:.78rem;color:var(--text);line-height:1.6;flex:1;}
+.cm-meaning em{color:var(--slate);font-style:normal;display:block;font-size:.72rem;margin-top:3px;}
 
-/* ─── JOINT QUESTIONS ─── */
-.jq-block{background:#fff;border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:12px;}
-.jq-head{display:flex;align-items:center;gap:12px;padding:14px 18px;background:var(--pb-light);border-bottom:1px solid var(--border);}
-.jq-num{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:0.84rem;color:#fff;flex-shrink:0;background:linear-gradient(135deg,var(--paid),var(--seo));}
-.jq-q{font-weight:700;color:var(--navy);font-size:0.89rem;line-height:1.4;}
-.jq-body{padding:12px 18px;font-size:0.82rem;color:var(--text-light);line-height:1.65;}
-
-/* ─── STRATEGY PLAYS ─── */
+/* ── STRATEGY PLAYS ── */
 .play-card{background:#fff;border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:20px;}
 .play-header{display:flex;align-items:stretch;}
 .play-badge{width:56px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;font-weight:900;color:#fff;flex-shrink:0;}
@@ -289,131 +295,107 @@ ul.plain.wht li::before{color:var(--gold);}
 .play-badge.seo-lead{background:var(--seo);}
 .play-badge.paid-lead{background:var(--paid);}
 .play-meta{padding:14px 18px;background:var(--light-gray);border-bottom:1px solid var(--border);flex:1;}
-.play-label{font-size:0.65rem;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:5px;}
+.play-label{font-size:.65rem;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:5px;}
 .play-label.both{color:var(--slate);}
 .play-label.seo-lead{color:var(--seo-dark);}
 .play-label.paid-lead{color:var(--paid-dark);}
-.play-title{font-weight:800;color:var(--navy);font-size:0.93rem;line-height:1.35;}
-.play-trigger{font-size:0.77rem;color:var(--text-light);margin-top:4px;font-style:italic;}
+.play-title{font-weight:800;color:var(--navy);font-size:.93rem;line-height:1.35;}
+.play-trigger{font-size:.77rem;color:var(--text-light);margin-top:4px;font-style:italic;}
 .play-body{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;}
 .play-col{padding:16px 18px;}
 .play-col:not(:last-child){border-right:1px solid var(--border);}
-.play-col-label{font-size:0.67rem;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:10px;}
+.play-col-label{font-size:.67rem;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:10px;}
 .play-col-label.seo{color:var(--seo-dark);}
 .play-col-label.paid{color:var(--paid-dark);}
 .play-col-label.together{color:var(--navy);}
 .play-col ul{list-style:none;padding:0;}
-.play-col li{font-size:0.79rem;color:var(--text);padding:5px 0;border-bottom:1px solid var(--border);display:flex;gap:7px;line-height:1.5;}
+.play-col li{font-size:.79rem;color:var(--text);padding:5px 0;border-bottom:1px solid var(--border);display:flex;gap:7px;line-height:1.5;}
 .play-col li:last-child{border-bottom:none;}
 .play-col.seo li::before{content:'→';color:var(--seo);flex-shrink:0;}
 .play-col.paid li::before{content:'→';color:var(--paid);flex-shrink:0;}
 .play-col.together li::before{content:'⟳';color:var(--navy);flex-shrink:0;}
-.play-result{padding:12px 18px;background:rgba(27,79,114,0.04);border-top:1px solid var(--border);font-size:0.78rem;color:var(--text-light);line-height:1.6;}
+.play-result{padding:12px 18px;background:rgba(27,79,114,.04);border-top:1px solid var(--border);font-size:.78rem;color:var(--text-light);line-height:1.6;}
 .play-result strong{color:var(--navy);}
 
-/* ─── MEETING FRAMEWORK ─── */
+/* ── MEETING FRAMEWORK ── */
 .mf-wrap{background:#fff;border:1px solid var(--border);border-radius:14px;overflow:hidden;}
 .mf-head{background:var(--navy);padding:20px 24px;display:flex;align-items:center;justify-content:space-between;}
 .mf-head-title{color:#fff;font-weight:800;font-size:1rem;margin-bottom:3px;}
-.mf-head-sub{color:rgba(255,255,255,0.55);font-size:0.77rem;}
-.mf-time-badge{background:var(--gold);color:var(--navy);font-weight:800;font-size:0.78rem;padding:4px 12px;border-radius:6px;white-space:nowrap;}
+.mf-head-sub{color:rgba(255,255,255,.65);font-size:.77rem;}
+.mf-time-badge{background:var(--gold);color:var(--navy);font-weight:800;font-size:.78rem;padding:4px 12px;border-radius:6px;white-space:nowrap;}
 .mf-item{display:flex;gap:0;border-bottom:1px solid var(--border);}
 .mf-item:last-child{border-bottom:none;}
 .mf-time-block{width:72px;flex-shrink:0;padding:14px 12px;background:var(--light-gray);border-right:1px solid var(--border);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;}
 .mf-mins{font-size:1.1rem;font-weight:900;color:var(--navy);line-height:1;}
-.mf-min-label{font-size:0.62rem;color:var(--slate);text-transform:uppercase;letter-spacing:1px;font-weight:600;}
+.mf-min-label{font-size:.62rem;color:var(--slate);text-transform:uppercase;letter-spacing:1px;font-weight:600;}
 .mf-content{padding:14px 20px;flex:1;}
-.mf-item-title{font-weight:700;color:var(--navy);font-size:0.87rem;margin-bottom:4px;}
-.mf-owner{font-size:0.67rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;}
-.mf-owner.seo{color:var(--seo-dark);}
-.mf-owner.paid{color:var(--paid-dark);}
-.mf-owner.both{color:var(--slate);}
-.mf-owner.il{color:var(--navy);}
+.mf-item-title{font-weight:700;color:var(--navy);font-size:.87rem;margin-bottom:4px;}
+.mf-owner{font-size:.67rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;}
+.mf-owner.seo{color:var(--seo-dark);} .mf-owner.paid{color:var(--paid-dark);}
+.mf-owner.both{color:var(--slate);} .mf-owner.il{color:var(--navy);}
 .mf-list{list-style:none;padding:0;}
-.mf-list li{font-size:0.78rem;color:var(--text-light);padding:3px 0;display:flex;gap:7px;line-height:1.5;}
+.mf-list li{font-size:.78rem;color:var(--text-light);padding:3px 0;display:flex;gap:7px;line-height:1.5;}
 .mf-list li::before{content:'·';color:var(--border);flex-shrink:0;font-size:1rem;line-height:1;}
 
-/* ─── RED / GREEN SPLIT ─── */
-.rg-split{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:14px;overflow:hidden;border:1px solid var(--border);}
-.rg-left{background:rgba(231,76,60,0.04);border-right:1px solid var(--border);padding:24px;}
-.rg-right{background:rgba(39,174,96,0.04);padding:24px;}
-.rg-title{font-weight:800;font-size:0.95rem;margin-bottom:4px;}
-.rg-left .rg-title{color:var(--error);}
-.rg-right .rg-title{color:var(--success);}
-.rg-sub{font-size:0.77rem;color:var(--text-light);margin-bottom:14px;font-style:italic;}
-.rg-items{list-style:none;padding:0;}
-.rg-items li{font-size:0.83rem;color:var(--text);padding:7px 0;border-bottom:1px solid var(--border);display:flex;gap:9px;align-items:flex-start;line-height:1.55;}
-.rg-items li:last-child{border-bottom:none;}
-.rg-left .rg-items li::before{content:'✗';color:var(--error);flex-shrink:0;font-weight:700;margin-top:1px;}
-.rg-right .rg-items li::before{content:'✓';color:var(--success);flex-shrink:0;font-weight:700;margin-top:1px;}
-
-/* ─── RECAP ─── */
+/* ── RECAP ── */
 .recap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
-.recap-item{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:22px;}
-.recap-num{font-size:2rem;font-weight:900;color:var(--gold);opacity:0.3;line-height:1;margin-bottom:4px;}
-.recap-title{color:var(--gold);font-weight:700;font-size:0.88rem;margin-bottom:8px;}
-.recap-desc{color:rgba(255,255,255,0.62);font-size:0.81rem;line-height:1.6;}
+.recap-item{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:22px;}
+.recap-num{font-size:2rem;font-weight:900;color:var(--gold);opacity:.35;line-height:1;margin-bottom:4px;}
+.recap-title{color:var(--gold);font-weight:700;font-size:.88rem;margin-bottom:8px;}
+.recap-desc{color:rgba(255,255,255,.85);font-size:.82rem;line-height:1.62;}
 
-/* ─── REF RIBBON ─── */
-.ref-ribbon{background:rgba(27,79,114,0.08);border:1px solid rgba(27,79,114,0.15);border-radius:10px;padding:14px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
-.rr-label{color:var(--slate);font-size:0.68rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;white-space:nowrap;flex-shrink:0;}
+/* ── REF RIBBON ── */
+.ref-ribbon{background:rgba(27,79,114,.08);border:1px solid rgba(27,79,114,.15);border-radius:10px;padding:14px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
+.rr-label{color:var(--slate);font-size:.68rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;white-space:nowrap;flex-shrink:0;}
 .rr-links{display:flex;gap:8px;flex-wrap:wrap;}
-.rr-link{background:#fff;border:1px solid var(--border);color:var(--navy);font-size:0.72rem;font-weight:700;padding:4px 11px;border-radius:6px;text-decoration:none;transition:all 0.15s;white-space:nowrap;}
+.rr-link{background:#fff;border:1px solid var(--border);color:var(--navy);font-size:.72rem;font-weight:700;padding:4px 11px;border-radius:6px;text-decoration:none;transition:all .15s;white-space:nowrap;}
 .rr-link:hover{background:var(--navy);color:#fff;border-color:var(--navy);}
 
-/* ─── FOOTER ─── */
+/* ── FOOTER ── */
 .footer{background:#0D1C2B;padding:42px 48px;text-align:center;}
 .footer-brand{color:#fff;font-size:1.4rem;font-weight:900;margin-bottom:5px;}
 .footer-brand em{color:var(--gold);font-style:normal;}
-.footer-school{color:var(--gold);font-size:0.7rem;font-weight:800;letter-spacing:3px;text-transform:uppercase;margin-bottom:14px;}
+.footer-school{color:var(--gold);font-size:.7rem;font-weight:800;letter-spacing:3px;text-transform:uppercase;margin-bottom:14px;}
 .footer-meta{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;}
-.footer-meta span{color:rgba(255,255,255,0.27);font-size:0.73rem;}
+.footer-meta span{color:rgba(255,255,255,.32);font-size:.73rem;}
 
-/* ─── UTILITIES ─── */
+/* ── UTILITIES ── */
 .mt16{margin-top:16px;} .mt24{margin-top:24px;} .mt32{margin-top:32px;}
 .mb16{margin-bottom:16px;} .mb24{margin-bottom:24px;} .mb32{margin-bottom:32px;}
-[id]::before{content:'';display:block;height:80px;margin-top:-80px;pointer-events:none;}
+[id]::before{content:'';display:block;height:160px;margin-top:-160px;pointer-events:none;}
 
 @media(max-width:860px){
-  .g2,.g3,.vis-split,.attr-compare,.rg-split,.recap-grid{grid-template-columns:1fr;}
-  .stat-strip,.dark-stat-strip{grid-template-columns:repeat(2,1fr);}
+  .g2,.g3,.vis-split,.attr-compare,.rg-split,.recap-grid,.dss,.stat-strip{grid-template-columns:1fr;}
   .play-body{grid-template-columns:1fr;}
   .play-col:not(:last-child){border-right:none;border-bottom:1px solid var(--border);}
-  .platform-math{grid-template-columns:1fr;}
-  .container{padding:0 24px;} .top-nav,.section-nav{padding:0 24px;}
-  .part-header{padding:52px 24px 48px;} .ph-title{font-size:2rem;}
-  .mf-item{flex-direction:column;} .mf-time-block{width:100%;border-right:none;border-bottom:1px solid var(--border);}
+  .pm-wrap{grid-template-columns:1fr;}
+  .container{padding:0 24px;}
+  .top-nav,.section-nav,.playbook-nav{padding:0 24px;}
+  .part-header{padding:52px 24px 48px;}
+  .ph-title{font-size:2rem;}
 }
 </style>
 </head>
 <body>
 
-<!-- ══ NAV -->
+<!-- TOP NAV -->
 <nav class="top-nav">
   <div class="brand">
     <span class="brand-main">Outer<em>Box</em></span>
     <span class="brand-school">B·SCHOOL</span>
   </div>
-  <div class="nav-right">
-    <span class="nav-badge">SEO + Paid Search Partnership Playbook</span>
-    <a href="integrated-strategy-playbook.html" class="nav-back">← Integrated Playbook</a>
-  </div>
+  <span class="nav-badge">SEO + Paid Search Partnership Playbook</span>
 </nav>
 
-<!-- ══ SECTION NAV -->
-<div class="section-nav">
-  <span class="snav-label">Playbook</span>
-  <a href="#landscape"   class="snav-link"><span class="snav-num sn-both">1</span>Shared Landscape</a>
-  <a href="#visibility"  class="snav-link"><span class="snav-num sn-seo">2</span>What Each Sees</a>
-  <a href="#fullpath"    class="snav-link"><span class="snav-num sn-attr">3</span>Full User Path</a>
-  <a href="#attribution" class="snav-link"><span class="snav-num sn-attr">4</span>Attribution Reality</a>
-  <a href="#meeting"     class="snav-link"><span class="snav-num sn-navy">5</span>Meeting Prep</a>
-  <a href="#metrics"     class="snav-link"><span class="snav-num sn-paid">6</span>Cross-Channel Metrics</a>
-  <a href="#plays"       class="snav-link"><span class="snav-num sn-loop">7</span>Strategy Plays</a>
-  <a href="#review"      class="snav-link"><span class="snav-num sn-slate">8</span>Review Framework</a>
+<!-- PLAYBOOK NAV -->
+<div class="playbook-nav">
+  <span class="pn-label">📚 B·School Series</span>
+  <a class="pn-link other" href="integrated-strategy-playbook.html">All Channels · Integrated Strategy Playbook</a>
+  <span class="pn-sep">→</span>
+  <a class="pn-link active" href="seo-paid-partnership.html">🔍💰 SEO + Paid Search Partnership Playbook</a>
 </div>
 
-<!-- ══ HEADER -->
+<!-- HEADER -->
 <div class="part-header">
   <div class="ph-blob"></div>
   <div class="ph-inner">
@@ -438,74 +420,85 @@ ul.plain.wht li::before{color:var(--gold);}
 </div>
 <div class="dual-strip"></div>
 
+<!-- SECTION NAV — below header -->
+<div class="section-nav">
+  <span class="snav-label">Sections</span>
+  <a href="#landscape"   class="snav-link"><span class="snav-num sn-both">1</span>Shared Landscape</a>
+  <a href="#visibility"  class="snav-link"><span class="snav-num sn-seo">2</span>What Each Sees</a>
+  <a href="#fullpath"    class="snav-link"><span class="snav-num sn-attr">3</span>Full User Path</a>
+  <a href="#attribution" class="snav-link"><span class="snav-num sn-attr">4</span>Attribution Reality</a>
+  <a href="#meeting"     class="snav-link"><span class="snav-num sn-navy">5</span>Meeting Prep</a>
+  <a href="#metrics"     class="snav-link"><span class="snav-num sn-paid">6</span>Cross-Channel Metrics</a>
+  <a href="#plays"       class="snav-link"><span class="snav-num sn-loop">7</span>Strategy Plays</a>
+  <a href="#review"      class="snav-link"><span class="snav-num sn-slate">8</span>Review Framework</a>
+</div>
 
-<!-- ══════════════════════════════════════
-     SECTION 1: SHARED LANDSCAPE
-══════════════════════════════════════ -->
+
+<!-- ═══════════════════════════════════════
+     SECTION 1 — SHARED LANDSCAPE
+═══════════════════════════════════════ -->
 <section class="sec-white" id="landscape">
   <div class="container">
     <div class="sh">
       <div class="sh-tag both">Section 1 — The Shared Landscape</div>
-      <h2 class="sh-title">You're Both Competing for the Same Buyer Attention in the Same Place</h2>
-      <p class="sh-desc">SEO and Paid Search don't occupy separate realities. They both appear on the same SERP, compete for the same buyer's attention at the same moment of intent, and ultimately drive toward the same conversion. The 2026 search landscape has shifted enough that neither channel can optimize in isolation without leaving significant opportunity on the table.</p>
+      <h2 class="sh-title">You're Both Competing for the Same Buyer in the Same Place</h2>
+      <p class="sh-desc">SEO and Paid Search appear on the same SERP, compete for the same buyer attention at the same moment of intent, and drive toward the same conversion. The 2026 search landscape has shifted enough that neither channel can optimize in isolation without leaving significant opportunity on the table.</p>
     </div>
 
-    <div class="stat-strip mb32">
-      <div class="stat-cell gold"><div class="stat-num">5T</div><div class="stat-label">Annual searches on Google — the search pie is growing, not shrinking with AI</div><div class="stat-source">Google Internal Data, Jan 2025</div></div>
+    <div class="stat-strip">
+      <div class="stat-cell gold"><div class="stat-num">5T</div><div class="stat-label">Annual Google searches — the search pie is growing, not shrinking with AI</div><div class="stat-source">Google Internal Data, Jan 2025</div></div>
       <div class="stat-cell navy"><div class="stat-num">94%</div><div class="stat-label">Of frequent LLM users are also frequent Google Search users — AI is additive to search</div><div class="stat-source">Google / Ipsos, Dec 2025</div></div>
-      <div class="stat-cell paid"><div class="stat-num">2–3×</div><div class="stat-label">Longer queries in AI Mode — more specific intent means B-SMART® layered terms are more valuable than ever</div><div class="stat-source">Google Internal Data</div></div>
-      <div class="stat-cell seo"><div class="stat-num">65%</div><div class="stat-label">Of multi-touchpoint purchase journeys use Google or YouTube before Meta — search is where the journey lives</div><div class="stat-source">Google / Measure Protocol, 2024</div></div>
+      <div class="stat-cell paid"><div class="stat-num">2–3×</div><div class="stat-label">Longer queries in AI Mode — B-SMART® specific intent is more valuable than ever</div><div class="stat-source">Google Internal Data</div></div>
+      <div class="stat-cell seo"><div class="stat-num">65%</div><div class="stat-label">Of multi-touchpoint purchase journeys use Google or YouTube before Meta</div><div class="stat-source">Google / Measure Protocol, 2024</div></div>
     </div>
 
-    <div class="stat-strip mb32">
-      <div class="stat-cell gold"><div class="stat-num">$6</div><div class="stat-label">Back for every $1 spent on Google Search globally (incremental ROAS)</div><div class="stat-source">Google Conversion Lift Analysis, 143 studies</div></div>
-      <div class="stat-cell paid"><div class="stat-num">27%</div><div class="stat-label">More conversions with AI Max for Search at similar CPA/ROAS vs. exact &amp; phrase match</div><div class="stat-source">Google Internal Data, 2025</div></div>
-      <div class="stat-cell seo"><div class="stat-num">81%</div><div class="stat-label">Of people who discover something on social media come to Google Search to learn more before converting</div><div class="stat-source">Google / Ipsos, Dec 2025</div></div>
-      <div class="stat-cell navy"><div class="stat-num">71%</div><div class="stat-label">Of Google Search shoppers are open to trying new brands — organic authority and paid visibility both matter for discovery</div><div class="stat-source">Google / Ipsos, Dec 2025</div></div>
+    <div class="stat-strip">
+      <div class="stat-cell gold"><div class="stat-num">$6</div><div class="stat-label">Back for every $1 spent on Google Search globally (incremental ROAS)</div><div class="stat-source">Google Conversion Lift, 143 studies</div></div>
+      <div class="stat-cell paid"><div class="stat-num">27%</div><div class="stat-label">More conversions with AI Max at similar CPA/ROAS vs. exact &amp; phrase match</div><div class="stat-source">Google Internal Data, 2025</div></div>
+      <div class="stat-cell seo"><div class="stat-num">81%</div><div class="stat-label">Who discover something on social come to Google Search to learn more before converting</div><div class="stat-source">Google / Ipsos, Dec 2025</div></div>
+      <div class="stat-cell navy"><div class="stat-num">71%</div><div class="stat-label">Of Google Search shoppers are open to trying new brands — discovery matters</div><div class="stat-source">Google / Ipsos, Dec 2025</div></div>
     </div>
 
     <div class="g2 mb32">
       <div class="card">
-        <h3 style="color:var(--seo);">🔍 What the SEO Strategist Is Managing in 2026</h3>
+        <h3 style="color:var(--seo);">🔍 What SEO Is Managing in 2026</h3>
         <ul class="plain seo-b mt16">
-          <li>77.9% of SEO professionals fear AI-generated answers will reduce organic clicks — informational query traffic is actively compressing</li>
-          <li>66.3% say original content creation is still the most impactful SEO activity — the content authority moat strategy is valid but must be selective</li>
-          <li>49.6% are investing in E-E-A-T reinforcement as their primary AI-era differentiation — content AI can't fabricate is the moat</li>
-          <li>AI Overviews require evaluating who's cited, what content types rank, and where gaps exist — competitive SERP intelligence is now part of every analysis</li>
-          <li>Ads now appear within AI Overviews and AI Mode — paid is encroaching on organic SERP real estate in new ways that affect organic CTR</li>
-          <li>Fast indexing via IndexNow directly improves AI tool visibility (ChatGPT, Perplexity) — a technical SEO action with cross-channel implications</li>
+          <li>77.9% of SEO pros fear AI answers will reduce organic clicks — informational traffic is compressing</li>
+          <li>66.3% say original content creation is still the most impactful SEO activity</li>
+          <li>49.6% are investing in E-E-A-T reinforcement as their primary AI-era differentiation strategy</li>
+          <li>AI Overviews require evaluating who's cited and where gaps exist — every SERP analysis</li>
+          <li>Ads in AI Overviews and AI Mode now encroach on organic SERP real estate in new ways</li>
         </ul>
       </div>
       <div class="card">
-        <h3 style="color:var(--paid);">💰 What the Paid Media Strategist Is Managing in 2026</h3>
+        <h3 style="color:var(--paid);">💰 What Paid Search Is Managing in 2026</h3>
         <ul class="plain paid-b mt16">
-          <li>PMax and Smart Bidding make targeting decisions algorithmically — the primary lever has shifted from manual keyword control to signal quality</li>
-          <li>AI Max delivers 27% more conversions at similar CPA/ROAS vs. exact and phrase match — but only when fed the right first-party signals</li>
-          <li>"Conversions are the fuel needed to teach AI who are the most valuable people" — first-party data and Loop ICP buyer profiles are table stakes, not nice-to-have</li>
-          <li>Ads now serve within AI Overviews and AI Mode — new placement inventory that didn't exist 18 months ago</li>
-          <li>Measurement is murkier: platform-reported ROAS, GA4 last-click, and actual incremental conversions rarely align — attribution context is essential every reporting cycle</li>
-          <li>The algorithm only knows what it's given — organic content quality, UX landing page experience, and Loop ICP data are all upstream signals Paid can't create alone</li>
+          <li>PMax and Smart Bidding make targeting decisions algorithmically — the lever is now signal quality, not keyword control</li>
+          <li>AI Max delivers 27% more conversions — but only when fed the right first-party signals</li>
+          <li>"Conversions are the fuel needed to teach AI who the most valuable people are" — Loop ICP is table stakes</li>
+          <li>Ads now serve within AI Overviews and AI Mode — new placement inventory requiring the same intent principles</li>
+          <li>Organic content quality and UX landing page experience are upstream signals Paid can't create alone</li>
         </ul>
       </div>
     </div>
 
     <div class="callout both">
       <div class="callout-label">The Point Where Both Channels Converge</div>
-      <p>Both SEO and Paid are navigating the same fundamental shift: AI is changing where buyers research, what queries look like, and how the SERP is organized. <strong>The channels that win in this environment aren't the ones optimizing in isolation — they're the ones sharing signals, coordinating coverage, and letting each channel's data make the other's decisions smarter.</strong> The Paid Media Strategist's search term reports are SEO page-build opportunities. The SEO Strategist's content quality is the ceiling for PMax performance. Neither channel can see the full picture alone — and neither should be trying to.</p>
+      <p>Both channels are navigating the same shift: AI is changing where buyers research, what queries look like, and how the SERP is organized. <strong>The teams that win share signals, coordinate coverage, and let each channel's data make the other's decisions smarter.</strong> The Paid Media Strategist's search term reports are SEO page-build opportunities. The SEO Strategist's content quality is the ceiling for PMax performance. Neither channel can see the full picture alone — and neither should be trying to.</p>
     </div>
   </div>
 </section>
 
 
-<!-- ══════════════════════════════════════
-     SECTION 2: WHAT EACH CHANNEL SEES
-══════════════════════════════════════ -->
+<!-- ═══════════════════════════════════════
+     SECTION 2 — WHAT EACH CHANNEL SEES
+═══════════════════════════════════════ -->
 <section class="sec-light" id="visibility">
   <div class="container">
     <div class="sh">
       <div class="sh-tag navy">Section 2 — Channel Visibility</div>
       <h2 class="sh-title">What Each Channel Can See That the Other Can't</h2>
-      <p class="sh-desc">SEO and Paid Search provide fundamentally different types of visibility into buyer behavior. Neither is complete on its own. The most important question isn't "which channel is performing better?" — it's "what is each channel revealing that the other needs to act on?"</p>
+      <p class="sh-desc">SEO and Paid provide fundamentally different types of visibility into buyer behavior. The most important question isn't "which channel is performing better?" — it's "what is each channel revealing that the other needs to act on?"</p>
     </div>
 
     <div class="vis-split mb32">
@@ -516,21 +509,21 @@ ul.plain.wht li::before{color:var(--gold);}
           <div class="vs-tag">Long-term organic buyer behavior &amp; SERP landscape</div>
         </div>
         <div class="vs-body">
-          <div class="vs-section-label" style="color:var(--seo-dark);">SERP Intelligence</div>
+          <div class="vs-slabel" style="color:var(--seo-dark);">SERP Intelligence</div>
           <ul class="vs-items">
-            <li>Which queries trigger AI Overviews — and which competitors are being cited vs. the client, creating a competitive map of authority gaps</li>
-            <li>Organic CTR by query — which terms and meta descriptions resonate with buyers before they click, independent of any ad spend</li>
-            <li>Ranking position movement over time — where authority is compounding vs. where it's stalling and why</li>
-            <li>Featured snippets, People Also Ask, image packs, and other SERP features the client occupies or is missing from entirely</li>
+            <li>Which queries trigger AI Overviews — and which competitors are cited vs. the client</li>
+            <li>Organic CTR by query — which terms and meta copy resonate with buyers independent of ad spend</li>
+            <li>Ranking position movement over time — where authority compounds vs. stalls</li>
+            <li>Featured snippets, PAA boxes, and other SERP features the client occupies or is missing</li>
           </ul>
-          <div class="vs-section-label" style="color:var(--seo-dark);">Content &amp; Conversion Path Intelligence</div>
+          <div class="vs-slabel" style="color:var(--seo-dark);">Content &amp; Conversion Path Intelligence</div>
           <ul class="vs-items">
-            <li>Which pages appear most frequently in organic conversion paths — what buyers read before they converted, not just what they landed on</li>
-            <li>Topical authority patterns — which content clusters are earning consistent ranking across related queries vs. ranking in isolation</li>
-            <li>High-impression, low-click queries — terms buyers are searching but not clicking on, signaling misaligned meta copy or AI Overview absorption</li>
-            <li>Long-tail query patterns in GSC — the specific, spec-level phrases real buyers are using that no keyword planner ever surfaces</li>
+            <li>Which pages appear most in organic conversion paths — what buyers read before they converted</li>
+            <li>Topical authority patterns — which content clusters earn consistent ranking across related queries</li>
+            <li>High-impression, low-click queries — terms buyers search but don't click, signaling AI Overview absorption</li>
+            <li>Long-tail query patterns in GSC — spec-level phrases real buyers use that keyword planners don't surface</li>
           </ul>
-          <div class="vs-blind"><strong>Blind spot:</strong> SEO cannot see conversion data at the query level with the granularity that paid can. Organic reporting in GA4 aggregates and loses query-level conversion detail. The Paid Media Strategist's search term report is the single biggest dataset SEO is missing.</div>
+          <div class="vs-blind"><strong>Blind spot:</strong> SEO cannot see conversion data at the query level with the granularity paid can. The Paid Media Strategist's search term report is the single biggest dataset SEO is missing.</div>
         </div>
       </div>
       <div>
@@ -540,98 +533,93 @@ ul.plain.wht li::before{color:var(--gold);}
           <div class="vs-tag">Real-time, query-level conversion data &amp; competitive signals</div>
         </div>
         <div class="vs-body">
-          <div class="vs-section-label" style="color:var(--paid-dark);">Query-Level Conversion Intelligence</div>
+          <div class="vs-slabel" style="color:var(--paid-dark);">Query-Level Conversion Intelligence</div>
           <ul class="vs-items">
-            <li>Exact search terms that converted — not just keywords that drove clicks, but the precise queries that drove form submissions and calls</li>
-            <li>Search terms that drove high click volume but zero conversions — wrong-fit intent signals that SEO should actively avoid attracting</li>
-            <li>Quality Score by landing page — Google's real-time assessment of how relevant the client's pages are to specific queries</li>
-            <li>Impression share data — how much of the available market the ads are reaching vs. losing to competitors or budget constraints</li>
+            <li>Exact search terms that converted — the precise queries that drove form submissions and calls</li>
+            <li>Search terms with high clicks but zero conversions — wrong-fit intent SEO should avoid building for</li>
+            <li>Quality Score by landing page — Google's real-time assessment of page relevance per query</li>
+            <li>Impression share — how much available market the ads are reaching vs. losing to budget or competitors</li>
           </ul>
-          <div class="vs-section-label" style="color:var(--paid-dark);">Audience &amp; Competitive Intelligence</div>
+          <div class="vs-slabel" style="color:var(--paid-dark);">Audience &amp; Competitive Intelligence</div>
           <ul class="vs-items">
-            <li>Auction Insights — which competitors are bidding on which terms, their impression share and overlap rate, and where they're outranking the client</li>
-            <li>Demographic breakdown of who's actually clicking and converting — age, device, location, time of day, audience segment</li>
-            <li>First-party audience performance — which Loop ICP-matched remarketing segments convert at measurably higher rates than cold traffic</li>
-            <li>PMax performance by asset group — which creative themes, headlines, and descriptions are driving conversions vs. burning budget</li>
+            <li>Auction Insights — which competitors bid on which terms, their impression share, and overlap rate</li>
+            <li>Demographic breakdown of who's actually clicking and converting — device, location, time of day</li>
+            <li>First-party audience performance — which Loop ICP-matched segments convert at higher rates</li>
+            <li>PMax asset group performance — which creative themes drive conversions vs. burn budget</li>
           </ul>
-          <div class="vs-blind"><strong>Blind spot:</strong> Paid cannot see organic authority building over time, what content is priming buyer trust before a paid click, or which organic pages are conditioning buyers to convert when they eventually see an ad. The SEO conversion path report is the biggest dataset Paid is missing.</div>
+          <div class="vs-blind"><strong>Blind spot:</strong> Paid cannot see organic authority building over time, what content is priming buyer trust before a paid click, or which pages are conditioning buyers to convert. The SEO conversion path report is the biggest dataset Paid is missing.</div>
         </div>
       </div>
     </div>
 
     <div class="callout navy">
       <div class="callout-label">The Exchange That Makes Both Channels Smarter</div>
-      <p><strong style="color:var(--gold)">The SEO Strategist's best keyword data comes from the Paid Media Strategist's search term report. The Paid Media Strategist's best landing page data comes from the SEO Strategist's organic conversion path analysis.</strong> These aren't nice-to-have exchanges — they're the difference between optimizing with full market intelligence and optimizing with half the picture. When both channels operate on isolated data sets, both channels make suboptimal decisions with incomplete evidence — every single month.</p>
+      <p><strong style="color:var(--gold)">The SEO Strategist's best keyword data comes from the Paid Media Strategist's search term report. The Paid Media Strategist's best landing page data comes from the SEO Strategist's organic conversion path analysis.</strong> These aren't nice-to-have exchanges — they're the difference between optimizing with full market intelligence and optimizing with half the picture. When both channels operate on isolated data, both make suboptimal decisions every single month.</p>
     </div>
   </div>
 </section>
 
 
-<!-- ══════════════════════════════════════
-     SECTION 3: FULL USER PATH
-══════════════════════════════════════ -->
+<!-- ═══════════════════════════════════════
+     SECTION 3 — FULL USER PATH
+═══════════════════════════════════════ -->
 <section class="sec-white" id="fullpath">
   <div class="container">
     <div class="sh">
       <div class="sh-tag attr">Section 3 — The Full User Path</div>
       <h2 class="sh-title">The Buyer's Journey Is Not a Straight Line — and Your Attribution Model Is Pretending It Is</h2>
-      <p class="sh-desc">In B2B and industrial buying, the path from first awareness to form submission is rarely a single session. Buyers research, return, compare, consult colleagues, and then convert — often across multiple sessions, multiple channels, and sometimes multiple weeks. The channel that gets the last click gets the credit. The channels that built the trust get nothing.</p>
+      <p class="sh-desc">In B2B and industrial buying, the path from first awareness to form submission is rarely a single session. Buyers research, return, compare, and then convert — often across multiple sessions and multiple channels. The channel that gets the last click gets the credit. The channels that built the trust get nothing.</p>
     </div>
 
-    <div class="path-wrap mb32">
+    <div class="path-wrap">
       <div class="path-head">
-        <div>
-          <div class="path-head-title">Three Real Buyer Journeys — Across the Same Search Ecosystem</div>
-          <div class="path-head-sub">Last-click credit shown below each touchpoint. Each journey shows reality vs. what reporting captures.</div>
-        </div>
+        <div class="path-head-title">Three Real Buyer Journeys — Across the Same Search Ecosystem</div>
+        <div class="path-head-sub">Last-click credit shown below each touchpoint. Reality vs. what reporting captures.</div>
       </div>
       <div class="path-body">
 
-        <!-- Journey A -->
         <div class="path-journey">
-          <div class="path-journey-label">Journey A — Organic-Led, Paid Conversion</div>
+          <div class="pj-label">Journey A — Organic-Led, Paid Conversion</div>
           <div class="path-steps">
-            <div class="path-step"><div class="ps-touch organic">Organic Blog Post<br><span style="font-size:0.68rem;font-weight:400;">Grade-specific content</span></div><div class="ps-credit none">0% credit</div></div>
+            <div class="path-step"><div class="ps-touch organic">Organic Blog<br><span style="font-size:.68rem;font-weight:400;">Grade-specific content</span></div><div class="ps-credit none">0% credit</div></div>
             <div class="path-arrow">→</div>
-            <div class="path-step"><div class="ps-touch direct">Direct Visit<br><span style="font-size:0.68rem;font-weight:400;">Returns 3 days later</span></div><div class="ps-credit none">0% credit</div></div>
+            <div class="path-step"><div class="ps-touch direct">Direct Return<br><span style="font-size:.68rem;font-weight:400;">3 days later</span></div><div class="ps-credit none">0% credit</div></div>
             <div class="path-arrow">→</div>
-            <div class="path-step"><div class="ps-touch organic">Organic Product Page<br><span style="font-size:0.68rem;font-weight:400;">Certifications page</span></div><div class="ps-credit none">0% credit</div></div>
+            <div class="path-step"><div class="ps-touch organic">Organic Product Page<br><span style="font-size:.68rem;font-weight:400;">Certifications page</span></div><div class="ps-credit none">0% credit</div></div>
             <div class="path-arrow">→</div>
-            <div class="path-step"><div class="ps-touch paid">Paid Retargeting Click<br><span style="font-size:0.68rem;font-weight:400;">Sees ad, returns</span></div><div class="ps-credit full">100% credit</div></div>
+            <div class="path-step"><div class="ps-touch paid-t">Paid Retargeting<br><span style="font-size:.68rem;font-weight:400;">Sees ad, returns</span></div><div class="ps-credit full">100% credit</div></div>
             <div class="path-arrow">→</div>
             <div class="path-step"><div class="ps-touch convert">RFQ Submitted ✓</div></div>
           </div>
-          <div class="path-note">The organic blog post and certifications page built the trust and familiarity that made the retargeting click convert. Last-click gives Paid 100% of the credit. Organic gets nothing — and the SEO investment that enabled the conversion is completely invisible in every report Paid produces.</div>
+          <div class="path-note">The organic blog post and certifications page built the trust that made the retargeting click convert. Last-click gives Paid 100% of the credit. Organic gets nothing — and the SEO investment that enabled the conversion is completely invisible in every report Paid produces.</div>
         </div>
 
-        <!-- Journey B -->
         <div class="path-journey">
-          <div class="path-journey-label">Journey B — Paid First-Touch, Organic Conversion</div>
+          <div class="pj-label">Journey B — Paid First-Touch, Organic Conversion</div>
           <div class="path-steps">
-            <div class="path-step"><div class="ps-touch paid">Paid Search Click<br><span style="font-size:0.68rem;font-weight:400;">Brand-new visitor</span></div><div class="ps-credit none">0% credit</div></div>
+            <div class="path-step"><div class="ps-touch paid-t">Paid Search Click<br><span style="font-size:.68rem;font-weight:400;">Brand-new visitor</span></div><div class="ps-credit none">0% credit</div></div>
             <div class="path-arrow">→</div>
-            <div class="path-step"><div class="ps-touch direct">Direct Return<br><span style="font-size:0.68rem;font-weight:400;">Bookmarked site</span></div><div class="ps-credit none">0% credit</div></div>
+            <div class="path-step"><div class="ps-touch direct">Direct Return<br><span style="font-size:.68rem;font-weight:400;">Bookmarked site</span></div><div class="ps-credit none">0% credit</div></div>
             <div class="path-arrow">→</div>
-            <div class="path-step"><div class="ps-touch direct">Direct Return<br><span style="font-size:0.68rem;font-weight:400;">Second research session</span></div><div class="ps-credit none">0% credit</div></div>
+            <div class="path-step"><div class="ps-touch direct">Direct Return<br><span style="font-size:.68rem;font-weight:400;">Second session</span></div><div class="ps-credit none">0% credit</div></div>
             <div class="path-arrow">→</div>
-            <div class="path-step"><div class="ps-touch organic">Organic Brand Search<br><span style="font-size:0.68rem;font-weight:400;">"[Client] stainless plate"</span></div><div class="ps-credit full">100% credit</div></div>
+            <div class="path-step"><div class="ps-touch organic">Organic Brand Search<br><span style="font-size:.68rem;font-weight:400;">"[Client] stainless"</span></div><div class="ps-credit full">100% credit</div></div>
             <div class="path-arrow">→</div>
             <div class="path-step"><div class="ps-touch convert">RFQ Submitted ✓</div></div>
           </div>
-          <div class="path-note">Paid introduced the brand to a buyer who had never heard of the client. The buyer bookmarked it, returned twice, then searched the brand organically and converted. Last-click gives organic the credit. The paid ad that created brand awareness gets nothing — and appears to have generated zero return on spend in Paid's own reporting.</div>
+          <div class="path-note">Paid introduced the brand to a buyer who'd never heard of the client. The buyer bookmarked it, returned twice, then searched the brand organically and converted. Last-click gives organic the full credit. The paid ad that created brand awareness gets zero return in Paid's own reporting.</div>
         </div>
 
-        <!-- Journey C -->
         <div class="path-journey">
-          <div class="path-journey-label">Journey C — AI-Assisted Research, Mixed Attribution</div>
+          <div class="pj-label">Journey C — AI-Assisted Research, Mixed Attribution</div>
           <div class="path-steps">
-            <div class="path-step"><div class="ps-touch social">LinkedIn Post<br><span style="font-size:0.68rem;font-weight:400;">Industry awareness</span></div><div class="ps-credit none">0% credit</div></div>
+            <div class="path-step"><div class="ps-touch social">LinkedIn Post<br><span style="font-size:.68rem;font-weight:400;">Industry awareness</span></div><div class="ps-credit none">0% credit</div></div>
             <div class="path-arrow">→</div>
-            <div class="path-step"><div class="ps-touch ai">AI Tool Research<br><span style="font-size:0.68rem;font-weight:400;">ChatGPT / Perplexity</span></div><div class="ps-credit none">0% credit</div></div>
+            <div class="path-step"><div class="ps-touch ai-t">AI Tool Research<br><span style="font-size:.68rem;font-weight:400;">ChatGPT / Perplexity</span></div><div class="ps-credit none">0% credit</div></div>
             <div class="path-arrow">→</div>
-            <div class="path-step"><div class="ps-touch organic">Organic Click<br><span style="font-size:0.68rem;font-weight:400;">Spec-specific page</span></div><div class="ps-credit none">0% credit</div></div>
+            <div class="path-step"><div class="ps-touch organic">Organic Click<br><span style="font-size:.68rem;font-weight:400;">Spec-specific page</span></div><div class="ps-credit none">0% credit</div></div>
             <div class="path-arrow">→</div>
-            <div class="path-step"><div class="ps-touch paid">Paid Ad in AIO<br><span style="font-size:0.68rem;font-weight:400;">AI Overview placement</span></div><div class="ps-credit full">100% credit</div></div>
+            <div class="path-step"><div class="ps-touch paid-t">Paid Ad in AIO<br><span style="font-size:.68rem;font-weight:400;">AI Overview placement</span></div><div class="ps-credit full">100% credit</div></div>
             <div class="path-arrow">→</div>
             <div class="path-step"><div class="ps-touch convert">RFQ Submitted ✓</div></div>
           </div>
@@ -643,26 +631,26 @@ ul.plain.wht li::before{color:var(--gold);}
 
     <div class="callout both">
       <div class="callout-label">The Data Point That Anchors This</div>
-      <p><strong>"In 65% of online purchase journeys with multiple touchpoints, consumers use Google or YouTube before Meta."</strong> — Google / Measure Protocol, 2024. The implication: organic and paid search touchpoints are almost always part of a multi-touch journey. The channel that gets last-click credit frequently didn't do the heaviest lifting. Looking at individual channel performance without a full-path view produces systematically misleading conclusions about what's actually working — and leads to budget and content decisions built on incomplete evidence.</p>
+      <p><strong>"In 65% of online purchase journeys with multiple touchpoints, consumers use Google or YouTube before Meta."</strong> — Google / Measure Protocol, 2024. The implication: organic and paid search touchpoints are almost always part of a multi-touch journey. The channel that gets last-click credit frequently didn't do the heaviest lifting. Looking at individual channel performance without a full-path view produces systematically misleading conclusions about what's working.</p>
     </div>
 
     <div class="g2 mt24">
       <div class="card">
         <h3>When Organic Assists Paid — But Gets No Credit</h3>
         <ul class="plain seo-b mt16">
-          <li>Buyer finds the client through an organic blog post → returns days later via a paid retargeting ad → converts. Paid gets 100% credit.</li>
-          <li>Organic certification hub page builds buyer confidence → buyer searches brand + material term → clicks a paid exact-match ad for the final session. Organic's trust-building is invisible.</li>
-          <li>Content earns AI Overview citation → buyer arrives to verify → clicks paid ad in the same SERP. The citation that drove the qualifying visit gets no conversion credit.</li>
-          <li>Organic ranks for brand-awareness queries at top-of-funnel → brand familiarity increases paid brand keyword CTR and conversion rate. Organic gets no credit for the efficiency gain.</li>
+          <li>Buyer finds client via organic blog → returns via paid retargeting → converts. Paid gets 100% credit.</li>
+          <li>Organic certifications hub builds buyer confidence → buyer searches brand + material → clicks paid exact-match. Organic's trust-building is invisible.</li>
+          <li>Content earns AI Overview citation → buyer arrives to verify → clicks paid ad in same SERP. The qualifying visit gets no conversion credit.</li>
+          <li>Organic brand-awareness queries build familiarity → increases paid brand keyword CTR and CVR. Organic gets no credit for that efficiency gain.</li>
         </ul>
       </div>
       <div class="card">
         <h3>When Paid Assists Organic — But Gets No Credit</h3>
         <ul class="plain paid-b mt16">
-          <li>Paid ad introduces the brand to a first-time visitor → buyer comes back via organic brand search → organic conversion. Paid created the brand awareness; organic gets the credit.</li>
-          <li>Remarketing ad re-triggers consideration → buyer decides to search brand organically → organic conversion attributed entirely to SEO. Paid's re-engagement gets nothing.</li>
-          <li>Paid validates a keyword converts at high rates → SEO builds organic authority around it → organic credit accumulates. Paid's conversion intelligence informed the organic investment but receives no recognition for it.</li>
-          <li>PMax discovers a high-converting query SEO didn't have on its radar → organic page built later → organic credit accumulates. Paid's query discovery gets no attribution.</li>
+          <li>Paid ad introduces brand to first-time visitor → buyer returns via organic brand search → organic gets the conversion credit entirely.</li>
+          <li>Remarketing ad re-triggers consideration → buyer searches brand organically → organic conversion. Paid's re-engagement gets nothing.</li>
+          <li>Paid validates a keyword converts at high rates → SEO builds organic authority around it → organic credit accumulates. Paid's intelligence informed the investment but receives no recognition.</li>
+          <li>PMax discovers a high-converting query SEO didn't have → organic page built later → organic credit. Paid's discovery gets no attribution.</li>
         </ul>
       </div>
     </div>
@@ -670,126 +658,117 @@ ul.plain.wht li::before{color:var(--gold);}
 </section>
 
 
-<!-- ══════════════════════════════════════
-     SECTION 4: ATTRIBUTION REALITY
-══════════════════════════════════════ -->
+<!-- ═══════════════════════════════════════
+     SECTION 4 — ATTRIBUTION REALITY
+═══════════════════════════════════════ -->
 <section class="sec-attr" id="attribution">
   <div class="container">
     <div class="sh">
       <div class="sh-tag attr">Section 4 — Attribution Reality</div>
       <h2 class="sh-title wht">Last-Click Attribution Is Misleading Both Channels. Here's How to Talk About It.</h2>
-      <p class="sh-desc wht">OBx's attribution framework recognizes three methodologies: Last-Click (the GA4 default), Multi-Touch Attribution, and Incrementality testing. Last-click is the most commonly reported model — and it systematically undervalues upper-funnel touchpoints, organic content, and brand-building activities. Understanding this isn't just internal knowledge — it's a client conversation you need to own.</p>
+      <p class="sh-desc wht">OBx's attribution framework recognizes three methodologies: Last-Click (the GA4 default), Multi-Touch Attribution, and Incrementality testing. Last-click is the most commonly reported model — and it systematically undervalues upper-funnel touchpoints, organic content, and brand-building activities.</p>
     </div>
 
-    <div class="dark-stat-strip mb32">
+    <div class="dss">
       <div class="dss-cell gold"><div class="dss-num">65%</div><div class="dss-label">Of multi-touchpoint purchase journeys include Google or YouTube before Meta — most conversions aren't single-touch events</div><div class="dss-source">Google / Measure Protocol, 2024</div></div>
       <div class="dss-cell seo"><div class="dss-num">81%</div><div class="dss-label">Of social media discoverers come to Google Search to learn more — showing the research layer that precedes most conversions</div><div class="dss-source">Google / Ipsos, Dec 2025</div></div>
-      <div class="dss-cell attr"><div class="dss-num">67%</div><div class="dss-label">Who discover brands on social are influenced by Google Search to purchase a different brand — intent research changes purchase outcomes</div><div class="dss-source">Google / Ipsos, Dec 2025</div></div>
+      <div class="dss-cell attr"><div class="dss-num">67%</div><div class="dss-label">Who discover brands on social are influenced by Google Search to purchase a different brand — intent research changes outcomes</div><div class="dss-source">Google / Ipsos, Dec 2025</div></div>
     </div>
 
-    <!-- ATTRIBUTION MODEL COMPARISON -->
-    <h3 style="font-size:0.72rem;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:14px;">Three Attribution Models — One Journey, Three Different Stories</h3>
-    <p style="font-size:0.84rem;color:rgba(255,255,255,0.55);margin-bottom:16px;line-height:1.65;">Using Journey A: Organic Blog Post → Direct Visit → Organic Certifications Page → Paid Retargeting Click → RFQ Submitted</p>
+    <p style="font-size:.84rem;color:rgba(255,255,255,.75);margin-bottom:14px;line-height:1.65;"><strong style="color:rgba(255,255,255,.95);">Three Attribution Models — One Journey, Three Different Stories.</strong> Using Journey A: Organic Blog Post → Direct Visit → Organic Product Page → Paid Retargeting → RFQ Submitted</p>
 
-    <div class="attr-compare mb32">
+    <div class="attr-compare">
       <div class="ac-col">
-        <div class="ac-head last"><div class="ac-model">Last-Click (GA4 Default)</div><div class="ac-desc">100% credit to the final touchpoint before conversion. Standard GA4 view. Most commonly reported.</div></div>
+        <div class="ac-head last-c"><div class="ac-model">Last-Click (GA4 Default)</div><div class="ac-desc">100% credit to the final touchpoint. Standard GA4 view. Most commonly reported.</div></div>
         <div class="ac-body">
           <ul class="ac-touch-list">
-            <li class="ac-touch"><span class="ac-touch-name">Organic Blog Post</span><div class="ac-credit-bar none"></div><span class="ac-credit-pct none">0%</span></li>
-            <li class="ac-touch"><span class="ac-touch-name">Direct Visit</span><div class="ac-credit-bar none"></div><span class="ac-credit-pct none">0%</span></li>
-            <li class="ac-touch"><span class="ac-touch-name">Organic Product Page</span><div class="ac-credit-bar none"></div><span class="ac-credit-pct none">0%</span></li>
-            <li class="ac-touch"><span class="ac-touch-name">Paid Retargeting</span><div class="ac-credit-bar paid" style="width:88px;"></div><span class="ac-credit-pct paid">100%</span></li>
+            <li class="ac-touch"><span class="ac-touch-name">Organic Blog Post</span><div class="ac-bar none"></div><span class="ac-pct none">0%</span></li>
+            <li class="ac-touch"><span class="ac-touch-name">Direct Visit</span><div class="ac-bar none"></div><span class="ac-pct none">0%</span></li>
+            <li class="ac-touch"><span class="ac-touch-name">Organic Product Page</span><div class="ac-bar none"></div><span class="ac-pct none">0%</span></li>
+            <li class="ac-touch"><span class="ac-touch-name">Paid Retargeting</span><div class="ac-bar paid" style="width:88px;"></div><span class="ac-pct paid">100%</span></li>
           </ul>
-          <div class="ac-verdict"><strong style="color:var(--error);">What this tells the team:</strong> Paid retargeting is driving all conversions. Double down on paid. SEO appears to generate traffic with zero conversion contribution — which could incorrectly justify reducing SEO investment.</div>
+          <div class="ac-verdict"><strong style="color:var(--error);">What this tells the team:</strong> Paid is driving all conversions. Double down on paid. SEO appears to contribute zero to conversion — which could incorrectly justify cutting SEO investment.</div>
         </div>
       </div>
       <div class="ac-col">
-        <div class="ac-head multi"><div class="ac-model">Linear Multi-Touch</div><div class="ac-desc">Equal credit to every touchpoint in the path. Better picture — but doesn't distinguish intent stages or channel contribution weight.</div></div>
+        <div class="ac-head multi"><div class="ac-model">Linear Multi-Touch</div><div class="ac-desc">Equal credit to every touchpoint in the path. Better — but doesn't distinguish intent stages.</div></div>
         <div class="ac-body">
           <ul class="ac-touch-list">
-            <li class="ac-touch"><span class="ac-touch-name">Organic Blog Post</span><div class="ac-credit-bar seo" style="width:22px;"></div><span class="ac-credit-pct seo">25%</span></li>
-            <li class="ac-touch"><span class="ac-touch-name">Direct Visit</span><div class="ac-credit-bar direct" style="width:22px;"></div><span class="ac-credit-pct direct">25%</span></li>
-            <li class="ac-touch"><span class="ac-touch-name">Organic Product Page</span><div class="ac-credit-bar seo" style="width:22px;"></div><span class="ac-credit-pct seo">25%</span></li>
-            <li class="ac-touch"><span class="ac-touch-name">Paid Retargeting</span><div class="ac-credit-bar paid" style="width:22px;"></div><span class="ac-credit-pct paid">25%</span></li>
+            <li class="ac-touch"><span class="ac-touch-name">Organic Blog Post</span><div class="ac-bar seo" style="width:22px;"></div><span class="ac-pct seo">25%</span></li>
+            <li class="ac-touch"><span class="ac-touch-name">Direct Visit</span><div class="ac-bar direct" style="width:22px;"></div><span class="ac-pct direct">25%</span></li>
+            <li class="ac-touch"><span class="ac-touch-name">Organic Product Page</span><div class="ac-bar seo" style="width:22px;"></div><span class="ac-pct seo">25%</span></li>
+            <li class="ac-touch"><span class="ac-touch-name">Paid Retargeting</span><div class="ac-bar paid" style="width:22px;"></div><span class="ac-pct paid">25%</span></li>
           </ul>
-          <div class="ac-verdict"><strong style="color:var(--attr);">What this tells the team:</strong> Each channel contributed equally. More nuanced than last-click — but doesn't distinguish between the discovery role of organic and the conversion-trigger role of paid. All touchpoints look equivalent when they aren't.</div>
+          <div class="ac-verdict"><strong style="color:var(--attr);">What this tells the team:</strong> Each channel contributed equally. More nuanced than last-click — but doesn't distinguish between the discovery role of organic and the conversion-trigger role of paid.</div>
         </div>
       </div>
       <div class="ac-col">
-        <div class="ac-head full"><div class="ac-model">Data-Driven / GA4 Full Path</div><div class="ac-desc">GA4's data-driven model weights by observed conversion probability at each stage. Closest to the truth.</div></div>
+        <div class="ac-head full-c"><div class="ac-model">Data-Driven / GA4 Full Path</div><div class="ac-desc">GA4's data-driven model weights by observed conversion probability at each stage. Closest to reality.</div></div>
         <div class="ac-body">
           <ul class="ac-touch-list">
-            <li class="ac-touch"><span class="ac-touch-name">Organic Blog Post</span><div class="ac-credit-bar seo" style="width:13px;"></div><span class="ac-credit-pct seo">~15%</span></li>
-            <li class="ac-touch"><span class="ac-touch-name">Direct Visit</span><div class="ac-credit-bar direct" style="width:9px;"></div><span class="ac-credit-pct direct">~10%</span></li>
-            <li class="ac-touch"><span class="ac-touch-name">Organic Product Page</span><div class="ac-credit-bar seo" style="width:17px;"></div><span class="ac-credit-pct seo">~20%</span></li>
-            <li class="ac-touch"><span class="ac-touch-name">Paid Retargeting</span><div class="ac-credit-bar paid" style="width:48px;"></div><span class="ac-credit-pct paid">~55%</span></li>
+            <li class="ac-touch"><span class="ac-touch-name">Organic Blog Post</span><div class="ac-bar seo" style="width:13px;"></div><span class="ac-pct seo">~15%</span></li>
+            <li class="ac-touch"><span class="ac-touch-name">Direct Visit</span><div class="ac-bar direct" style="width:9px;"></div><span class="ac-pct direct">~10%</span></li>
+            <li class="ac-touch"><span class="ac-touch-name">Organic Product Page</span><div class="ac-bar seo" style="width:17px;"></div><span class="ac-pct seo">~20%</span></li>
+            <li class="ac-touch"><span class="ac-touch-name">Paid Retargeting</span><div class="ac-bar paid" style="width:48px;"></div><span class="ac-pct paid">~55%</span></li>
           </ul>
-          <div class="ac-verdict"><strong style="color:var(--success);">What this tells the team:</strong> Paid triggered the conversion, but organic content meaningfully contributed to conversion probability. Both channels are demonstrably valuable. This is closer to reality — and the model to reference when a client questions organic's role in a paid-heavy account.</div>
+          <div class="ac-verdict"><strong style="color:var(--success);">What this tells the team:</strong> Paid triggered the conversion, but organic content meaningfully contributed. Both channels are demonstrably valuable. Reference this model when a client questions organic's role in a paid-heavy account.</div>
         </div>
       </div>
     </div>
 
-    <!-- PLATFORM MATH -->
-    <h3 style="font-size:0.72rem;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:14px;">The Platform Math Problem: Why Your Numbers Never Add Up</h3>
-    <div class="platform-math mb32">
+    <p style="font-size:.84rem;color:rgba(255,255,255,.75);margin:20px 0 12px;line-height:1.65;"><strong style="color:rgba(255,255,255,.95);">The Platform Math Problem: Why Your Numbers Never Add Up</strong></p>
+    <div class="pm-wrap">
       <div class="pm-left">
         <div class="pm-platform">Google Ads Reports</div>
         <div class="pm-num">87</div>
-        <div class="pm-label">Conversions attributed this month</div>
+        <div class="pm-sub">Conversions attributed this month</div>
         <ul class="pm-items">
           <li>Uses Google's own attribution model — credits touchpoints within the Google ecosystem</li>
-          <li>May include view-through conversions from Display, YouTube, and Discovery</li>
-          <li>Models additional conversions using machine learning — not just observed clicks</li>
-          <li>Uses a different attribution window than GA4's default by design</li>
-          <li>Platform has an incentive to show its own contribution favorably</li>
+          <li>May include view-through conversions from Display and YouTube</li>
+          <li>Models additional conversions using machine learning beyond observed clicks</li>
+          <li>Uses a different attribution window than GA4 by design</li>
         </ul>
       </div>
       <div class="pm-mid"><div class="pm-icon">≠</div></div>
       <div class="pm-right">
         <div class="pm-platform">GA4 Reports (Last-Click Default)</div>
         <div class="pm-num">42</div>
-        <div class="pm-label">Conversions attributed to Paid this month</div>
+        <div class="pm-sub">Conversions attributed to Paid this month</div>
         <ul class="pm-items">
           <li>Uses last-click attribution by default — credits only the final touchpoint</li>
           <li>Does not credit view-through or cross-channel assist touches</li>
-          <li>Organic and Direct traffic "steal" paid credit when they appear in the final session</li>
+          <li>Organic and Direct "steal" paid credit when they appear in the final session</li>
           <li>Applies its own attribution window and conversion definition</li>
-          <li>Underrepresents upper-funnel paid touchpoints that primed conversion</li>
         </ul>
       </div>
     </div>
 
-    <div class="callout attr mb32">
-      <div class="callout-label">OBx Attribution Framework: The Source of Truth Principle</div>
-      <p>Per OBx's analytics documentation: <strong>"Platform reporting will always aggregate to more conversions than the actual business sees — paid and organic will both claim the same conversion."</strong> This is expected and normal, not a tracking problem.<br><br>
-      <strong>Small accounts (1–2 channels):</strong> In-platform measurement + holistic GA4 view as primary source of truth<br>
-      <strong>Medium accounts (3–5 channels):</strong> GA4/CRM as source of truth with recognition of last-click limitations<br>
-      <strong>Enterprise:</strong> Client's internal model or third-party attribution platform<br><br>
-      The critical instruction from OBx: <em>Don't compare platform-to-platform.</em> Google Ads ROAS vs. GA4 attribution vs. Loop-qualified form submissions are three different lenses on the same reality. Use each for what it's good at. The Integrated Strategy Lead's job is to synthesize, not to declare one winner.</p>
+    <div class="callout attr" style="margin-top:24px;">
+      <div class="callout-label">OBx Source of Truth Framework</div>
+      <p>Per OBx analytics documentation: <strong>"Platform reporting will always aggregate to more conversions than the actual business sees — paid and organic will both claim the same conversion. This is expected and normal."</strong><br><br>
+      <strong>Small accounts (1–2 channels):</strong> In-platform + holistic GA4 view &nbsp;|&nbsp; <strong>Medium accounts:</strong> GA4/CRM as source of truth with last-click recognition &nbsp;|&nbsp; <strong>Enterprise:</strong> Client's internal model or 3rd-party attribution platform<br><br>
+      Critical rule: <em>Don't compare platform-to-platform.</em> Google Ads ROAS vs. GA4 vs. Loop-qualified submissions are three different lenses on the same reality. The Integrated Strategy Lead synthesizes — they don't declare a winner.</p>
     </div>
 
-    <!-- ATTRIBUTION CONVERSATION -->
-    <div class="rg-split">
+    <div class="rg-split mt24">
       <div class="rg-left">
         <div class="rg-title">❌ Don't Say This About Attribution</div>
         <div class="rg-sub">These framings create confusion and erode trust</div>
         <ul class="rg-items">
-          <li>"Google Ads shows 87 conversions but GA4 only shows 42 — the platform must be overcounting or there's a tracking bug."</li>
-          <li>"SEO isn't converting — all the conversions this month are coming from paid search."</li>
-          <li>"We should cut SEO budget and reallocate it to paid because paid is showing more attributed conversions."</li>
-          <li>"These numbers don't add up — something must be wrong with the setup."</li>
-          <li>Comparing ROAS across platforms as if they use the same model and the same data</li>
+          <li>"Google Ads shows 87 conversions but GA4 only shows 42 — the platform must be overcounting."</li>
+          <li>"SEO isn't converting — all conversions this month are coming from paid search."</li>
+          <li>"We should cut SEO budget and reallocate to paid because paid shows more conversions."</li>
+          <li>"These numbers don't add up — something must be wrong with the tracking."</li>
         </ul>
       </div>
       <div class="rg-right">
         <div class="rg-title">✅ Do Say This About Attribution</div>
         <div class="rg-sub">These framings build strategic credibility</div>
         <ul class="rg-items">
-          <li>"The difference between Google Ads and GA4 conversion numbers is expected — each uses a different attribution model. GA4 uses last-click as default; Google Ads models additional contributions. We use GA4 trends as our source of truth and Google Ads for campaign-level optimization."</li>
-          <li>"SEO often assists paid conversions — buyers research organically, then convert via a paid ad. Last-click gives paid the credit, but the organic content built the trust that made the click convert. The GA4 Conversion Path report shows this."</li>
-          <li>"The Loop form submissions are our cleanest read on total opportunity generation — they're channel-agnostic. They tell us who submitted, what they asked for, and what the quality looks like regardless of which channel last touched them."</li>
-          <li>"We're seeing both channels contribute to the buyer journey. The question isn't which one is working — it's how we use what each channel is generating to make the other smarter."</li>
+          <li>"The difference between Google Ads and GA4 conversion numbers is expected — each uses a different attribution model. We use GA4 trends as our source of truth for comparisons over time."</li>
+          <li>"SEO often assists paid conversions — buyers research organically, then convert via a paid ad. Last-click gives paid the credit, but the GA4 Conversion Path report shows organic's contribution."</li>
+          <li>"The Loop form submissions are our cleanest read on total opportunity generation — they're channel-agnostic and show us who submitted and what they asked for regardless of last channel."</li>
+          <li>"Both channels are contributing. The question is how we use what each is generating to make the other smarter."</li>
         </ul>
       </div>
     </div>
@@ -797,126 +776,124 @@ ul.plain.wht li::before{color:var(--gold);}
 </section>
 
 
-<!-- ══════════════════════════════════════
-     SECTION 5: MEETING PREPARATION
-══════════════════════════════════════ -->
+<!-- ═══════════════════════════════════════
+     SECTION 5 — MEETING PREPARATION
+═══════════════════════════════════════ -->
 <section class="sec-light" id="meeting">
   <div class="container">
     <div class="sh">
       <div class="sh-tag navy">Section 5 — Meeting Preparation</div>
       <h2 class="sh-title">What to Bring to Every Cross-Channel Strategy Meeting</h2>
-      <p class="sh-desc">A cross-channel strategy meeting only works if both strategists arrive with data the other needs — not just their own channel's performance summary. The following are the specific data points, insights, and questions each strategist should prepare for every meeting where both channels are represented.</p>
+      <p class="sh-desc">A cross-channel strategy meeting only works if both strategists arrive with data the other needs — not just their own channel's performance summary. These are the specific data points each strategist should prepare for every meeting where both channels are represented.</p>
     </div>
 
-    <div class="g2 mb32">
-      <div class="mp-card">
-        <div class="mp-head seo-to-paid">
-          <div class="mp-direction"><span class="mp-from">🔍 SEO Strategist</span><span class="mp-arrow-icon">→</span><span class="mp-to">Paid Strategy Meeting</span></div>
-          <div class="mp-title">What SEO Brings to Help Paid</div>
-          <div class="mp-sub">Data that makes the Paid Media Strategist's decisions smarter — not just a ranking update</div>
-        </div>
-        <div class="mp-body">
-          <div class="mp-item"><div class="mp-item-label">Organic CTR by Query</div><div class="mp-item-value"><strong>Why Paid needs it:</strong> CTR reveals which terms and meta descriptions resonate with real buyers before a click — a paid headline mirroring a high-CTR organic meta title has built-in validation. Also surfaces queries with high impressions but low CTR, signaling AI Overview absorption or a paid ad copy opportunity.</div></div>
-          <div class="mp-item"><div class="mp-item-label">Ranking Gaps on High-Intent Terms</div><div class="mp-item-value"><strong>Why Paid needs it:</strong> When organic ranks #8–15 on a high-converting B-SMART® term, that's an immediate paid coverage gap. Brings the exact keyword and current ranking position so Paid can close the SERP gap today while organic authority builds over months. Don't let a competitor own the paid spot on a term where SEO is a month away from ranking.</div></div>
-          <div class="mp-item"><div class="mp-item-label">AI Overview Competitor Audit</div><div class="mp-item-value"><strong>Why Paid needs it:</strong> Competitors cited in AI Overviews are winning brand awareness in the zero-click moment. Paid can respond with targeted impression share campaigns on those exact queries to ensure the client is still visible even when organic isn't being cited in the AI-generated answer.</div></div>
-          <div class="mp-item"><div class="mp-item-label">Top Organic Conversion Pages</div><div class="mp-item-value"><strong>Why Paid needs it:</strong> Pages appearing most frequently in organic conversion paths are proven landing page candidates. If PMax is currently sending traffic to a generic homepage or category page, these organic conversion-path pages are where ad groups and final URLs should actually point.</div></div>
-          <div class="mp-item"><div class="mp-item-label">Long-Tail Query Patterns (GSC)</div><div class="mp-item-value"><strong>Why Paid needs it:</strong> Long-tail queries in Google Search Console — high impressions, low clicks — are exact-match keyword candidates for paid, especially B-SMART® layered terms that keyword planners don't surface. These are the most specific, highest-intent terms in the category and Paid should be covering them today while organic builds.</div></div>
-          <div class="mp-item"><div class="mp-item-label">Loop ICP Language Patterns</div><div class="mp-item-value"><strong>Why Paid needs it:</strong> Terms appearing repeatedly in form comment fields are buyer vocabulary — the shorthand, specific grades, and spec language real buyers actually type. These become exact-match keyword additions and validated ad copy headline candidates that no keyword planner will ever surface independently.</div></div>
-        </div>
+    <div class="mp-card">
+      <div class="mp-head seo-to-paid">
+        <div class="mp-direction"><span class="mp-from">🔍 SEO Strategist</span><span class="mp-arrow-icon">→</span><span class="mp-to">Paid Strategy Meeting</span></div>
+        <div class="mp-title">What SEO Brings to Help Paid</div>
+        <div class="mp-sub">Data that makes the Paid Media Strategist's decisions smarter — not just a ranking update</div>
       </div>
+      <div class="mp-body">
+        <div class="mp-item"><div class="mp-item-label">Organic CTR by Query</div><div class="mp-item-value"><strong>Why Paid needs it:</strong> CTR reveals which terms and meta descriptions resonate with real buyers before a click — a paid headline mirroring a high-CTR organic meta title has built-in validation. Also surfaces high-impression, low-CTR queries where AI Overview absorption is occurring and paid coverage should compensate.</div></div>
+        <div class="mp-item"><div class="mp-item-label">Ranking Gaps on High-Intent Terms</div><div class="mp-item-value"><strong>Why Paid needs it:</strong> When organic ranks #8–15 on a high-converting B-SMART® term, that's an immediate paid coverage gap. Share the exact keyword and current ranking so Paid can close the SERP gap today while SEO builds authority over the next 3–6 months.</div></div>
+        <div class="mp-item"><div class="mp-item-label">AI Overview Competitor Audit</div><div class="mp-item-value"><strong>Why Paid needs it:</strong> Competitors cited in AI Overviews are winning brand awareness in zero-click moments. Paid can respond with targeted impression share campaigns on those exact queries to ensure the client stays visible even when organic isn't cited in the AI-generated answer.</div></div>
+        <div class="mp-item"><div class="mp-item-label">Top Organic Conversion Pages</div><div class="mp-item-value"><strong>Why Paid needs it:</strong> Pages appearing most in organic conversion paths are proven landing page candidates. If PMax is sending traffic to a generic homepage, these pages are where ad groups and final URLs should actually point.</div></div>
+        <div class="mp-item"><div class="mp-item-label">Long-Tail GSC Queries</div><div class="mp-item-value"><strong>Why Paid needs it:</strong> High-impression, low-click queries in Google Search Console are exact-match keyword candidates for paid — especially B-SMART® layered terms that keyword planners don't surface. These are often the highest-converting terms in the category.</div></div>
+        <div class="mp-item"><div class="mp-item-label">Loop ICP Language Patterns</div><div class="mp-item-value"><strong>Why Paid needs it:</strong> Terms appearing repeatedly in form comment fields are buyer vocabulary — the shorthand, specific grades, and spec language real buyers actually type. These become exact-match keyword additions and ad copy headline candidates no keyword planner will ever surface.</div></div>
+      </div>
+    </div>
 
-      <div class="mp-card">
-        <div class="mp-head paid-to-seo">
-          <div class="mp-direction"><span class="mp-from">💰 Paid Strategist</span><span class="mp-arrow-icon">→</span><span class="mp-to">SEO Strategy Meeting</span></div>
-          <div class="mp-title">What Paid Brings to Help SEO</div>
-          <div class="mp-sub">Data that makes the SEO Strategist's decisions smarter — not just a CPC and impression share update</div>
-        </div>
-        <div class="mp-body">
-          <div class="mp-item"><div class="mp-item-label">Search Terms Report</div><div class="mp-item-value"><strong>Why SEO needs it:</strong> Shows the exact queries the algorithm matched that converted — real buyer searches, not keyword planner predictions. High-converting terms without organic rankings are immediate content build priorities. This is the single most underutilized SEO intelligence source available on any account — share it every meeting.</div></div>
-          <div class="mp-item"><div class="mp-item-label">Quality Score by Landing Page</div><div class="mp-item-value"><strong>Why SEO needs it:</strong> Quality Score is Google's real-time assessment of landing page relevance and experience relative to specific queries. A low QS (below 5) on a page SEO is trying to rank signals a content, UX, or targeting misalignment that needs to be fixed regardless of SEO tactics — and it's affecting organic performance too, not just paid.</div></div>
-          <div class="mp-item"><div class="mp-item-label">Auction Insights Report</div><div class="mp-item-value"><strong>Why SEO needs it:</strong> Which competitors are bidding on the client's category terms, their impression share and overlap rate — this is the competitive map of the most commercially valuable queries. SEO uses it to prioritize which competitors to analyze for content gaps and where to accelerate organic authority building before a competitor locks in the organic position too.</div></div>
-          <div class="mp-item"><div class="mp-item-label">Negative Keyword List</div><div class="mp-item-value"><strong>Why SEO needs it:</strong> Negative keywords are wrong-fit intent signals — terms that attracted clicks but produced no conversions. These patterns tell SEO which queries to actively de-prioritize in content strategy and which buyer intent types to avoid attracting organically. Negative keyword patterns are one of the fastest ways to align organic and paid on what not to target.</div></div>
-          <div class="mp-item"><div class="mp-item-label">Audience Demographics of Converters</div><div class="mp-item-value"><strong>Why SEO needs it:</strong> The demographic profile, device mix, location, and behavioral characteristics of buyers who converted through paid reveals who is actually in the market. This informs organic content depth, format considerations (mobile-first vs. desktop), geographic focus for location-based content, and time-based publishing and promotion decisions.</div></div>
-          <div class="mp-item"><div class="mp-item-label">High-Intent Non-Converting Clicks</div><div class="mp-item-value"><strong>Why SEO needs it:</strong> Buyers who clicked specific paid landing pages with low bounce rates but no conversion are a UX and content gap signal. If buyers are engaging with a paid landing page but not converting, the organic equivalent of that page likely has the same friction. Both the SEO Strategist and UX Strategist should diagnose this together, not in isolation.</div></div>
-        </div>
+    <div class="mp-card">
+      <div class="mp-head paid-to-seo">
+        <div class="mp-direction"><span class="mp-from">💰 Paid Strategist</span><span class="mp-arrow-icon">→</span><span class="mp-to">SEO Strategy Meeting</span></div>
+        <div class="mp-title">What Paid Brings to Help SEO</div>
+        <div class="mp-sub">Data that makes the SEO Strategist's decisions smarter — not just a CPC and impression share update</div>
+      </div>
+      <div class="mp-body">
+        <div class="mp-item"><div class="mp-item-label">Search Terms Report</div><div class="mp-item-value"><strong>Why SEO needs it:</strong> Shows the exact queries the algorithm matched that converted — real buyer searches, not keyword planner predictions. High-converting terms without organic rankings are immediate content build priorities. This is the single most underutilized SEO intelligence source on any account. Share it every meeting.</div></div>
+        <div class="mp-item"><div class="mp-item-label">Quality Score by Landing Page</div><div class="mp-item-value"><strong>Why SEO needs it:</strong> Quality Score is Google's real-time assessment of landing page relevance per query. A QS below 5 on a page SEO is trying to rank signals a content, UX, or targeting misalignment that needs fixing — regardless of SEO tactics. It's affecting organic performance too, not just paid.</div></div>
+        <div class="mp-item"><div class="mp-item-label">Auction Insights Report</div><div class="mp-item-value"><strong>Why SEO needs it:</strong> Which competitors are bidding on category terms and their impression share. This is the competitive map of the most commercially valuable queries. SEO uses it to prioritize which competitors to analyze for content gaps and where to accelerate organic authority before a competitor locks in the organic position.</div></div>
+        <div class="mp-item"><div class="mp-item-label">Negative Keyword List</div><div class="mp-item-value"><strong>Why SEO needs it:</strong> Negative keywords are wrong-fit intent signals — terms that attracted clicks but produced no conversions. These patterns tell SEO which queries to de-prioritize and which buyer intent types to avoid attracting organically. Negative keyword patterns are one of the fastest ways to align both channels on what not to target.</div></div>
+        <div class="mp-item"><div class="mp-item-label">Audience Demographics of Converters</div><div class="mp-item-value"><strong>Why SEO needs it:</strong> The demographic profile, device mix, location, and behavior of buyers who converted through paid reveals who is actually in the market. Informs organic content depth, format (mobile vs. desktop), geographic focus for location-based content, and publishing timing.</div></div>
+        <div class="mp-item"><div class="mp-item-label">High-Intent Non-Converting Clicks</div><div class="mp-item-value"><strong>Why SEO needs it:</strong> Buyers who clicked paid landing pages with low bounce rates but no conversion are a UX and content gap signal. If buyers are engaging but not converting on a paid page, the organic equivalent of that page likely has the same friction. Both the SEO Strategist and UX Strategist should diagnose together.</div></div>
       </div>
     </div>
 
     <h3 style="font-size:1.05rem;font-weight:800;color:var(--navy);margin-bottom:16px;">Joint Questions — Ask These Together in Every Strategy Meeting</h3>
-    <p style="font-size:0.87rem;color:var(--text-light);margin-bottom:16px;line-height:1.65;">These questions require both channels to answer and can't be answered well by looking at one channel's dashboard in isolation. Bring them to every cross-channel meeting as shared agenda items.</p>
 
-    <div class="mb32">
-      <div class="jq-block"><div class="jq-head"><div class="jq-num">1</div><div class="jq-q">Which high-converting paid search terms don't have an organic page ranking for them — and how long would it take to build that authority?</div></div><div class="jq-body">Paid's search term report reveals what's converting today. SEO's ranking data shows where organic authority is absent. Terms that rank high in both conversions (Paid) and search volume (GSC) with no organic ranking are the highest-priority content builds in any account. This one exchange between channels can generate a quarter of actionable SEO work in one meeting.</div></div>
-      <div class="jq-block"><div class="jq-head"><div class="jq-num">2</div><div class="jq-q">Where are we appearing in both organic and paid on the same query — and is the double coverage justified or is it cannibalizing budget?</div></div><div class="jq-body">When the client ranks #1 organically AND is spending on a paid ad for the same exact query, the incremental value of the paid spend needs to be evaluated. Sometimes double coverage increases total SERP CTR and is worth it (especially for branded terms). Sometimes it's wasted budget where organic is already capturing the click at zero additional cost. This can only be evaluated when both channels have visibility into each other's performance.</div></div>
-      <div class="jq-block"><div class="jq-head"><div class="jq-num">3</div><div class="jq-q">Where are competitors outranking us organically on terms where we're already winning in paid — and what's the content investment needed to close that gap?</div></div><div class="jq-body">Auction Insights (from Paid) shows which competitors are dominating the paid landscape on specific terms. If those same competitors also rank organically above the client on those terms, the client has a dual visibility problem. Paid can maintain presence while SEO builds the organic position — but the SEO Strategist needs the Auction Insights data to know which terms are strategically the most important to prioritize.</div></div>
-      <div class="jq-block"><div class="jq-head"><div class="jq-num">4</div><div class="jq-q">What does the Loop ICP data from this month's form submissions tell us about the buyer language both channels should be using — and are there terms appearing in comment fields that neither channel is currently targeting?</div></div><div class="jq-body">Loop form comment fields are the richest real-buyer language source available. Any term that appears three or more times in a month is a keyword candidate for both Paid (exact match) and SEO (page content and meta copy). This question ensures both channels are updated from the same buyer intelligence simultaneously, rather than each channel working from its own independently-researched keyword set that may contradict each other.</div></div>
-      <div class="jq-block"><div class="jq-head"><div class="jq-num">5</div><div class="jq-q">Are AI Overviews appearing on any of our highest-value queries — and are we in them, are competitors in them, and does paid coverage compensate if organic is being displaced?</div></div><div class="jq-body">OBx's SERP analysis guidance explicitly instructs strategists to evaluate AI Overview presence as part of every SERP audit. When AI Overviews appear on high-value queries and competitors are cited but the client isn't, Paid can ensure continued visibility through ads that appear above, within, or below the AI answer. The SEO Strategist identifies the citation gap; the Paid Media Strategist closes the visibility gap while organic authority catches up.</div></div>
-      <div class="jq-block"><div class="jq-head"><div class="jq-num">6</div><div class="jq-q">What is the GA4 Conversion Path data showing about how many conversions included an organic touchpoint before a paid conversion — and are we communicating that in our reports?</div></div><div class="jq-body">GA4's Advertising → Attribution → Conversion Paths report shows multi-touch journeys. Looking at the percentage of paid conversions that had an organic touchpoint earlier in the path quantifies organic's contribution to paid conversion efficiency. This is one of the most persuasive data points for justifying continued SEO investment on accounts that are heavily paid-dependent — and both strategists should be able to speak to it in any client conversation.</div></div>
-    </div>
+    <div class="jq-block"><div class="jq-head"><div class="jq-num">1</div><div class="jq-q">Which high-converting paid search terms don't have an organic page ranking for them — and how long would it take to build that authority?</div></div><div class="jq-body">Paid's search term report reveals what's converting today. SEO's ranking data shows where organic authority is absent. Terms that rank high in both paid conversions and search volume with no organic ranking are the highest-priority content builds in any account. This single exchange can generate a quarter of actionable SEO work in one meeting.</div></div>
+
+    <div class="jq-block"><div class="jq-head"><div class="jq-num">2</div><div class="jq-q">Where are we appearing in both organic and paid on the same query — and is double coverage justified or is it cannibalizing budget?</div></div><div class="jq-body">When the client ranks #1 organically AND is spending on a paid ad for the same exact query, the incremental value of the paid spend needs to be evaluated. Sometimes double coverage increases total SERP CTR and is worth it (especially branded terms). Sometimes it's wasted budget where organic is already capturing the click at zero additional cost.</div></div>
+
+    <div class="jq-block"><div class="jq-head"><div class="jq-num">3</div><div class="jq-q">Where are competitors outranking us organically on terms where we're already winning in paid — and what's the content investment needed to close that gap?</div></div><div class="jq-body">Auction Insights shows which competitors dominate the paid landscape. If those same competitors also rank organically above the client on the same terms, the client has a dual visibility problem. Paid maintains presence while SEO builds the organic position — but SEO needs Auction Insights data to know which terms are strategically most important to prioritize.</div></div>
+
+    <div class="jq-block"><div class="jq-head"><div class="jq-num">4</div><div class="jq-q">What does this month's Loop ICP data tell us about buyer language both channels should be using — are there terms in comment fields neither channel is currently targeting?</div></div><div class="jq-body">Loop form comment fields are the richest real-buyer language source available. Any term appearing three or more times in a month is a keyword candidate for both Paid (exact match) and SEO (page content and meta copy). This question ensures both channels update from the same buyer intelligence simultaneously, rather than working from independently-researched keyword sets that may contradict each other.</div></div>
+
+    <div class="jq-block"><div class="jq-head"><div class="jq-num">5</div><div class="jq-q">Are AI Overviews appearing on our highest-value queries — are we in them, are competitors, and does paid coverage compensate if organic is being displaced?</div></div><div class="jq-body">When AI Overviews appear on high-value queries and competitors are cited but the client isn't, Paid can ensure continued visibility through ads that appear above, within, or below the AI answer. The SEO Strategist identifies the citation gap; the Paid Media Strategist closes the visibility gap while organic authority catches up.</div></div>
+
+    <div class="jq-block"><div class="jq-head"><div class="jq-num">6</div><div class="jq-q">What does the GA4 Conversion Path report show about how many conversions included an organic touchpoint before a paid conversion — and are we communicating that to the client?</div></div><div class="jq-body">GA4's Advertising → Attribution → Conversion Paths report shows multi-touch journeys. The percentage of paid conversions that had an organic touchpoint earlier in the path quantifies organic's contribution to paid conversion efficiency. This is one of the most persuasive data points for justifying continued SEO investment on paid-heavy accounts — and both strategists should be able to speak to it in any client conversation.</div></div>
   </div>
 </section>
 
 
-<!-- ══════════════════════════════════════
-     SECTION 6: CROSS-CHANNEL METRICS
-══════════════════════════════════════ -->
+<!-- ═══════════════════════════════════════
+     SECTION 6 — CROSS-CHANNEL METRICS
+═══════════════════════════════════════ -->
 <section class="sec-white" id="metrics">
   <div class="container">
     <div class="sh">
       <div class="sh-tag paid">Section 6 — Cross-Channel Metrics</div>
       <h2 class="sh-title">Metrics From the Other Channel That Actually Matter to Your Strategy</h2>
-      <p class="sh-desc">Most strategists track their own channel's metrics in depth and treat the other channel's dashboard as someone else's problem. But specific metrics from the other channel are direct inputs to your own strategy decisions. Here's exactly which ones matter and why.</p>
+      <p class="sh-desc">Most strategists track their own channel's metrics in depth and treat the other's dashboard as someone else's problem. But specific metrics from the other channel are direct inputs to your own strategy decisions. Here's exactly which ones matter and why.</p>
     </div>
 
-    <div class="g2 mb32">
-      <div class="cm-block">
-        <div class="cm-head seo-tracks">
-          <h3>🔍 Paid Metrics the SEO Strategist Should Track</h3>
-          <p>Metrics from Paid that directly inform SEO content, keyword, and page strategy</p>
-        </div>
-        <div class="cm-body">
-          <div class="cm-row"><div class="cm-metric">Paid Search Term CVR</div><div class="cm-meaning">Which exact-match terms are converting at the highest rates in paid campaigns — these are the highest-priority organic page builds. A term converting at 8% in paid with no organic ranking is leaving compounding long-term value on the table.<em>Action: Add highest-CVR paid terms to SEO content pipeline as immediate page priorities.</em></div></div>
-          <div class="cm-row"><div class="cm-metric">Quality Score by Page</div><div class="cm-meaning">Google's assessment of landing page relevance to specific queries. A QS below 5 on a page you're trying to rank means Google considers it misaligned — fix the content before investing more in organic signals.<em>Action: Prioritize pages with low QS for content depth, buyer language alignment, and UX improvements.</em></div></div>
-          <div class="cm-row"><div class="cm-metric">Auction Impression Share</div><div class="cm-meaning">Which competitors dominate paid impression share on category terms reveals who SEO needs to displace organically. High paid competitor impression share = a competitor with budget, credibility, and likely strong organic presence too.<em>Action: Run organic competitor content gap analysis specifically on high-auction-overlap competitors.</em></div></div>
-          <div class="cm-row"><div class="cm-metric">Negative Keywords Added</div><div class="cm-meaning">Wrong-fit query patterns Paid identified and excluded. These are organic avoidance signals — query types attracting the wrong buyer intent that SEO should also de-prioritize in content strategy.<em>Action: Cross-reference with content calendar to remove or deprioritize content built around wrong-fit intent patterns.</em></div></div>
-          <div class="cm-row"><div class="cm-metric">PMax Asset Group CVR</div><div class="cm-meaning">Which creative themes, headlines, and value propositions are generating conversions in PMax. Winning ad copy contains the language that resonates most at the moment of intent — and should directly inform organic page headlines, meta descriptions, and body copy.<em>Action: Mirror highest-CVR PMax headlines as H1 and meta title tests on organic landing pages.</em></div></div>
-          <div class="cm-row"><div class="cm-metric">Top Converting Landing Pages</div><div class="cm-meaning">Which destination URLs in paid campaigns generate the most conversions — these pages have proven conversion mechanics. Compare against organic versions; if the paid page outconverts the organic equivalent, there's a content or UX gap to close.<em>Action: Audit organic pages serving the same query intent as top-converting paid URLs for missing elements.</em></div></div>
-        </div>
+    <div class="cm-block">
+      <div class="cm-head seo-tracks">
+        <h3>🔍 Paid Metrics the SEO Strategist Should Track</h3>
+        <p>Metrics from Paid that directly inform SEO content, keyword, and page strategy</p>
       </div>
+      <div class="cm-body">
+        <div class="cm-row"><div class="cm-metric">Paid Search Term CVR</div><div class="cm-meaning">Which exact-match terms convert at the highest rates in paid campaigns — these are the highest-priority organic page builds. A term converting at 8% in paid with no organic ranking is leaving compounding long-term value on the table every month.<em>Action: Add highest-CVR paid terms to SEO content pipeline as immediate page priorities.</em></div></div>
+        <div class="cm-row"><div class="cm-metric">Quality Score by Page</div><div class="cm-meaning">Google's assessment of landing page relevance to specific queries. A QS below 5 on a page you're trying to rank means Google considers it misaligned — fix the content before investing more in organic signals. Low QS affects organic ranking potential, not just paid performance.<em>Action: Prioritize low-QS pages for content depth, buyer language alignment, and UX improvements.</em></div></div>
+        <div class="cm-row"><div class="cm-metric">Auction Impression Share</div><div class="cm-meaning">Which competitors dominate paid impression share on category terms reveals who SEO needs to displace organically. High paid competitor impression share typically means they also have strong organic presence — a two-front competitive problem to solve strategically.<em>Action: Run organic competitor content gap analysis specifically on high-auction-overlap competitors first.</em></div></div>
+        <div class="cm-row"><div class="cm-metric">Negative Keywords Added</div><div class="cm-meaning">Wrong-fit query patterns Paid identified and excluded. These are organic avoidance signals — query types attracting the wrong buyer intent that SEO should also deprioritize in content strategy to avoid attracting the same wrong-fit organic visitors.<em>Action: Cross-reference with content calendar to deprioritize content built around wrong-fit intent patterns.</em></div></div>
+        <div class="cm-row"><div class="cm-metric">PMax Asset CVR</div><div class="cm-meaning">Which creative themes, headlines, and value propositions are generating conversions in PMax. Winning ad copy contains the language that resonates most at the moment of intent — and should directly inform organic page headlines, meta descriptions, and body copy.<em>Action: Mirror highest-CVR PMax headlines as H1 and meta title tests on organic landing pages.</em></div></div>
+        <div class="cm-row"><div class="cm-metric">Top Converting Landing Pages</div><div class="cm-meaning">Which destination URLs in paid generate the most conversions — these pages have proven conversion mechanics. Compare against organic versions; if the paid page outconverts the organic equivalent, there's a content or UX gap to close immediately.<em>Action: Audit organic pages serving the same query intent as top-converting paid URLs for missing elements.</em></div></div>
+      </div>
+    </div>
 
-      <div class="cm-block">
-        <div class="cm-head paid-tracks">
-          <h3>💰 SEO Metrics the Paid Media Strategist Should Track</h3>
-          <p>Metrics from SEO that directly inform paid keyword, audience, and landing page strategy</p>
-        </div>
-        <div class="cm-body">
-          <div class="cm-row"><div class="cm-metric">Organic CTR by Query</div><div class="cm-meaning">Terms where organic meta descriptions generate high CTR are producing copy that resonates with real buyers. Mirror this language in paid ad headlines and descriptions for validation with immediate A/B test potential.<em>Action: Use top organic CTR queries as headline candidates in RSA and PMax asset group text.</em></div></div>
-          <div class="cm-row"><div class="cm-metric">Organic Ranking Gaps</div><div class="cm-meaning">Terms the client should rank for but doesn't — especially B-SMART® layered terms with clear buyer intent. These are immediate paid coverage opportunities while SEO builds authority over the next 3–6 months.<em>Action: Build exact-match or phrase-match campaigns specifically for unranked high-intent terms SEO has flagged.</em></div></div>
-          <div class="cm-row"><div class="cm-metric">Organic Conv. Path Pages</div><div class="cm-meaning">Pages appearing most frequently in the journey before an organic conversion are proven trust builders. These are the pages buyers read to make up their minds — and should be the destination URLs in paid campaigns, not generic homepages.<em>Action: Replace generic paid landing pages with the top organic conversion-path pages identified in GA4.</em></div></div>
-          <div class="cm-row"><div class="cm-metric">AI Overview Presence</div><div class="cm-meaning">Whether the client appears in AI Overviews on high-value queries — and which competitors are cited instead. Paid must compensate for zero-click AI Overview absorption with visible above/below AIO placements on high-value queries where organic isn't being cited.<em>Action: Prioritize paid impression share maintenance on queries where AI Overviews are absorbing organic clicks.</em></div></div>
-          <div class="cm-row"><div class="cm-metric">Long-Tail Query Impressions</div><div class="cm-meaning">High-impression, low-click queries in GSC reveal buyer demand that organic meta copy isn't satisfying. Many of these are B-SMART® layered terms with very specific intent — perfect for exact-match paid targeting that organic can't capture quickly.<em>Action: Pull top GSC impression terms with CTR under 1% and add high-intent ones as exact-match paid keywords.</em></div></div>
-          <div class="cm-row"><div class="cm-metric">Loop ICP Comment Language</div><div class="cm-meaning">The exact terminology buyers use in form comment fields — the shorthand, grades, and spec language that reveals how buyers describe their need. No keyword planner generates this vocabulary; it comes from real submissions and is the most validated input for exact-match keyword additions.<em>Action: Add every recurring comment-field term to exact-match keyword testing in Paid before building organic pages.</em></div></div>
-        </div>
+    <div class="cm-block">
+      <div class="cm-head paid-tracks">
+        <h3>💰 SEO Metrics the Paid Media Strategist Should Track</h3>
+        <p>Metrics from SEO that directly inform paid keyword, audience, and landing page strategy</p>
+      </div>
+      <div class="cm-body">
+        <div class="cm-row"><div class="cm-metric">Organic CTR by Query</div><div class="cm-meaning">Terms where organic meta descriptions generate high CTR are producing copy that resonates with real buyers. Mirror this language in paid ad headlines and descriptions for immediate A/B test validation with real conversion data behind it.<em>Action: Use top organic CTR queries as headline candidates in RSA and PMax asset group text.</em></div></div>
+        <div class="cm-row"><div class="cm-metric">Organic Ranking Gaps</div><div class="cm-meaning">Terms the client should rank for but doesn't — especially B-SMART® layered terms with clear buyer intent. These are immediate paid coverage opportunities while SEO builds organic authority over the next 3–6 months. Don't let a competitor own the paid slot on a term where SEO is a month away from ranking organically.<em>Action: Build exact-match campaigns specifically for unranked high-intent terms SEO has flagged.</em></div></div>
+        <div class="cm-row"><div class="cm-metric">Organic Conversion Path Pages</div><div class="cm-meaning">Pages appearing most in the buyer journey before an organic conversion are proven trust builders — buyers read them to make up their minds. These pages should be the destination URLs in paid campaigns, not generic homepages or category pages.<em>Action: Replace generic paid landing page URLs with the top organic conversion-path pages identified in GA4.</em></div></div>
+        <div class="cm-row"><div class="cm-metric">AI Overview Presence</div><div class="cm-meaning">Whether the client appears in AI Overviews on high-value queries — and which competitors are cited instead. Paid must compensate for zero-click AI Overview absorption with visible placements on high-value queries where organic isn't being cited in the AI-generated answer.<em>Action: Prioritize paid impression share maintenance on queries where AI Overviews are absorbing organic clicks.</em></div></div>
+        <div class="cm-row"><div class="cm-metric">Long-Tail Impressions (GSC)</div><div class="cm-meaning">High-impression, low-click queries in GSC reveal buyer demand that organic meta copy isn't satisfying. Many are B-SMART® layered terms with very specific intent — perfect for exact-match paid targeting that organic can't capture quickly. Some of the best exact-match opportunities exist here.<em>Action: Pull GSC impression terms with CTR under 1% and add high-intent ones as exact-match paid keywords.</em></div></div>
+        <div class="cm-row"><div class="cm-metric">Loop ICP Comment Language</div><div class="cm-meaning">The exact terminology buyers use in form comment fields — the shorthand, grades, and spec language that reveals how buyers describe their need. No keyword planner generates this vocabulary. It's the most validated input for exact-match keyword additions available on any account.<em>Action: Add every recurring comment-field term to exact-match keyword testing in Paid before building organic pages.</em></div></div>
       </div>
     </div>
 
     <div class="callout loop">
       <div class="callout-label">The Loop Data Layer — Where Both Channels Get Smarter Simultaneously</div>
-      <p>Loop form submissions give both channels something neither keyword planner, SERP tool, nor GA4 report can provide: <strong>the exact language, industries, roles, volumes, and intent signals of real buyers who already showed up and asked for something.</strong> When the SEO Strategist and Paid Media Strategist review Loop ICP data together — not in separate channel silos — both channels update from the same first-party intelligence at the same time. That synchronization is what prevents the two channels from working from contradictory keyword sets, misaligned landing page priorities, and out-of-date buyer assumptions simultaneously.</p>
+      <p>Loop form submissions give both channels something neither keyword planner, SERP tool, nor GA4 report can provide: <strong>the exact language, industries, roles, volumes, and intent signals of real buyers who already showed up and asked for something.</strong> When the SEO Strategist and Paid Media Strategist review Loop ICP data together — not in separate channel silos — both channels update from the same first-party intelligence at the same time. That synchronization prevents both channels from working from contradictory keyword sets, misaligned landing page priorities, and out-of-date buyer assumptions simultaneously.</p>
     </div>
   </div>
 </section>
 
 
-<!-- ══════════════════════════════════════
-     SECTION 7: STRATEGY PLAYS
-══════════════════════════════════════ -->
+<!-- ═══════════════════════════════════════
+     SECTION 7 — STRATEGY PLAYS
+═══════════════════════════════════════ -->
 <section class="sec-light" id="plays">
   <div class="container">
     <div class="sh">
       <div class="sh-tag loop">Section 7 — Strategy Plays</div>
       <h2 class="sh-title">Six Strategy Plays That Require Both Channels to Coordinate</h2>
-      <p class="sh-desc">These are the plays where SEO and Paid doing their own thing produces a fraction of the result they'd generate together. Each play has a clear trigger that tells you when to run it, a specific action for each channel, and what the combined outcome should be.</p>
+      <p class="sh-desc">These are the plays where SEO and Paid doing their own thing produces a fraction of the result they'd generate together. Each play has a clear trigger, a specific action for each channel, and a combined outcome the individual channels couldn't achieve alone.</p>
     </div>
 
     <!-- PLAY 1 -->
@@ -926,38 +903,29 @@ ul.plain.wht li::before{color:var(--gold);}
         <div class="play-meta">
           <div class="play-label both">Play 1 — Both Channels Coordinate</div>
           <div class="play-title">The Ranking Gap Fill: Paid Covers While SEO Builds</div>
-          <div class="play-trigger">Trigger: SEO identifies a high-converting B-SMART® term where organic ranking is page 2 or lower. Paid confirms it converts in search term data.</div>
+          <div class="play-trigger">Trigger: SEO identifies a high-converting B-SMART® term where organic ranking is page 2 or lower. Paid confirms it converts in the search term report.</div>
         </div>
       </div>
       <div class="play-body">
-        <div class="play-col seo">
-          <div class="play-col-label seo">🔍 SEO Strategist</div>
-          <ul>
-            <li>Prioritize building or deepening the page targeting this term — spec depth, buyer language, trust signals</li>
-            <li>Set a ranking milestone target (page 1 within 90 days) and communicate it to Paid so they know when paid coverage can be evaluated for reduction</li>
-            <li>Use Paid's ad copy and headline data as page copy testing validation — what's converting in paid belongs on the organic page</li>
-            <li>Track organic impressions and ranking movement on the term monthly; report back to Paid as coverage rationale adjusts</li>
-          </ul>
-        </div>
-        <div class="play-col paid">
-          <div class="play-col-label paid">💰 Paid Media Strategist</div>
-          <ul>
-            <li>Build exact-match or phrase-match paid coverage on the term immediately — don't wait for organic to catch up if the term is converting</li>
-            <li>Test 3–4 headline variations using the buyer language from Loop ICP comment fields and SEO's organic CTR data</li>
-            <li>Monitor quality score on the landing page — flag to SEO if QS is below 6, indicating the page needs content work before organic can rank well</li>
-            <li>Share converting ad copy back to SEO as headline and meta description test candidates for the organic page</li>
-          </ul>
-        </div>
-        <div class="play-col together">
-          <div class="play-col-label together">⟳ Together</div>
-          <ul>
-            <li>Align on the same landing page URL for both channels — creates a consistency signal for Google and a better buyer experience</li>
-            <li>Share a combined SERP presence goal: paid above the fold + organic in top 5 = maximum SERP coverage on this query</li>
-            <li>Review monthly: when organic reaches page 1, evaluate whether paid is still incrementally additive or can be reallocated</li>
-          </ul>
-        </div>
+        <div class="play-col seo"><div class="play-col-label seo">🔍 SEO Strategist</div><ul>
+          <li>Prioritize building or deepening the page targeting this term with spec depth, buyer language, and trust signals</li>
+          <li>Set a ranking milestone target (page 1 within 90 days) and communicate it to Paid so they know when coverage can be evaluated for reduction</li>
+          <li>Use Paid's ad copy and headline data as page copy validation — what converts in paid belongs on the organic page</li>
+          <li>Track organic impressions and ranking movement monthly; report back to Paid as coverage rationale adjusts</li>
+        </ul></div>
+        <div class="play-col paid"><div class="play-col-label paid">💰 Paid Media Strategist</div><ul>
+          <li>Build exact-match or phrase-match paid coverage on the term immediately — don't wait for organic if it's already converting</li>
+          <li>Test 3–4 headline variations using buyer language from Loop ICP comment fields and SEO's organic CTR data</li>
+          <li>Monitor quality score on the landing page — flag to SEO if QS is below 6, indicating content work needed before organic can rank</li>
+          <li>Share converting ad copy back to SEO as headline and meta description candidates for the organic page</li>
+        </ul></div>
+        <div class="play-col together"><div class="play-col-label together">⟳ Together</div><ul>
+          <li>Align on the same landing page URL for both channels — creates a consistency signal for Google and better buyer experience</li>
+          <li>Share a combined SERP goal: paid above the fold + organic in top 5 = maximum SERP coverage</li>
+          <li>Review monthly: when organic reaches page 1, evaluate whether paid is still incrementally additive or can be reallocated</li>
+        </ul></div>
       </div>
-      <div class="play-result"><strong>Combined outcome:</strong> The client maintains SERP visibility on a high-converting, high-intent term immediately (via Paid) while building permanent, zero-marginal-cost authority over 3–6 months (via SEO). Neither channel alone achieves both simultaneously.</div>
+      <div class="play-result"><strong>Combined outcome:</strong> The client maintains SERP visibility on a high-intent term immediately (via Paid) while building permanent, zero-marginal-cost authority over 3–6 months (via SEO). Neither channel alone achieves both simultaneously.</div>
     </div>
 
     <!-- PLAY 2 -->
@@ -967,37 +935,28 @@ ul.plain.wht li::before{color:var(--gold);}
         <div class="play-meta">
           <div class="play-label seo-lead">Play 2 — SEO-Led, Paid Responds</div>
           <div class="play-title">The AI Overview Compensation Play</div>
-          <div class="play-trigger">Trigger: SEO identifies that an AI Overview is appearing on a high-value query and the client is not cited — a competitor is. Organic CTR on that term drops measurably.</div>
+          <div class="play-trigger">Trigger: SEO identifies an AI Overview appearing on a high-value query where the client is not cited — a competitor is. Organic CTR on that term drops measurably.</div>
         </div>
       </div>
       <div class="play-body">
-        <div class="play-col seo">
-          <div class="play-col-label seo">🔍 SEO Strategist</div>
-          <ul>
-            <li>Audit the competitor content being cited — identify what format (spec depth, structured data, authority signals) earned the citation</li>
-            <li>Update or rebuild the client's page to match or exceed the content characteristics Google's AI is prioritizing for citation</li>
-            <li>Implement IndexNow / Bing Webmaster Tools fast indexing to push the updated content to AI tools like ChatGPT and Perplexity as quickly as possible</li>
-            <li>Monitor impressions and rank movement while the citation gap is being closed — communicate timeline estimate to Paid</li>
-          </ul>
-        </div>
-        <div class="play-col paid">
-          <div class="play-col-label paid">💰 Paid Media Strategist</div>
-          <ul>
-            <li>Increase impression share maintenance on the query while the organic citation gap is being closed — ads appearing above or below the AI Overview keep the client visible</li>
-            <li>Test ad copy that matches the content depth AI Overviews are providing — "DFARS certifications included," "spec sheets available" — to differentiate from what the AI answer covers generically</li>
-            <li>Monitor if the AI Overview appearance is reducing organic CTR AND paid CTR — if both are declining, the query's intent may be shifting to zero-click and budget should be reallocated elsewhere</li>
-          </ul>
-        </div>
-        <div class="play-col together">
-          <div class="play-col-label together">⟳ Together</div>
-          <ul>
-            <li>Agree on a "while SEO catches up" paid spend threshold so budget isn't open-ended</li>
-            <li>Share the competitor citation audit with both channels — what's earning AI citation on content also reveals what should be in paid ad copy</li>
-            <li>Report to the client as a coordinated strategic response, not two separate channel updates</li>
-          </ul>
-        </div>
+        <div class="play-col seo"><div class="play-col-label seo">🔍 SEO Strategist</div><ul>
+          <li>Audit the competitor content being cited — identify what format, spec depth, and authority signals earned the citation</li>
+          <li>Update or rebuild the client's page to match or exceed the content characteristics Google's AI is prioritizing</li>
+          <li>Implement IndexNow fast indexing to push the updated content to ChatGPT, Perplexity, and other AI models quickly</li>
+          <li>Monitor impressions and rank movement while closing the citation gap — communicate timeline to Paid</li>
+        </ul></div>
+        <div class="play-col paid"><div class="play-col-label paid">💰 Paid Media Strategist</div><ul>
+          <li>Increase impression share maintenance on the query while the organic citation gap is being closed</li>
+          <li>Test ad copy that differentiates from what the AI answer covers generically: "DFARS certifications included," "spec sheets available," "same-week ship"</li>
+          <li>Monitor if AI Overview appearance is reducing both organic AND paid CTR — if both are declining, the query may be shifting to zero-click and budget should be reallocated</li>
+        </ul></div>
+        <div class="play-col together"><div class="play-col-label together">⟳ Together</div><ul>
+          <li>Agree on a "while SEO catches up" paid spend threshold so budget isn't open-ended</li>
+          <li>Share the competitor citation audit with both channels — what earns AI citation also informs paid ad copy</li>
+          <li>Report to the client as a coordinated strategic response — not two separate channel updates</li>
+        </ul></div>
       </div>
-      <div class="play-result"><strong>Combined outcome:</strong> The client maintains commercial SERP visibility during an organic citation gap (Paid), while building the content authority needed to earn AI Overview citations long-term (SEO). The client never disappears from high-value queries, even during organic disruption.</div>
+      <div class="play-result"><strong>Combined outcome:</strong> The client maintains commercial SERP visibility during an organic citation gap (Paid), while building the content authority needed to earn AI Overview citations long-term (SEO). The client never disappears from high-value queries during organic disruption.</div>
     </div>
 
     <!-- PLAY 3 -->
@@ -1011,34 +970,25 @@ ul.plain.wht li::before{color:var(--gold);}
         </div>
       </div>
       <div class="play-body">
-        <div class="play-col paid">
-          <div class="play-col-label paid">💰 Paid Media Strategist</div>
-          <ul>
-            <li>Flag the term from the search term report to SEO immediately — don't wait for the monthly meeting if it's converting at a strong rate</li>
-            <li>Provide the full context: exact query, conversion volume, conversion rate, and which landing page it's currently going to</li>
-            <li>Continue covering the term in paid while SEO builds organic authority — don't cut the paid term just because SEO is now targeting it</li>
-            <li>Test ad copy variations on the term to validate which framing converts best before SEO uses that copy for the organic page</li>
-          </ul>
-        </div>
-        <div class="play-col seo">
-          <div class="play-col-label seo">🔍 SEO Strategist</div>
-          <ul>
-            <li>Add the term to the content pipeline as a priority build — Paid has de-risked it by validating it converts before the organic investment is made</li>
-            <li>Cross-reference the term against Loop ICP comment field language to confirm real buyer vocabulary alignment</li>
-            <li>Build the page around the same buyer intent Paid validated — use winning ad headlines as page H1 and meta title candidates</li>
-            <li>Target the landing page URL Paid is already using if possible — shared URL creates authority continuity across both channels</li>
-          </ul>
-        </div>
-        <div class="play-col together">
-          <div class="play-col-label together">⟳ Together</div>
-          <ul>
-            <li>This play turns Paid into SEO's most effective content prioritization tool — Paid validates conversion before SEO invests in building</li>
-            <li>Document every discovery play in a shared tracking sheet so both channels can measure when organic begins covering what Paid discovered</li>
-            <li>Report the discovery to the Integrated Strategy Lead as a Loop ICP pattern confirmation — if paid is converting on it, buyers are likely mentioning it in form comments too</li>
-          </ul>
-        </div>
+        <div class="play-col paid"><div class="play-col-label paid">💰 Paid Media Strategist</div><ul>
+          <li>Flag the term to SEO immediately — don't wait for the monthly meeting if it's converting at a strong rate</li>
+          <li>Provide full context: exact query, conversion volume, conversion rate, and which landing page it's currently using</li>
+          <li>Continue covering the term in paid while SEO builds organic authority — don't cut the paid term just because SEO is now targeting it</li>
+          <li>Test ad copy variations on the term to validate which framing converts best before SEO uses it for the organic page</li>
+        </ul></div>
+        <div class="play-col seo"><div class="play-col-label seo">🔍 SEO Strategist</div><ul>
+          <li>Add the term to the content pipeline as a priority — Paid has de-risked it by validating it converts before the organic investment is made</li>
+          <li>Cross-reference with Loop ICP comment field language to confirm real buyer vocabulary alignment</li>
+          <li>Build the page around the same buyer intent Paid validated — use winning ad headlines as page H1 and meta title candidates</li>
+          <li>Target the same landing page URL Paid is already using if possible — shared URL creates authority continuity</li>
+        </ul></div>
+        <div class="play-col together"><div class="play-col-label together">⟳ Together</div><ul>
+          <li>This play turns Paid into SEO's most effective content prioritization tool — Paid validates conversion before SEO invests in building</li>
+          <li>Document every discovery play in a shared tracking sheet so both channels can measure when organic begins covering what Paid discovered</li>
+          <li>Report the discovery to the Integrated Strategy Lead as a Loop ICP confirmation — if paid is converting on it, buyers are likely mentioning it in form comments too</li>
+        </ul></div>
       </div>
-      <div class="play-result"><strong>Combined outcome:</strong> Paid's real-time conversion data de-risks SEO's content investment decisions. SEO builds permanent, compounding authority around terms already proven to convert. The account builds a self-reinforcing discovery loop where paid funds organic content strategy.</div>
+      <div class="play-result"><strong>Combined outcome:</strong> Paid's real-time conversion data de-risks SEO's content investment decisions. SEO builds permanent authority around terms already proven to convert. The account builds a self-reinforcing loop where paid funds organic content strategy.</div>
     </div>
 
     <!-- PLAY 4 -->
@@ -1052,33 +1002,24 @@ ul.plain.wht li::before{color:var(--gold);}
         </div>
       </div>
       <div class="play-body">
-        <div class="play-col paid">
-          <div class="play-col-label paid">💰 Paid Media Strategist</div>
-          <ul>
-            <li>Extract wrong-fit language from Loop comment fields ("small amounts," "personal project," "just need a few pieces") and add to negative keyword list immediately</li>
-            <li>Add minimum quantity qualifiers to ad copy: "Industrial quantities · 50 lb minimum" — filters wrong-fit buyers before they click and waste budget</li>
-            <li>Review audience exclusions — if demographics from the wrong-fit submissions skew a particular segment, add it as an audience exclusion to PMax</li>
-            <li>Report the cost-per-wrong-fit-lead to the Integrated Strategy Lead as a quantified efficiency gain when the negative keywords reduce that volume</li>
-          </ul>
-        </div>
-        <div class="play-col seo">
-          <div class="play-col-label seo">🔍 SEO Strategist</div>
-          <ul>
-            <li>Add minimum order callouts, volume pricing tiers, and industrial-context language to product and category pages to filter wrong-fit organic searchers before they submit</li>
-            <li>Review which pages are attracting wrong-fit organic traffic — if a generic "stainless steel bar" page is attracting retail buyers, refocus the content on industrial and procurement-level intent</li>
-            <li>Add FAQ content addressing minimum orders, lead times, and procurement requirements — answers the wrong-fit buyer's questions in a way that self-selects them out before they submit</li>
-          </ul>
-        </div>
-        <div class="play-col together">
-          <div class="play-col-label together">⟳ Together</div>
-          <ul>
-            <li>Both channels adjust from the same Loop ICP wrong-fit pattern data — ensuring the filtration applies to both organic and paid traffic simultaneously, not just one channel</li>
-            <li>Brief the Integrated Strategy Lead and client together: "We identified a recurring wrong-fit submission pattern and here's what we changed in both channels to reduce it." This is a Heartbeat-positive conversation.</li>
-            <li>Measure the change in Loop ICP submission quality score month-over-month as the coordinated filtration takes effect</li>
-          </ul>
-        </div>
+        <div class="play-col paid"><div class="play-col-label paid">💰 Paid Media Strategist</div><ul>
+          <li>Extract wrong-fit language from Loop comment fields and add to the negative keyword list immediately</li>
+          <li>Add minimum quantity qualifiers to ad copy: "Industrial quantities · 50 lb minimum" — filters wrong-fit buyers before they click and waste budget</li>
+          <li>Review audience exclusions — if the wrong-fit submissions skew a demographic segment, add it as a PMax exclusion</li>
+          <li>Report cost-per-wrong-fit-lead to the Integrated Strategy Lead as a quantified efficiency gain when volume reduces</li>
+        </ul></div>
+        <div class="play-col seo"><div class="play-col-label seo">🔍 SEO Strategist</div><ul>
+          <li>Add minimum order callouts, volume pricing tiers, and industrial-context language to product and category pages to filter wrong-fit organic searchers before they submit</li>
+          <li>Review which pages are attracting wrong-fit organic traffic — if a generic product page attracts retail buyers, refocus the content on industrial and procurement-level intent</li>
+          <li>Add FAQ content addressing minimum orders, lead times, and procurement requirements — self-selects wrong-fit buyers out before they submit</li>
+        </ul></div>
+        <div class="play-col together"><div class="play-col-label together">⟳ Together</div><ul>
+          <li>Both channels adjust from the same Loop ICP wrong-fit pattern data — ensuring filtration applies to both organic and paid traffic simultaneously</li>
+          <li>Brief the Integrated Strategy Lead and client together: "We identified a recurring wrong-fit submission pattern and here's what both channels changed." This is a Heartbeat-positive conversation.</li>
+          <li>Measure the change in Loop ICP submission quality score month-over-month as the coordinated filtration takes effect</li>
+        </ul></div>
       </div>
-      <div class="play-result"><strong>Combined outcome:</strong> The client's sales team receives higher-quality inquiries from both channels simultaneously. Paid reduces budget waste. SEO improves content relevance signals. The client sees a measurable improvement in lead quality — not just lead volume — which is a qualitatively different and more valuable outcome.</div>
+      <div class="play-result"><strong>Combined outcome:</strong> The client's sales team receives higher-quality inquiries from both channels simultaneously. Paid reduces budget waste. SEO improves content relevance signals. The client sees a measurable improvement in lead quality — not just lead volume.</div>
     </div>
 
     <!-- PLAY 5 -->
@@ -1088,35 +1029,26 @@ ul.plain.wht li::before{color:var(--gold);}
         <div class="play-meta">
           <div class="play-label seo-lead">Play 5 — SEO-Led, Paid Amplifies</div>
           <div class="play-title">The Content Authority + Paid Amplification Play</div>
-          <div class="play-trigger">Trigger: SEO builds a high-quality piece of authority content (industry hub, compliance guide, material spec deep-dive) that earns strong engagement and early ranking signals but has low direct conversion volume.</div>
+          <div class="play-trigger">Trigger: SEO builds a high-quality authority content piece (industry hub, compliance guide, material spec deep-dive) that earns strong engagement and early ranking signals but has low direct conversion volume on its own.</div>
         </div>
       </div>
       <div class="play-body">
-        <div class="play-col seo">
-          <div class="play-col-label seo">🔍 SEO Strategist</div>
-          <ul>
-            <li>Build the content specifically to earn E-E-A-T signals: first-hand expertise, original data from Loop ICP patterns, specific buyer use cases the client has actually served</li>
-            <li>Structure with conversion pathways — the authority content should link to product pages, include CTAs for spec downloads or consultations, not just exist as a standalone informational page</li>
-            <li>Track organic impressions, clicks, engagement rate, and scroll depth — strong engagement signals to Google that the content deserves ranking even before it converts directly</li>
-            <li>Pass the content URL and engagement metrics to Paid as a remarketing asset candidate</li>
-          </ul>
-        </div>
-        <div class="play-col paid">
-          <div class="play-col-label paid">💰 Paid Media Strategist</div>
-          <ul>
-            <li>Build a remarketing audience from visitors to the authority content page — these buyers have demonstrated research intent beyond a standard product page visit</li>
-            <li>Serve retargeting ads to this authority content visitor audience with a stronger commercial CTA: "Ready to request a quote?" — they've already been educated, they need a conversion trigger</li>
-            <li>Test using the authority content as a paid landing page for specific informational queries — buyers searching "DFARS titanium requirements" may convert better landing on the compliance guide than a product page</li>
-          </ul>
-        </div>
-        <div class="play-col together">
-          <div class="play-col-label together">⟳ Together</div>
-          <ul>
-            <li>The organic content creates the buyer education layer. Paid monetizes the engaged audience that organic content produces. Neither channel alone completes the loop.</li>
-            <li>Report authority content performance as a combined metric: organic engagement + paid retargeting conversions from that audience = the true value of the content investment</li>
-            <li>If the authority content earns AI Overview citation, Paid should immediately build presence on the cited query to capture commercial intent that the zero-click citation creates</li>
-          </ul>
-        </div>
+        <div class="play-col seo"><div class="play-col-label seo">🔍 SEO Strategist</div><ul>
+          <li>Build the content to earn E-E-A-T signals: first-hand expertise, original data from Loop ICP patterns, specific buyer use cases the client has actually served</li>
+          <li>Structure with conversion pathways — the authority content should link to product pages and include CTAs, not just exist as standalone informational content</li>
+          <li>Track engagement rate and scroll depth — strong signals to Google that the content deserves ranking even before it converts directly</li>
+          <li>Pass the content URL and engagement metrics to Paid as a remarketing audience candidate</li>
+        </ul></div>
+        <div class="play-col paid"><div class="play-col-label paid">💰 Paid Media Strategist</div><ul>
+          <li>Build a remarketing audience from visitors to the authority content page — these buyers have demonstrated research intent beyond a standard product page visit</li>
+          <li>Serve retargeting ads to this authority content visitor audience with a stronger commercial CTA: "Ready to request a quote?" — they've already been educated</li>
+          <li>Test using the authority content as a paid landing page for specific informational queries — buyers searching "DFARS titanium requirements" may convert better landing on the compliance guide than a product page</li>
+        </ul></div>
+        <div class="play-col together"><div class="play-col-label together">⟳ Together</div><ul>
+          <li>The organic content creates the buyer education layer. Paid monetizes the engaged audience that organic content produces. Neither channel alone completes the loop.</li>
+          <li>Report authority content performance as a combined metric: organic engagement + paid retargeting conversions from that audience = the true value of the content investment</li>
+          <li>If the authority content earns AI Overview citation, Paid should immediately build presence on the cited query to capture commercial intent the zero-click citation creates</li>
+        </ul></div>
       </div>
       <div class="play-result"><strong>Combined outcome:</strong> SEO's content investment generates a qualified, already-educated audience that Paid converts at higher rates and lower CPAs than cold traffic. The content earns organic authority AND fuels paid conversion efficiency — two returns from one investment.</div>
     </div>
@@ -1127,51 +1059,42 @@ ul.plain.wht li::before{color:var(--gold);}
         <div class="play-badge both">6</div>
         <div class="play-meta">
           <div class="play-label both">Play 6 — Both Channels Coordinate</div>
-          <div class="play-title">The New Industry / ICP Expansion Play</div>
-          <div class="play-trigger">Trigger: Loop ICP data shows a new industry or company type appearing in form submissions that the client wasn't deliberately targeting — an unplanned inbound demand signal worth capitalizing on.</div>
+          <div class="play-title">The ICP Expansion Play</div>
+          <div class="play-trigger">Trigger: Loop ICP data shows a new industry or company type appearing in form submissions the client wasn't deliberately targeting — an unplanned inbound demand signal worth capitalizing on.</div>
         </div>
       </div>
       <div class="play-body">
-        <div class="play-col seo">
-          <div class="play-col-label seo">🔍 SEO Strategist</div>
-          <ul>
-            <li>Validate the industry demand — check GSC for impressions on industry-specific queries, run SERP analysis on the vertical's most common search patterns, and assess whether the client can actually serve this industry well</li>
-            <li>Build a dedicated industry landing page if validation confirms demand: industry-specific applications, relevant compliance certifications, case study language drawn from Loop submission patterns</li>
-            <li>Add industry-specific B-SMART® keyword clusters to the content pipeline: material + application + industry + requirement combinations that this vertical's buyers actually search</li>
-          </ul>
-        </div>
-        <div class="play-col paid">
-          <div class="play-col-label paid">💰 Paid Media Strategist</div>
-          <ul>
-            <li>Launch a targeted paid campaign for the new industry vertical while the organic page is being built — the inbound demand signal means buyers are already searching, Paid captures them immediately</li>
-            <li>Use the Loop ICP language from the new industry's submissions in ad copy — mirror the terminology these buyers used in their form comments for maximum relevance</li>
-            <li>Build a Customer Match audience from the new industry's submitters — this signals to PMax what the ICP profile looks like for this vertical and helps the algorithm find similar buyers</li>
-          </ul>
-        </div>
-        <div class="play-col together">
-          <div class="play-col-label together">⟳ Together</div>
-          <ul>
-            <li>Validate together with the Integrated Strategy Lead and client before full investment — can the client actually serve this industry? Are the margins right? Does the sales team know how to close this buyer type?</li>
-            <li>Share a 90-day build plan: Paid launches immediately, SEO builds organic authority over the next two quarters, combined SERP presence for the new vertical is the goal</li>
-            <li>Report the expansion to the client as evidence of Loop ICP intelligence working: "Our form data identified organic demand from this industry we weren't targeting — here's how both channels responded to capture it."</li>
-          </ul>
-        </div>
+        <div class="play-col seo"><div class="play-col-label seo">🔍 SEO Strategist</div><ul>
+          <li>Validate the industry demand — check GSC for impressions on industry-specific queries, run SERP analysis, and assess whether the client can actually serve this vertical well</li>
+          <li>Build a dedicated industry landing page if validation confirms demand: industry-specific applications, relevant certifications, case study language drawn from Loop submission patterns</li>
+          <li>Add industry-specific B-SMART® keyword clusters: material + application + industry + requirement combinations that this vertical's buyers actually search</li>
+        </ul></div>
+        <div class="play-col paid"><div class="play-col-label paid">💰 Paid Media Strategist</div><ul>
+          <li>Launch a targeted paid campaign for the new vertical while the organic page is being built — inbound demand signals mean buyers are already searching</li>
+          <li>Use the Loop ICP language from the new industry's submissions in ad copy — mirror the terminology these buyers used in their form comments</li>
+          <li>Build a Customer Match audience from the new industry's submitters — signals to PMax what the ICP profile looks like for this vertical</li>
+        </ul></div>
+        <div class="play-col together"><div class="play-col-label together">⟳ Together</div><ul>
+          <li>Validate with the Integrated Strategy Lead and client before full investment — can the client actually serve this industry? Are the margins right?</li>
+          <li>Share a 90-day build plan: Paid launches immediately, SEO builds organic authority over the next two quarters</li>
+          <li>Report the expansion to the client as Loop ICP intelligence working: "Our form data identified organic demand from this industry we weren't targeting — here's how both channels responded."</li>
+        </ul></div>
       </div>
-      <div class="play-result"><strong>Combined outcome:</strong> An unplanned inbound demand signal from Loop gets converted into a deliberate, dual-channel expansion play within 30–60 days. The client grows into a new vertical with immediate paid presence and compounding organic authority — informed entirely by real buyer data, not keyword planner assumptions.</div>
+      <div class="play-result"><strong>Combined outcome:</strong> An unplanned inbound demand signal from Loop gets converted into a deliberate, dual-channel expansion play within 30–60 days — informed entirely by real buyer data, not keyword planner assumptions.</div>
     </div>
   </div>
 </section>
 
 
-<!-- ══════════════════════════════════════
-     SECTION 8: REVIEW FRAMEWORK
-══════════════════════════════════════ -->
+<!-- ═══════════════════════════════════════
+     SECTION 8 — REVIEW FRAMEWORK
+═══════════════════════════════════════ -->
 <section class="sec-white" id="review">
   <div class="container">
     <div class="sh">
       <div class="sh-tag navy">Section 8 — The Review Framework</div>
       <h2 class="sh-title">The Cross-Channel Strategy Review Meeting</h2>
-      <p class="sh-desc">A monthly cross-channel review between the SEO Strategist and Paid Media Strategist should be structured to produce specific cross-channel actions — not just a parallel status update where each channel reports on itself. Here's the framework that produces the most strategic output per 45 minutes.</p>
+      <p class="sh-desc">A monthly cross-channel review between the SEO Strategist and Paid Media Strategist should be structured to produce specific cross-channel actions — not a parallel status update where each channel reports on itself. Here's the framework that produces the most strategic output per 45 minutes.</p>
     </div>
 
     <div class="mf-wrap mb32">
@@ -1189,7 +1112,7 @@ ul.plain.wht li::before{color:var(--gold);}
           <div class="mf-item-title">Loop ICP Update — What Did This Month's Submissions Tell Us?</div>
           <div class="mf-owner il">Integrated Strategy Lead or Either Strategist</div>
           <ul class="mf-list">
-            <li>What company types, roles, and industries submitted this month — does it match what both channels are targeting?</li>
+            <li>What company types, roles, and industries submitted — does it match what both channels are targeting?</li>
             <li>Any new language in comment fields that neither channel is currently using in keywords or content?</li>
             <li>Any wrong-fit submission patterns that need to be addressed in both channels simultaneously?</li>
             <li>Any dream accounts or notable company names that submitted — requires immediate response outside the meeting</li>
@@ -1203,10 +1126,10 @@ ul.plain.wht li::before{color:var(--gold);}
           <div class="mf-item-title">Paid → SEO Data Transfer: Search Terms Report Review</div>
           <div class="mf-owner paid">Paid Media Strategist Presents</div>
           <ul class="mf-list">
-            <li>Top 10–15 converting search terms this month — which of these have no organic page or ranking? These are the SEO priority builds</li>
-            <li>High-click, zero-conversion terms that were added as negatives — organic should avoid building content around these intent patterns</li>
-            <li>Any queries the algorithm discovered via PMax or AI Max that SEO has never targeted? Flag these immediately</li>
-            <li>Current quality scores on top 5 landing pages — any below 6 that need SEO / UX attention before organic rankings will improve?</li>
+            <li>Top 10–15 converting search terms this month — which have no organic page or ranking? These are the SEO priority builds.</li>
+            <li>High-click, zero-conversion terms added as negatives — organic should avoid building content around these intent patterns</li>
+            <li>Any queries the algorithm discovered via PMax or AI Max that SEO has never targeted? Flag these immediately.</li>
+            <li>Current quality scores on top 5 landing pages — any below 6 that need SEO / UX attention before organic rankings can improve?</li>
           </ul>
         </div>
       </div>
@@ -1217,10 +1140,10 @@ ul.plain.wht li::before{color:var(--gold);}
           <div class="mf-item-title">SEO → Paid Data Transfer: SERP Intelligence &amp; Organic Conversion Path Review</div>
           <div class="mf-owner seo">SEO Strategist Presents</div>
           <ul class="mf-list">
-            <li>AI Overview presence audit: which high-value queries now have AI Overviews? Who's being cited — the client or a competitor? Paid coverage implications?</li>
+            <li>AI Overview presence audit: which high-value queries now have AI Overviews? Who's cited — the client or a competitor? Paid coverage implications?</li>
             <li>Top 5 high-intent terms where organic ranking is page 2 or lower — paid should be covering these now</li>
             <li>Organic conversion path pages: which pages appear most in the buyer journey before conversion? Are these the paid landing pages too?</li>
-            <li>Organic CTR wins this month: which meta titles/descriptions generated strong CTR? Mirror these in paid ad copy testing</li>
+            <li>Organic CTR wins this month: which meta titles/descriptions generated strong CTR? Mirror these in paid ad copy testing.</li>
           </ul>
         </div>
       </div>
@@ -1232,9 +1155,9 @@ ul.plain.wht li::before{color:var(--gold);}
           <div class="mf-owner both">Both Strategists Review Together</div>
           <ul class="mf-list">
             <li>Pull GA4 Conversion Paths: what percentage of total conversions included an organic touchpoint before the converting session? What percentage included a paid touchpoint?</li>
-            <li>Are GA4 numbers and platform numbers materially different from last month? If so, is it a tracking change, a reporting model change, or an actual performance shift?</li>
+            <li>Are GA4 numbers and platform numbers materially different from last month? Tracking change, reporting model change, or actual performance shift?</li>
             <li>Are there any double-coverage queries where organic is now strong enough that paid spend can be evaluated for reduction or reallocation?</li>
-            <li>How does the Loop submission quality score compare to last month — and does it correlate with any specific channel's traffic patterns?</li>
+            <li>How does Loop submission quality score compare to last month — and does it correlate with any specific channel's traffic patterns?</li>
           </ul>
         </div>
       </div>
@@ -1269,7 +1192,7 @@ ul.plain.wht li::before{color:var(--gold);}
 
     <div class="callout navy mb32">
       <div class="callout-label">The Meeting Must Produce Cross-Channel Actions — Not Just Channel Updates</div>
-      <p><strong style="color:var(--gold)">The measure of a successful cross-channel review is not whether both strategists reported their channel's performance accurately. It's whether both strategists left with at least one specific action informed by the other channel's data.</strong> If the SEO Strategist didn't add a single keyword from the paid search term report, and the Paid Media Strategist didn't update a single landing page URL based on organic conversion path data — the meeting produced no cross-channel value. Every meeting should produce at minimum: one SEO action from paid data, and one paid action from SEO data.</p>
+      <p><strong style="color:var(--gold)">The measure of a successful cross-channel review is whether both strategists left with at least one specific action informed by the other channel's data.</strong> If the SEO Strategist didn't add a single keyword from the paid search term report, and the Paid Media Strategist didn't update a single landing page URL based on organic conversion path data — the meeting produced no cross-channel value. Every meeting should produce at minimum: one SEO action from paid data, and one paid action from SEO data.</p>
     </div>
 
     <div class="ref-ribbon">
@@ -1286,8 +1209,8 @@ ul.plain.wht li::before{color:var(--gold);}
 </section>
 
 
-<!-- ══ RECAP -->
-<section class="sec-dark" id="recap">
+<!-- RECAP -->
+<section class="sec-dark">
   <div class="container">
     <div class="sh">
       <div class="sh-tag wht">Partnership Playbook Recap</div>
@@ -1295,36 +1218,12 @@ ul.plain.wht li::before{color:var(--gold);}
       <p class="sh-desc wht">These are the principles that define an effective SEO + Paid partnership at OBx. They apply regardless of account size, vertical, or how long you've been working with a client.</p>
     </div>
     <div class="recap-grid">
-      <div class="recap-item">
-        <div class="recap-num">01</div>
-        <div class="recap-title">You Share a Search Ecosystem</div>
-        <div class="recap-desc">Both channels appear on the same SERP, compete for the same buyer attention, and drive toward the same conversion. Optimizing in isolation means optimizing with incomplete information — every single time.</div>
-      </div>
-      <div class="recap-item">
-        <div class="recap-num">02</div>
-        <div class="recap-title">Each Channel Sees What the Other Can't</div>
-        <div class="recap-desc">Paid sees query-level conversion data and real-time competitive auction signals. SEO sees long-term authority patterns and SERP landscape shifts. Neither is complete without the other. The exchange is not optional.</div>
-      </div>
-      <div class="recap-item">
-        <div class="recap-num">03</div>
-        <div class="recap-title">The Buyer Journey Is Multi-Touch</div>
-        <div class="recap-desc">65% of multi-touchpoint purchase journeys include Google or YouTube before Meta. Buyers research organically, return directly, and convert via paid — or vice versa. Last-click attribution lies to both channels equally.</div>
-      </div>
-      <div class="recap-item">
-        <div class="recap-num">04</div>
-        <div class="recap-title">Last-Click Isn't a Strategy, It's a Starting Point</div>
-        <div class="recap-desc">GA4's default model systematically undervalues upper-funnel content and over-credits the final click. Use GA4 Conversion Paths, Data-Driven attribution, and Loop ICP form submissions together as a fuller picture of what's actually generating pipeline.</div>
-      </div>
-      <div class="recap-item">
-        <div class="recap-num">05</div>
-        <div class="recap-title">Bring Data the Other Channel Needs</div>
-        <div class="recap-desc">The SEO Strategist brings ranking gaps, organic CTR wins, AI Overview audits, and Loop ICP language. The Paid Media Strategist brings search term reports, quality scores, auction insights, and negative keyword patterns. Every meeting. Every month.</div>
-      </div>
-      <div class="recap-item">
-        <div class="recap-num">06</div>
-        <div class="recap-title">Every Meeting Must Produce a Cross-Channel Action</div>
-        <div class="recap-desc">A cross-channel review that produces no actions from the other channel's data produced no cross-channel value. The measure of success is simple: at least one SEO action from paid data, and at least one paid action from SEO data, every month.</div>
-      </div>
+      <div class="recap-item"><div class="recap-num">01</div><div class="recap-title">You Share a Search Ecosystem</div><div class="recap-desc">Both channels appear on the same SERP, compete for the same buyer attention, and drive toward the same conversion. Optimizing in isolation means optimizing with incomplete information — every single time.</div></div>
+      <div class="recap-item"><div class="recap-num">02</div><div class="recap-title">Each Channel Sees What the Other Can't</div><div class="recap-desc">Paid sees query-level conversion data and real-time competitive auction signals. SEO sees long-term authority patterns and SERP landscape shifts. Neither is complete without the other. The exchange is not optional.</div></div>
+      <div class="recap-item"><div class="recap-num">03</div><div class="recap-title">The Buyer Journey Is Multi-Touch</div><div class="recap-desc">65% of multi-touchpoint journeys include Google or YouTube before Meta. Buyers research organically, return directly, and convert via paid — or vice versa. Last-click attribution lies to both channels equally and systematically.</div></div>
+      <div class="recap-item"><div class="recap-num">04</div><div class="recap-title">Last-Click Is a Starting Point, Not a Strategy</div><div class="recap-desc">GA4's default model undervalues upper-funnel content and over-credits the final click. Use GA4 Conversion Paths, Data-Driven attribution, and Loop ICP form submissions together as a fuller picture of what's actually generating pipeline.</div></div>
+      <div class="recap-item"><div class="recap-num">05</div><div class="recap-title">Bring Data the Other Channel Needs</div><div class="recap-desc">SEO brings ranking gaps, organic CTR wins, AI Overview audits, and Loop ICP language. Paid brings search term reports, quality scores, auction insights, and negative keyword patterns. Every meeting. Every month.</div></div>
+      <div class="recap-item"><div class="recap-num">06</div><div class="recap-title">Every Meeting Must Produce a Cross-Channel Action</div><div class="recap-desc">A review that produces no actions from the other channel's data produced no cross-channel value. At minimum: one SEO action from paid data, and one paid action from SEO data — every single month.</div></div>
     </div>
   </div>
 </section>
